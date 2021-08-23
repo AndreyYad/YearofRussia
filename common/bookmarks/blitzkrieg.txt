@@ -1,0 +1,300 @@
+bookmarks = {
+	bookmark = {
+		name = "BLITZKRIEG_NAME"
+		desc = "BLITZKRIEG_DESC"
+		date = 2020.1.1.12
+		picture = "GFX_select_date_1939"
+		default_country = "UKR"
+	
+		FRA = {
+			history = FRA_BLITZKRIEG_DESC
+			ideology = democratic
+			ideas={
+			NATO_member
+			}
+			focuses = {
+			}
+		}
+		USA = {
+			history = USA_BLITZKRIEG_DESC
+			ideology = democratic
+			ideas = {
+			NATO_member
+			}
+			focuses = {
+			}
+		}
+		ENG = {
+			history = ENG_BLITZKRIEG_DESC
+			ideology = democratic
+			ideas = {
+			ENG_Elizabeth
+			NATO_member
+			}
+			focuses = {
+			}
+			
+		}
+		GER = {
+			history = GER_BLITZKRIEG_DESC
+			ideology = democratic
+			ideas = {
+			NATO_member
+			}
+			focuses = {
+			}
+		}
+		PRC = {
+			history = PRC_BLITZKRIEG_DESC
+			ideology = neutrality
+			ideas={
+			China_Socialism_specific
+			The_Uyghur_problem 
+			}
+			focuses = {
+			PRC_return_to_mao
+			PRC_democratic_revolution
+			PRC_war_with_russia
+			}			
+		}
+		JAP = {
+			history = JAP_BLITZKRIEG_DESC
+			ideology = democratic
+			ideas={
+			}	
+			focuses = {
+			}		
+		}
+		SOV = {
+			history = SOV_BLITZKRIEG_DESC
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"---"={
+			history = "OTHER_BLITZKRIEG_DESC"
+		}
+
+		# minors from DLC ####
+		"POL"={
+			minor = yes
+			history = "POL_BLITZKRIEG_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"CAN"={
+			minor = yes
+			history = "CAN_BLITZKRIEG_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"AST"={
+			minor = yes
+			history = "AST_BLITZKRIEG_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"NZL"={
+			minor = yes
+			history = "NZL_BLITZKRIEG_DESC"
+			ideology = democratic
+			ideas = {			
+			}
+			focuses = {
+			}
+		}
+		"SAF"={
+			minor = yes
+			history = "SAF_BLITZKRIEG_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"RAJ"={
+			minor = yes
+			history = "RAJ_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"HUN"={
+			minor = yes
+			history = "HUN_BLITZKRIEG_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"ROM"={
+			minor = yes
+			history = "ROM_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"YUG"={
+			minor = yes
+			history = "YUG_BLITZKRIEG_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"CHI"={
+			minor = yes
+			history = "CHI_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		"UKR"={
+			minor = yes
+			history = "UKR_BLITZKRIEG_DESC"
+			ideology = democratic
+			ideas = {
+			Russophobia
+			}
+			focuses = {
+			UKR_democracy_patch
+			UKR_nationalism_patch
+			UKR_stop_nazi_focus
+			}
+		}
+
+		"AUS"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}		
+		"BLR"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}		
+		"KOR"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}		
+		"KPR"={
+			minor = yes
+			history = "WARLORDS_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"MEX"={
+			minor = yes
+			history = "MEXICO_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"HOL"={
+			minor = yes
+			history = "NETHERLANDS_BLITZKRIEG_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"SPR"={
+			minor = yes
+			history = "SPAIN_BLITZKRIEG_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+		
+		"POR"={
+			minor = yes
+			history = "PORTUGAL_BLITZKRIEG_DESC"
+			ideology = democratic
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"BUL"={
+			minor = yes
+			history = "BUL_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"GRE"={
+			minor = yes
+			history = "GRE_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"TUR"={
+			minor = yes
+			history = "TUR_BLITZKRIEG_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		effect = {
+			randomize_weather = 12345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

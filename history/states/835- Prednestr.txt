@@ -1,0 +1,25 @@
+state=
+{
+	id=845
+	name="STATE_78" #Приднестровье
+	manpower = 469000
+	
+	state_category = town
+	
+	history= {
+		add_core_of = MOL
+		owner = MOL
+		victory_points = { #Тирасполь
+			13238 3
+		}
+		buildings = {
+			infrastructure = 6
+			arms_factory = 2
+			industrial_complex = 2
+		}
+		add_core_of = ROM
+	}
+	provinces=
+	{
+13236 13237 13238 }
+}

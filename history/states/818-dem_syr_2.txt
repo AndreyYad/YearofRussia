@@ -1,0 +1,26 @@
+state={
+	id=818
+	name="STATE_818"
+	state_category=town
+	history={
+		owner = DSY
+		victory_points = { #Деръа
+			1074 5 
+		}
+		buildings = {
+			infrastructure = 2
+			air_base = 1
+			arms_factory = 1
+
+		}
+		add_core_of = SYR
+		add_core_of = DSY
+
+	}
+	
+	provinces={
+		1074 4486 
+	}
+	manpower=747797
+	buildings_max_level_factor=1.000
+}

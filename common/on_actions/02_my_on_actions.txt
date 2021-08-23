@@ -1,0 +1,194 @@
+on_actions = {
+
+	on_release_as_puppet = {
+		effect = {
+			if = {
+				limit = { 
+					AND = { 
+						TAG = ALK
+						is_subject_of = USA
+					}
+				}
+				set_cosmetic_tag = ALK_USA
+			}
+			if = {
+				limit = { 
+					AND = { 
+						TAG = CFR
+						is_subject_of = USA
+					}
+				}
+				set_cosmetic_tag = CFR_USA
+			}
+			
+			if = {
+				limit = { 
+					AND = { 
+						TAG = KUR
+						is_subject_of = DSY
+					}
+				}
+				set_cosmetic_tag = KUR_Puppet
+			}
+			if = {
+				limit = { 
+					AND = { 
+						TAG = KUR
+						is_subject_of = SYR
+					}
+				}
+				set_cosmetic_tag = KUR_Puppet
+			}
+			if = {
+				limit = { 
+					AND = { 
+						TAG = KUR
+						is_subject_of = IRQ
+					}
+				}
+				set_cosmetic_tag = KUR_Puppet
+			}
+			if = {
+				limit = { 
+					AND = { 
+						TAG = KUR
+						is_subject_of = TUR
+					}
+				}
+				set_cosmetic_tag = KUR_Puppet
+			}
+			
+			if = {
+				limit = { 
+					AND = { 
+						TAG = WLA
+						is_subject_of = FRA
+					}
+				}
+				set_cosmetic_tag = WLA_FRA
+			}
+			
+			if = {
+				limit = { 
+					AND = { 
+						TAG = RYU
+						is_subject_of = JAP
+					}
+				}
+				set_cosmetic_tag = RYU_JAP
+			}
+			
+			if = {
+				limit = { 
+					AND = { 
+						TAG = KUR
+						is_subject_of = FRA
+					}
+				}
+				set_cosmetic_tag = KUR_FRA
+			}
+		}
+	}
+	
+	on_monthly_CFR = {
+		effect = {			
+			if = {
+				limit = {
+					tag = CFR
+					has_cosmetic_tag = CFR_USA
+				}
+				drop_cosmetic_tag = yes
+			}
+		}
+	}
+	
+	on_monthly_ALK = {
+		effect = {			
+			if = {
+				limit = {
+					tag = ALK
+					has_cosmetic_tag = ALK_USA
+				}
+				drop_cosmetic_tag = yes
+			}
+		}
+	}
+	
+	on_monthly_PRC = {
+		effect = {			
+			if = {
+				limit = {
+					NOT = { has_government = neutrality }
+					NOT = { has_global_flag = end_of_mao }
+				}
+				drop_cosmetic_tag = yes
+				set_global_flag = end_of_mao
+			}
+		}
+	}
+	
+	on_monthly_SPR = {
+		effect = {	
+			if = {
+				limit = {
+					NOT = { has_government = democratic }
+					has_cosmetic_tag = SPR_despotism
+				}
+				drop_cosmetic_tag = yes
+			}
+		}
+	}
+	
+	on_monthly_SAU = {
+		effect = {		
+			if = {
+				limit = {
+					NOT = { has_government = fascism }
+					has_cosmetic_tag = SAU_Saud
+				}
+				drop_cosmetic_tag = yes
+			}
+		}
+	}
+	
+	on_monthly_LIB = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { has_government = neutrality }
+					has_cosmetic_tag = LIB_democratic
+				}
+				drop_cosmetic_tag = yes
+			}
+		}
+	}
+	
+	on_monthly_SOV = {
+		effect = {			
+			if = {
+				limit = {
+					country_exists = UKR
+					country_exists = BLR
+					country_exists = GEO
+					country_exists = AZR
+					country_exists = ARM
+					country_exists = UZB
+					country_exists = TAJ
+					country_exists = KYR
+					country_exists = TMS
+					country_exists = KAZ
+					country_exists = DNR
+					country_exists = LNR
+					country_exists = NKR
+					or = {
+					NOT = { has_global_flag = SOV_became_russia }
+					NOT = { has_global_flag = form_soviet_union_flag }
+					}
+				}
+				set_cosmetic_tag = SOV_russia
+				set_global_flag = SOV_became_russia
+			}
+		}
+	}
+	
+}

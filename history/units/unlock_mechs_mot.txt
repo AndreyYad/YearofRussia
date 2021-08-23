@@ -1,0 +1,12 @@
+﻿division_template = {
+	name = "Walker-Division"
+
+	regiments = {
+		mech = { x = 0 y = 0 } 
+		mech = { x = 0 y = 1 } 
+		mech = { x = 0 y = 2 } 
+		mech = { x = 1 y = 0 } 
+		mech = { x = 1 y = 1 } 
+		mech = { x = 1 y = 2 } 
+	}
+}

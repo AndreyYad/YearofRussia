@@ -1,0 +1,300 @@
+Ukraine = {
+	enable = {
+	country_exists = DNR
+		or = {
+		original_tag = USA
+		original_tag = GER
+		original_tag = GEO
+		original_tag = POL
+		original_tag = ROM
+		original_tag = TUR
+		}
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = DNR
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SOV"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "DNR"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "LNR"
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = "UKR"			
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "UKR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "UKR"			
+		value = 200
+	}
+}
+
+Ukraine_Belarus_friends1= {
+	enable = {
+		original_tag = UKR
+		}
+	
+	abort = {
+		date > 2015.3.15
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "BLR"			
+		value = 50
+	}
+}
+
+Ukraine_Belarus_friends2= {
+	enable = {
+		original_tag = BLR
+		}
+	
+	abort = {
+		date > 2015.3.15
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "UKR"			
+		value = 50
+	}
+}
+
+Ukraine_minsk1 = {
+	enable = {
+		original_tag = UKR
+		}
+	
+	abort = {
+		NOT = {
+			country_exists = DNR
+			country_exists = LNR
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "DNR"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "LNR"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SOV"
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "USA"			
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "DSY"			
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "DSY"			
+		value = 200
+	}
+}
+
+Ukraine_minsk2 = {
+	enable = {
+		or = {
+		original_tag = DNR
+		original_tag = LNR
+		}
+		}
+	
+	abort = {
+		NOT = {
+			country_exists = UKR
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "UKR"
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SOV"			
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = "BLR"			
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "SYR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "SYR"			
+		value = 200
+	}
+}
+
+Ukraine_minsk3 = {
+	enable = {
+		original_tag = SOV
+		}
+	
+	abort = {
+	OR = {
+		NOT = {
+			country_exists = DNR
+		}
+		NOT = {
+			country_exists = UKR
+		}
+	}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "DNR"
+		target = guarantee
+		value = 20
+	}
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "LNR"
+		target = guarantee
+		value = 20
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "UKR"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "USA"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "POL"
+		value = 150
+	}
+	ai_strategy = {
+		type = befriend
+		id = "DNR"			
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = "LNR"			
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = "PRC"			
+		value = 50
+	}
+	ai_strategy = {
+		type = support
+		id = "DNR"			
+		value = 300
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "DNR"			
+		value = 300
+	}
+	ai_strategy = {
+		type = support
+		id = "LNR"			
+		value = 300
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "LNR"			
+		value = 300
+	}
+}
+
+Ukr_civil_war = {
+	enable = {
+		original_tag = POL
+		original_tag = HUN
+		original_tag = LAT
+		original_tag = EST
+		original_tag = LIT
+		original_tag = CRO
+		}
+	
+	abort = {
+	OR = {
+		NOT = {
+			country_exists = UKS
+		}
+		NOT = {
+			country_exists = UKR
+		}
+	}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "UKR"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "DNR"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "LNR"
+		value = 150
+	}
+	ai_strategy = {
+		type = befriend
+		id = "UKS"			
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "UKS"			
+		value = 300
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "UKS"			
+		value = 300
+	}
+}

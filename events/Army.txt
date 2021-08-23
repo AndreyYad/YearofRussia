@@ -1,0 +1,91 @@
+add_namespace = army_events
+
+country_event = {
+	id = army_events.1
+	title = army_events.1.t
+	desc = army_events.1.d
+	picture = GFX_event_army_1
+	
+	is_triggered_only = yes
+
+	option = {
+	name = army_events.1.a
+		trigger = {
+		num_of_military_factories > 3
+	}
+	ai_chance = {
+			base = 15
+		}
+	load_oob = "NEW_Motorized"
+	}
+	
+	option = {
+	name = army_events.1.b
+	ai_chance = {
+			base = 5
+			modifier = {
+				add = 20
+				num_of_controlled_states < 3
+			}
+		}
+	add_stability = 0.2
+	}
+	
+	option = {
+	name = army_events.1.c
+	army_experience = 25
+	ai_chance = {
+			base = 5
+			modifier = {
+				add = 20
+				num_of_controlled_states < 4
+				num_of_military_factories > 3
+			}
+		}
+	}
+}
+
+country_event = {
+	id = army_events.2
+	title = army_events.2.t
+	desc = army_events.2.d
+	picture = GFX_event_army_2
+	
+	is_triggered_only = yes
+
+	option = {
+	name = army_events.2.a
+		trigger = {
+		num_of_military_factories > 2
+	}
+	ai_chance = {
+			base = 15
+		}
+	load_oob = "NEW_Army"
+	}
+	
+	option = {
+	name = army_events.2.b
+	ai_chance = {
+			base = 5
+			modifier = {
+				add = 20
+				num_of_controlled_states < 4
+			}
+		}
+	add_stability = 0.2
+	}
+	
+	option = {
+	name = army_events.2.c
+	army_experience = 15
+	ai_chance = {
+			base = 5
+			modifier = {
+				add = 25
+				num_of_controlled_states < 4
+				num_of_military_factories > 2
+			}
+		}
+	}
+}

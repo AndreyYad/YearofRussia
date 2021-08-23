@@ -1,0 +1,153 @@
+﻿add_namespace = modelectionministre
+
+#Jordan - 2016
+country_event = {
+	id = modelectionministre.1
+	title = modelectionministre.1.t
+	desc = modelectionministre.1.d
+	picture = GFX_event_ministre
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = JOR
+		has_government = neutrality
+		date > 2016.6.1
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "2016.6.1"
+		election_frequency = 48
+		elections_allowed = no
+		}
+		create_country_leader = {
+		name = "Hani al-Mulki"
+		desc = ""
+		picture = "gfx/leaders/JOR/Portrait_al-Mulki.dds"
+		expire = "2018.6.4"
+		ideology = oligarchism
+		traits = {
+			#
+		}
+		}
+		}
+	}
+}
+
+#Jordan - 2018
+country_event = {
+	id = modelectionministre.2
+	title = modelectionministre.1.t
+	desc = modelectionministre.1.d
+	picture = GFX_event_ministre
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = JOR
+		has_government = neutrality
+		date > 2018.6.4
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_politics = {
+		ruling_party = neutrality
+		last_election = "2018.6.4"
+		election_frequency = 48
+		elections_allowed = no
+		}
+		create_country_leader = {
+		name = "Omar Razzaz"
+		desc = ""
+		picture = "gfx/leaders/JOR/Portrait_Razzaz.dds"
+		expire = "2020.10.12"
+		ideology = oligarchism
+		traits = {
+			#
+		}
+		}
+		}
+	}
+}
+
+#South Yeman - 2016
+country_event = {
+	id = modelectionministre.3
+	title = modelectionministre.1.t
+	desc = modelectionministre.1.d
+	picture = GFX_event_ministre
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = SYE
+		has_government = neutrality
+		date > 2016.8.14
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "2016.8.14"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Saleh Ali al-Samad"
+			desc = " "
+			picture = "gfx/leaders/YEM/Portrait_Saleh.dds"
+			expire = "2018.4.25"
+			ideology = nationalism_ideology
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#South Yeman - 2018
+country_event = {
+	id = modelectionministre.4
+	title = modelectionministre.1.t
+	desc = modelectionministre.1.d
+	picture = GFX_event_ministre
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = SYE
+		has_government = neutrality
+		date > 2018.4.25
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "2018.4.25"
+			election_frequency = 48
+			elections_allowed = no
+			}
+		create_country_leader = {
+			name = "Mahdi Al-Mashat"
+			desc = " "
+			picture = "gfx/leaders/YEM/Portrait_Mahdi.dds"
+			expire = "2030.1.1"
+			ideology = nationalism_ideology
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}

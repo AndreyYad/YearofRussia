@@ -1,0 +1,56 @@
+﻿l_russian:
+
+#Political
+
+stability_up_1: "Популизм"
+stability_up_2: "Повысить уровень жизни"
+
+Call_NATO: "Призвать НАТО"
+
+New_flag_for_UKRpuppet: "Реорганизация Малороссии"
+
+Restoration_statehood: "Восстановление государственности"
+
+Select_Commune_Rules: "Правила и договоренности коммун"
+
+Russia_return_crimea: "Вернуть Крым"
+
+igi_wars: "Продолжить джихад!"
+
+to_retire: "Отправить лидера партии в отставку"
+new_leader: "Текущий лидер показал свою несостоятельность, нам нужны новые кадры..."
+
+#Ukraine politic
+
+novorossiya_war: "Украинская политика"
+play_dnr: "Поддержать ДНР"
+play_lnr: "Поддержать ЛНР"
+play_hnr: "Поддержать ХНР"
+no_russians: ""Решать" русский вопрос"
+
+form_greatukraine_category: "Украинские амбиции"
+form_great_ukraine: "Великая Украина"
+form_great_ukraine_rus: "Защитить Украинцев из России"
+form_great_ukraine_blr: "Защитить Украинцев из Беларуси"
+form_great_ukraine_mol: "Защитить Украинцев из Молдовы"
+form_great_ukraine_pol: "Защитить Украинцев из Польши"
+form_great_ukraine_slo: "Защитить Украинцев из Словакии"
+form_great_ukraine_rom: "Защитить Украинцев из Румынии"
+form_country_ukraine_required_states_tt: "Мы защитили наш народ во всех регионах"
+form_country_ukraine_rostov_required_states_tt: "Россия удерживает Кубань"
+
+UKR_decommunization: "Декоммунизация"
+
+#Novorossiya
+
+Form_Novorussia: "Создать Новороссию"
+form_country_Novorussia: "Восстановить мир на Украине"
+Alliance_Novorussia: "Создать Конфедерацию Новороссия"
+
+#Formable_nation
+
+form_russiaambition_category: "Наследие и амбиции"
+form_sssr: "Реставрация Советского Союза"
+form_russia_empire: "Реставрация Российской Империи"
+form_transcaucasia_category: "Закавказская Федерация"
+form_transcaucasia: "Объедить Закавказье"

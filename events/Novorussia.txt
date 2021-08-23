@@ -1,0 +1,520 @@
+add_namespace = dnr_events
+
+#Временное правительство
+country_event = {
+	id = dnr_events.1
+	title = dnr_events.1.t
+	desc = dnr_events.1.d
+	picture = GFX_DNR_ProvGov
+	
+	is_triggered_only = yes
+
+	option = {
+	name = Ok
+		add_stability = 0.1
+		add_political_power = 200
+	}
+}
+
+#Формирование ополчения
+country_event = {
+	id = dnr_events.15
+	title = dnr_events.15.t
+	desc = dnr_events.15.d
+	picture = GFX_DNR_Opolcheniye
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = Ok
+		add_stability = 0.05
+		add_war_support = 0.05
+		army_experience = 5
+		add_political_power = 50
+		load_oob = "DNR_2014"
+		create_corps_commander = {
+			name = "Igor Khakimzyanov"
+			picture = "GFX_Portrait_Khakimzyanov"
+			traits = { offensive_doctrine }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 2
+		}
+	}
+}
+
+#Прибытие Стрелкова
+country_event = {
+	id = dnr_events.2
+	title = dnr_events.2.t
+	desc = dnr_events.2.d
+	picture = GFX_DNR_Strelkov
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = DNR
+		date > 2014.4.12
+	}
+
+	option = {
+	name = Ok
+		add_stability = 0.05
+		add_war_support = 0.15
+		army_experience = 20
+		add_political_power = 200
+		load_oob = "DNR_Strelkov"
+		create_field_marshal = {
+			name = "Igor Strelkov"
+			picture = "GFX_Portrait_Strelkov"
+			traits = { }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 4
+			planning_skill = 2
+			logistics_skill = 4
+		}
+	}
+}
+
+#Контроль над СМИ
+country_event = {
+	id = dnr_events.3
+	title = dnr_events.3.t
+	desc = dnr_events.3.d
+	picture = GFX_DNR_News
+	
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = DNR
+		has_war_with = UKR
+		date > 2014.4.27
+	}
+
+	option = {
+	name = Ok
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+}
+
+#Референдум
+country_event = {
+	id = dnr_events.4
+	title = dnr_events.4.t
+	desc = dnr_events.4.d
+	picture = GFX_DNR_Referendum
+	
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = DNR
+		has_war_with = UKR
+		date > 2014.5.12
+	}
+
+	option = {
+	name = Ok
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 200
+		set_cosmetic_tag = DNR_2014-2018
+	}
+}
+
+#Начало Штурма Аэропорта
+country_event = {
+	id = dnr_events.5
+	title = dnr_events.5.t
+	desc = dnr_events.5.d
+	picture = GFX_DNR_Airport
+
+	fire_only_once = yes
+	
+	trigger = {
+	DNR = { has_war_with = UKR }
+		or = {
+		original_tag = DNR
+		original_tag = UKR
+		}
+		date > 2014.5.26
+	}
+
+	option = {
+	name = Ok
+		add_stability = -0.05
+		add_war_support = 0.2
+		army_experience = 10
+	}
+}
+
+#Конфедерация Новороссии
+country_event = {
+	id = dnr_events.6
+	title = dnr_events.6.t
+	desc = dnr_events.6.d
+	picture = GFX_DNR_ConfedNovorussia
+	
+	is_triggered_only = yes
+
+	option = {
+	name = Ok
+		add_stability = 0.05
+		add_war_support = 0.05
+		army_experience = 10
+	}
+	
+}
+
+#Катастрофа Boeing 777
+country_event = {
+	id = dnr_events.7
+	title = dnr_events.7.t
+	desc = dnr_events.7.d
+	picture = GFX_DNR_Boing777
+	
+	fire_only_once = yes
+
+	trigger = {
+		or = {
+		original_tag = DNR
+		original_tag = UKR
+		original_tag = MAL
+		original_tag = HOL
+		}
+		DNR = { has_war_with = UKR }
+		date > 2014.7.17
+	}
+
+	option = {
+	name = Ok
+		add_stability = -0.05
+		add_political_power = -50
+	}
+}
+
+#Окружение войск ВСУ
+country_event = {
+	id = dnr_events.8
+	title = dnr_events.8.t
+	desc = dnr_events.8.d
+	picture = GFX_DNR_VSU1
+	
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = DNR
+		has_war_with = UKR
+		date > 2014.8.10
+	}
+
+	option = {
+	name = Ok
+		add_war_support = 0.10
+		army_experience = 40
+		UKR = { country_event = { id = ukr_events.7 days = 1 } }
+	}
+}
+
+#Всеобщие выборы
+country_event = {
+	id = dnr_events.9
+	title = dnr_events.9.t
+	desc = dnr_events.9.d
+	picture = GFX_DNR_ELECTIONS1
+	
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+	name = dnr_events.9.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 200 is_historical_focus_on = yes }
+	}
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "2014.4.11"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Alexander Zakharchenko"
+			desc = ""
+			picture = "gfx/leaders/NOVORUSSIA/Portrait_Zakharchenko.dds"
+			expire = "2018.8.31"
+			ideology = oligarchism 
+			traits = {
+				#
+			}
+		}
+		add_stability = 0.1
+		set_cosmetic_tag = DNR_2014-2018
+	}
+	
+	option = {
+	name = dnr_events.9.b
+	ai_chance = { factor = 90 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+		set_politics = {
+			ruling_party = fascism
+			last_election = "2014.4.11"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Vladimir Medvedev"
+			desc = ""
+			picture = "gfx/leaders/NOVORUSSIA/Portrait_Medvedev.dds"
+			expire = "2030.1.1"
+			ideology = fascism_ideology 
+			traits = {
+				#
+			}
+		}
+		set_cosmetic_tag = DNR_2014-2018
+	}
+	
+	option = {
+	name = dnr_events.9.c
+	ai_chance = { factor = 70 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+		set_politics = {
+			ruling_party = communism
+			last_election = "2014.4.11"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Boris Litvinov"
+			desc = ""
+			picture = "gfx/leaders/NOVORUSSIA/Portrait_Litvinov.dds"
+			expire = "2030.1.1"
+			ideology = stalinism 
+			traits = {
+				#
+			}
+		}
+		add_stability = -0.1
+		drop_cosmetic_tag = yes
+	}
+}
+
+#Закрытие Конфедерации
+country_event = {
+	id = dnr_events.10
+	title = dnr_events.10.t
+	desc = dnr_events.10.d
+	picture = GFX_DNR_ENDCONFED
+	
+	fire_only_once = yes
+
+	trigger = {
+		or = {
+		original_tag = DNR
+		original_tag = LNR
+		}
+		date > 2015.5.18
+	}
+
+	option = {
+	name = Ok
+		add_stability = -0.1
+		add_political_power = -50
+	}
+}
+
+#Выдача паспортов
+country_event = {
+	id = dnr_events.11
+	title = dnr_events.11.t
+	desc = dnr_events.11.d
+	picture = GFX_DNR_PASPORT
+	
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = DNR
+		has_war_with = UKR
+		date > 2016.3.16
+	}
+
+	option = {
+	name = Ok
+		add_stability = 0.1
+		add_political_power = 50
+	}
+}
+
+#Смерть Захарченко
+country_event = {
+	id = dnr_events.12
+	title = dnr_events.12.t
+	desc = dnr_events.12.d
+	picture = GFX_DNR_DeadZacharchenko
+	
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = DNR
+		has_government = neutrality
+		date > 2018.8.31
+	}
+
+	option = {
+	name = dnr_events.12.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 200 is_historical_focus_on = yes }
+	}
+	retire_country_leader = yes
+	add_stability = -0.10
+	add_political_power = 150
+			create_country_leader = {
+			name = "Denis Pushilin"
+			desc = ""
+			picture = "gfx/leaders/NOVORUSSIA/Portrait_Pushilin.dds"
+			expire = "2030.1.1"
+			ideology = oligarchism 
+			traits = {
+				#
+			}
+			}
+			hidden_effect = {
+			set_politics = {
+				ruling_party = neutrality
+				last_election = "2018.8.31"
+				election_frequency = 48
+				elections_allowed = no
+			}
+			drop_cosmetic_tag = yes
+			}
+	}
+	
+	option = {
+	name = dnr_events.12.b
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+	hidden_effect = {
+	add_popularity = {
+		    ideology = communism
+			popularity = 0.4
+		}
+	drop_cosmetic_tag = yes
+	create_country_leader = {
+		name = "Alexander Zakharchenko"
+		desc = ""
+		picture = "gfx/leaders/NOVORUSSIA/Portrait_Zakharchenko_not_dead.dds"
+		expire = "2018.8.31"
+		ideology = oligarchism 
+		traits = {
+			#
+		}
+	}
+	}
+	add_stability = -0.15
+	add_political_power = -50
+	}
+}
+
+#Выдача паспортов РФ
+country_event = {
+	id = dnr_events.13
+	title = dnr_events.13.t
+	desc = dnr_events.13.d
+	picture = GFX_DNR_PASPORTRUS
+	
+	is_triggered_only = yes
+
+	option = {
+	name = Ok
+		add_stability = 0.01
+		add_political_power = -50
+	}
+}
+
+#Гуманитарная помощь
+country_event = {
+	id = dnr_events.14
+	title = dnr_events.14.t
+	desc = dnr_events.14.d
+	picture = GFX_DNR_OTHERHELP
+	
+	fire_only_once = yes
+
+	trigger = {
+		or = {
+		original_tag = DNR
+		original_tag = LNR
+		}
+		date > 2014.8.12
+	}
+
+
+
+	option = {
+	name = Ok
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 3000
+		}
+	}
+}
+
+#Произвол военных
+country_event = {
+	id = dnr_events.16
+	title = dnr_events.16.t
+	desc = dnr_events.16.d
+	picture = GFX_DNR_Opolcheniye_evil
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = Ok
+		add_stability = -0.05
+	}
+}
+
+#Союз Свободных Народов
+country_event = {
+	id = dnr_events.17
+	title = dnr_events.17.t
+	desc = dnr_events.17.d
+	picture = GFX_DNR_union
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = dnr_events.17.a
+	ai_chance = { factor = 60 
+	modifier = { factor = 100 has_government = communism }
+	}
+	add_stability = 0.05
+	add_war_support = 0.2
+	FROM = { add_to_faction = ROOT }
+	hidden_effect = {
+		add_timed_idea = { idea = communist_pressure days = 1095 }
+	}
+	}
+	
+	option = {
+	name = dnr_events.17.b
+	ai_chance = { factor = 40 
+	modifier = { factor = 0 has_government = fascism }
+	}
+	add_stability = 0.1
+	add_timed_idea = { idea = communist_pressure days = 1095 }
+	}
+}

@@ -1,0 +1,86 @@
+﻿capital = 8
+
+oob = "Minor_2014"
+
+add_ideas = {
+	disarmed_nation
+	NATO_member
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+	early_fighter = 1
+}
+
+set_war_support = 0.1
+set_stability = 0.8
+2020.1.1 = {
+	
+	add_ideas = {
+		disarmed_nation
+		NATO_member
+	}
+
+	oob = "Minor_2014"
+
+	add_political_power = 1198
+	
+	set_technology = {
+		tech_recon = 1
+		fighter1 = 1
+		interwar_artillery = 1
+		interwar_antiair = 1
+		
+		#doctrines
+		air_superiority = 1
+		
+		mass_assault = 1
+		pocket_defence = 1
+		defence_in_depth = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		fuel_silos = 1
+		construction1 = 1
+		construction2 = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2013.12.4"
+	election_frequency = 36
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 80
+	fascism = 3
+	communism = 5
+	neutrality = 12
+}
+
+create_country_leader = {
+	name = "Xavier Bettel"
+	desc = ""
+	picture = "gfx/leaders/LUX/Portrait_Bettel.dds"
+	expire = "2030.1.12"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}

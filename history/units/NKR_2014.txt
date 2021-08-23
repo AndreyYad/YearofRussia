@@ -1,0 +1,124 @@
+﻿##### Division Templates #####
+division_template = {
+	name = "Strelkovaya Diviziya"			# Rifle Division
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+	}
+	support = {
+		#engineer = { x = 0 y = 1 } 	# (semi-mot) Engineer bn
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Gornostrelkovaya Diviziya"		# Mountain Division
+
+	regiments = {
+		mountaineers = { x = 0 y = 0 }	
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }	
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }	
+		mountaineers = { x = 2 y = 1 }	
+		mountaineers = { x = 2 y = 2 }	
+		mountaineers = { x = 3 y = 0 }	
+		mountaineers = { x = 3 y = 1 }	
+	}
+	support = {
+		#recon = { x = 0 y = 0 } 		# Recon bn had 16 L tanks, 10 ACs, 1x mot inf co #Eng and recon removed and they seem rather OP. Could revisit if balance changes
+		#engineer = { x = 0 y = 1 } 	# (semi-mot) Engineer bn
+		artillery = { x = 0 y = 0 } 	# Heavy Arty Regiment had 1x 152mm bn + 2x 122mm bn
+	}
+}
+
+division_template = {
+	name = "Motostrelkovaya Diviziya"		# Motor Rifle Division			
+	regiments = {
+		motorized = { x = 0 y = 0 }
+		motorized = { x = 0 y = 1 }
+		motorized = { x = 0 y = 2 }
+		motorized = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+	support = {
+		#recon = { x = 0 y = 0 } 		# Recon bn had 16x L tanks, 45 ACs #Eng and recon removed and they seem rather OP. Could revisit if balance changes 
+		#engineer = { x = 0 y = 1 } 	# (mot) Engineer bn
+	}
+}
+
+division_template = {
+	name = "Konnaya Policiya" 	# Mounted police
+	division_names_group = SOV_CAV_01
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+##### OOB #####
+units = {
+	
+	# Subordinate to AG
+	division= {	# "1ya 'Nagorno-Karabahsk.' Strelkovaya. Div."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 1467
+		division_template = "Strelkovaya Diviziya"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "NKR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.5
+
+	}			
+	division= {	# "2ya 'Nagorno-Karabahsk.' Gornostrelk. Div."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 1467
+		division_template = "Gornostrelkovaya Diviziya"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "NKR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+
+	}			
+	division= {	# "3ya 'Nagorno-Karabahsk.' Gornostrelk. Div."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 9715
+		division_template = "Gornostrelkovaya Diviziya"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "NKR" } }
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.7
+
+	}	
+		division= {	# "4ya 'Nagorno-Karabahsk.' Gornostrelk. Div."		
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 9715
+		division_template = "Gornostrelkovaya Diviziya"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+
+	}	
+	
+}

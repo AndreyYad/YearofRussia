@@ -1,0 +1,321 @@
+add_namespace = lnr_events
+
+#Референдум
+country_event = {
+	id = lnr_events.1
+	title = lnr_events.1.t
+	desc = lnr_events.1.d
+	picture = GFX_LNR_REFERENDUM
+	
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = LNR
+		date > 2014.5.11
+	}
+
+	option = {
+	name = Ok
+		add_stability = 0.2
+		add_political_power = 250
+	}
+}
+
+#Захват прокуратуры
+country_event = {
+	id = lnr_events.2
+	title = lnr_events.2.t
+	desc = lnr_events.2.d
+	picture = GFX_LNR_Opolcheniye
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = LNR
+		date > 2014.4.29
+	}
+
+	option = {
+	name = Ok
+		add_stability = 0.05
+		add_war_support = 0.05
+		army_experience = 5
+		add_political_power = 50
+		load_oob = "LNR_2014"
+	}
+}
+
+#Борьба за власть
+country_event = {
+	id = lnr_events.3
+	title = lnr_events.3.t
+	desc = lnr_events.3.d
+	picture = GFX_LNR_Cossacks
+	
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = LNR
+		has_government = neutrality
+		date > 2014.4.27
+	}
+
+	option = {
+	name = lnr_events.3.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 200 is_historical_focus_on = yes }
+	}
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "2014.4.27"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Igor Plotnitsky"
+			desc = ""
+			picture = "gfx/leaders/NOVORUSSIA/Portrait_Plotnitsky.dds"
+			expire = "2017.11.24"
+			ideology = oligarchism 
+			traits = {
+				#
+			}
+		}
+		add_stability = 0.1
+		set_cosmetic_tag = LNR_TF
+	}
+	
+	option = {
+	name = lnr_events.3.b
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+		set_politics = {
+			ruling_party = fascism
+			last_election = "2014.4.27"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Nikolay Kozitsyn"
+			desc = ""
+			picture = "gfx/leaders/NOVORUSSIA/Portrait_Kozitsyn.dds"
+			expire = "2030.1.1"
+			ideology = rexism 
+			traits = {
+				#
+			}
+		}
+		add_war_support = 0.1
+		set_cosmetic_tag = LNR_Kazakiya
+	}
+}
+
+#Выборы 2014
+country_event = {
+	id = lnr_events.4
+	title = lnr_events.4.t
+	desc = lnr_events.4.d
+	picture = GFX_LNR_E2014
+	
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = LNR
+		has_government = neutrality
+		date > 2014.11.2
+	}
+
+	option = {
+	name = lnr_events.4.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 200 is_historical_focus_on = yes }
+	}
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "2014.11.2"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Igor Plotnitsky"
+			desc = ""
+			picture = "gfx/leaders/NOVORUSSIA/Portrait_Plotnitsky.dds"
+			expire = "2017.11.24"
+			ideology = oligarchism 
+			traits = {
+				#
+			}
+		}
+		add_stability = 0.1
+		drop_cosmetic_tag = yes
+	}
+	
+	option = {
+	name = lnr_events.4.b
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+		set_politics = {
+			ruling_party = fascism
+			last_election = "2014.11.2"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Oleg Akimov"
+			desc = ""
+			picture = "gfx/leaders/NOVORUSSIA/Portrait_Akimov.dds"
+			expire = "2030.1.1"
+			ideology = fascism_ideology 
+			traits = {
+				#
+			}
+		}
+		add_stability = -0.1
+		add_war_support = 0.1
+		set_cosmetic_tag = LNR_TF
+	}
+}
+
+#Чистки
+country_event = {
+	id = lnr_events.5
+	title = lnr_events.5.t
+	desc = lnr_events.5.d
+	picture = GFX_LNR_PURGE
+	
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = LNR
+		date > 2015.1.1
+	}
+
+	option = {
+	name = Ok
+		add_stability = -0.05
+		add_war_support = 0.05
+		add_political_power = 200
+	}
+}
+
+#Покушение
+country_event = {
+	id = lnr_events.6
+	title = lnr_events.6.t
+	desc = lnr_events.6.d
+	picture = GFX_LNR_ASSASSINATION
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = LNR
+		has_government = neutrality
+		date > 2016.8.6
+	}
+
+	option = {
+	name = Ok
+		add_stability = -0.01
+		add_war_support = 0.01
+	}
+}
+
+#Отставка Плотницкого
+country_event = {
+	id = lnr_events.7
+	title = lnr_events.7.t
+	desc = lnr_events.7.d
+	picture = GFX_LNR_PLOTLEAVE
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = LNR
+		has_government = neutrality
+		date > 2017.11.25
+	}
+
+	option = {
+	name = Ok
+		create_country_leader = {
+			name = "Leonid Pasechnik"
+			desc = ""
+			picture = "gfx/leaders/NOVORUSSIA/Portrait_Pasechnik.dds"
+			expire = "2030.1.1"
+			ideology = oligarchism 
+			traits = {
+				#
+			}
+		}
+		add_stability = -0.05
+	}
+}
+
+#Выборы 2018
+country_event = {
+	id = lnr_events.8
+	title = lnr_events.8.t
+	desc = lnr_events.8.d
+	picture = GFX_LNR_E2018
+	
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = LNR
+		has_government = neutrality
+		date > 2018.11.11
+	}
+
+	option = {
+	name = lnr_events.8.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 200 is_historical_focus_on = yes }
+	}
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "2018.11.11"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Leonid Pasechnik"
+			desc = ""
+			picture = "gfx/leaders/NOVORUSSIA/Portrait_Pasechnik.dds"
+			expire = "2030.1.1"
+			ideology = oligarchism 
+			traits = {
+				#
+			}
+		}
+		add_stability = 0.1
+	}
+	
+	option = {
+	name = lnr_events.8.b
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+		set_politics = {
+			ruling_party = fascism
+			last_election = "2018.11.11"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Zinaida Nadeon"
+			desc = ""
+			picture = "gfx/leaders/NOVORUSSIA/Portrait_Nadeon.dds"
+			expire = "2030.1.1"
+			ideology = fascism_ideology 
+			female = yes
+			traits = {
+				#
+			}
+		}
+		add_stability = -0.1
+		add_war_support = 0.1
+		set_cosmetic_tag = LNR_TF
+	}
+}

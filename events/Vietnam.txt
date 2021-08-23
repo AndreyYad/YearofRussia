@@ -1,0 +1,113 @@
+﻿
+add_namespace = modvietnam
+
+country_event = {
+	id = modvietnam.1
+	title = modvietnam.1.t
+	desc = modelection.2.d
+	picture = GFX_event_vietnam_president
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = VIE
+		has_government = neutrality
+		date > 2016.3.31
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+			set_politics = {
+			ruling_party = neutrality
+			last_election = "2016.3.31"
+			election_frequency = 48
+			elections_allowed = yes
+			}
+		create_country_leader = {
+			name = "Chan Dai Quang"
+			desc = ""
+			picture = "gfx/leaders/VIN/Portrait_Quang.dds"
+			expire = "2018.9.21"
+			ideology = moderatism
+			traits = {
+				
+			}
+		}
+		}
+	}
+}
+
+country_event = {
+	id = modvietnam.2
+	title = modvietnam.1.t
+	desc = modelection.2.d
+	picture = GFX_event_vietnam_president
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = VIE
+		has_government = neutrality
+		date > 2018.9.21
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+			set_politics = {
+			ruling_party = neutrality
+			last_election = "2018.9.21"
+			election_frequency = 48
+			elections_allowed = yes
+			}
+		create_country_leader = {
+			name = "Nguyen Phu Chong"
+			desc = ""
+			picture = "gfx/leaders/VIN/Portrait_Chong.dds"
+			expire = "2021.4.5"
+			ideology = moderatism
+			traits = {
+				
+			}
+		}
+		}
+	}
+}
+
+country_event = {
+	id = modvietnam.3
+	title = modvietnam.1.t
+	desc = modelection.2.d
+	picture = GFX_event_vietnam_president
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = VIE
+		has_government = neutrality
+		date > 2021.4.5
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+			set_politics = {
+			ruling_party = neutrality
+			last_election = "2021.4.5"
+			election_frequency = 48
+			elections_allowed = yes
+			}
+		create_country_leader = {
+			name = "Nguyen Xuan Phuc"
+			desc = ""
+			picture = "gfx/leaders/VIN/Portrait_Phuc.dds"
+			expire = "2030.3.1"
+			ideology = moderatism
+			traits = {
+				
+			}
+		}
+		}
+	}
+}

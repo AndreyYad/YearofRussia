@@ -1,0 +1,403 @@
+﻿capital = 608
+
+oob = "PRC_2014"
+
+add_ideas = { 
+China_Socialism_specific
+The_Uyghur_problem 
+}
+
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_autonomy = {
+		target = HKG
+		autonomous_state = autonomy_integrated_puppet
+	}
+	set_autonomy = {
+		target = MKO
+		autonomous_state = autonomy_integrated_puppet
+	}
+	else = {
+		puppet = HKG
+		puppet = MKO
+	}
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1  # PLACEHOLDER
+	#basic_heavy_tank = 1  # PLACEHOLDER
+	#basic_medium_tank = 1 # PLACEHOLDER
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	atomic_research = 1
+	nuclear_reactor = 1
+	nukes = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		mtg_transport = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+set_stability = 0.6
+set_war_support = 0.7
+set_research_slots = 3
+
+set_cosmetic_tag = PRC_proclaimed_communism
+
+2020.1.1 = {
+
+	add_political_power = 1198
+	oob = "PRC_2020"
+	
+	set_technology = {
+		CAS1 = 1
+		improved_light_tank = 1 
+		basic_heavy_tank = 1
+		basic_medium_tank = 1
+		tactical_bomber1 = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+	
+		support_weapons = 1
+		support_weapons2 = 1
+		paratroopers = 1
+
+		#doctrines
+		pocket_defence = 1
+		defence_in_depth = 1
+		battlefleet_concentration = 1
+		submarine_operations = 1
+
+		#Air
+		formation_flying = 1		
+		dive_bombing = 1
+		direct_ground_support = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		oil_processing = 1
+		fuel_refining2 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		concentrated_industry3 = 1
+		atomic_research = 1
+		nuclear_reactor = 1
+		nukes = 1
+	}
+	if = {
+		limit = { not = { has_dlc = "Man the Guns" } }
+		set_technology = {
+			basic_submarine = 1
+			basic_destroyer = 1
+			basic_heavy_cruiser = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+		set_technology = {
+			improved_ship_hull_light = 1
+			improved_ship_hull_submarine = 1
+			basic_ship_hull_cruiser = 1
+		}
+	}
+}
+
+give_guarantee = UKR
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2013.3.14"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	communism = 25
+	democratic = 10
+	fascism = 15
+	neutrality = 50
+}
+
+add_ideas = {
+	closed_economy
+	service_by_requirement
+	partial_economic_mobilisation
+	party_economy_policy_state_capitalism
+}
+
+create_country_leader = {
+	name = "Xi Jinping"
+	desc = " "
+	picture = "gfx/leaders/CHI/Portrait_Jinping.dds"
+	expire = "2030.1.1"
+	ideology = nationalism_ideology
+	traits = {
+		dictator
+	}
+}
+
+create_field_marshal = {
+	name = "Tu Yu-ming"
+	gfx = "GFX_portrait_chi_du_yuming"
+	traits = { defensive_doctrine trait_cautious armor_officer harsh_leader }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_field_marshal = {
+	name = "Hsueh Yueh"
+	gfx = "GFX_portrait_chi_xue_yue"
+	traits = { offensive_doctrine trait_reckless brilliant_strategist war_hero }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 3
+}
+
+create_field_marshal = {
+	name = "Tai An-lan"
+	gfx = "GFX_portrait_chi_tai_an_lan"
+	traits = {  offensive_doctrine trait_reckless career_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+create_field_marshal = {
+	name = "Wang Yao-wu"
+	gfx = "GFX_portrait_chi_wang_yaowu"
+	traits = { defensive_doctrine trait_cautious infantry_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Sun Li Jen"
+	gfx = "GFX_portrait_chi_sun_li_jen"
+	traits = { brilliant_strategist }
+	skill = 4
+	attack_skill = 5
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Hu Zongnan"
+	gfx = "GFX_portrait_chi_hu_zongnan"
+	traits = { politically_connected }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Gu Zhutong"
+	gfx = "GFX_portrait_chi_gu_zhutong"
+	traits = { career_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Wei Lihuang"
+	gfx = "GFX_portrait_chi_wei_lihuang"
+	traits = { infantry_officer }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Fu Zuoyi"
+	gfx = "GFX_portrait_chi_fu_zuoyi"
+	traits = { }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+create_field_marshal = {
+	name = "Zhang Xueliang"
+	gfx = "GFX_portrait_chi_zhang_xueliang"
+	traits = { }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+
+### VARIANTS ###
+# 2014 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Jianwei Class"			
+		type = ship_hull_light_1
+		name_group = CHI_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "Hairong Class"					# Hairong protected cruisers and Zhaohe, Yingrui training cruisers
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = CHI_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Haiqi Class"
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = CHI_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Ninghai Class"
+		type = ship_hull_cruiser_1
+		name_group = CHI_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}

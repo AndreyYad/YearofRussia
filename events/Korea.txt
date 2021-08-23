@@ -1,0 +1,38 @@
+﻿add_namespace = modkorea
+
+#Импичмент Пак Кын Хе
+country_event = {
+	id = modkorea.1
+	title = modkorea.1.t
+	desc = modkorea.1.d
+	picture = GFX_event_impichment
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = KOR
+		has_government = democratic
+		date > 2017.3.10
+	}
+
+	option = {
+	name = OK
+		hidden_effect = {
+			set_party_name = {
+			ideology = democratic
+			name = KOR_liberalism_party
+			long_name = KOR_liberalism_party_long
+		}
+		create_country_leader = {
+			name = "Moon Jae In"
+			desc = ""
+			picture = "gfx/leaders/KOR/Portrait_Moon.dds"
+			expire = "2030.1.1"
+			ideology = liberalism
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}

@@ -1,0 +1,81 @@
+﻿capital = 813
+
+oob = "Minor_2014"
+
+set_technology = {
+	infantry_weapons = 1
+
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	early_fighter = 1
+	early_bomber = 1
+	naval_bomber1 = 1
+}
+
+set_convoys = 20
+
+2020.1.1 = {
+
+	oob = "Minor_2014"
+	
+	set_technology = {
+
+		#doctrines
+		grand_battle_plan = 1
+		trench_warfare = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+set_popularities = {
+	democratic = 60
+	fascism = 20
+	communism = 5
+	neutrality = 15
+
+	}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2011.12.21"
+	election_frequency = 36
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Joan Enric Vives Sicilia"
+	desc = " "
+	picture = "gfx/leaders/ADR/Portrait_Sicilia.dds"
+	expire = "2030.1.1"
+	ideology = conservatism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Joan Enric Vives Sicilia"
+	desc = " "
+	picture = "gfx/leaders/ADR/Portrait_Sicilia.dds"
+	expire = "2030.1.1"
+	ideology = despotism
+	traits = {
+	}
+}

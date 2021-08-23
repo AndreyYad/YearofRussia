@@ -1,0 +1,29 @@
+state={
+	id=700
+	name="STATE_700"
+	manpower = 7656850
+	
+	state_category = town
+	
+	history=
+	{
+		owner = SIE
+		add_core_of = SIE
+		victory_points = {
+			2038 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 2
+			2038 = {
+				naval_base = 3
+			}
+		}
+
+	}
+	
+	provinces={
+		2038 2094 
+	}
+}

@@ -1,0 +1,7 @@
+technology_folders = {
+	mechs_folder
+}
+
+technology_categories = {
+	mech
+}

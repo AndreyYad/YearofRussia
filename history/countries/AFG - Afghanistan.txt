@@ -1,0 +1,141 @@
+﻿capital = 267
+
+oob = "AFG_2014"
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	transport = 1
+	trench_warfare = 1
+	gwtank = 1
+	fleet_in_being = 1
+	CAS1 = 1
+	early_fighter = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+
+2020.1.1 = {
+
+	add_political_power = 1198
+
+	oob = "AFG_2020"
+	set_technology = {
+		
+		early_fighter = 1
+		fighter1 = 1
+		force_rotation = 1
+		fighter_baiting = 1
+		grand_battle_plan = 1
+		gwtank = 1
+
+		trench_warfare = 1
+		prepared_defense = 1
+		battlefleet_concentration = 1
+		subsidiary_carrier_role = 1
+		convoy_sailing = 1
+		convoy_escorts = 1
+		submarine_operations = 1
+
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		decimetric_radar = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		fuel_refining2 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+	}
+}
+
+country_event = {
+id = mynews.2
+days = 365
+}
+
+set_cosmetic_tag = AFG_islamrepafg
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2004.10.7"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	fascism = 15
+	communism = 10
+	neutrality = 75
+}
+
+create_country_leader = {
+	name = "Hamid Karzai"
+	desc = " "
+	picture = "gfx/leaders/AFG/Portrait_Karzai.dds"
+	expire = "2014.9.29"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Haybatulla Akhundzada"
+	desc = " "
+	picture = "gfx/leaders/AFG/Portrait_Akhundzada.dds"
+	expire = "2020.6.7"
+	ideology = islamism
+	traits = {
+		#
+	}
+}
+
+2020.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "2014.9.29"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		fascism = 20
+		communism = 10
+		neutrality = 70
+	}
+	
+	create_country_leader = {
+	name = "Ashraf Ghani"
+	desc = " "
+	picture = "gfx/leaders/AFG/Portrait_Ghani.dds"
+	expire = "2030.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+
+}
+
+create_corps_commander = {
+	name = "Sardar Shah Wali Khan"
+	portrait_path = "gfx/leaders/SAU/Portrait_Arabia_Generic_land_3.dds"
+	traits = { desert_fox }
+	skill = 4
+	attack_skill = 5
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+}

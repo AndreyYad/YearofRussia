@@ -1,0 +1,47 @@
+spriteTypes = {
+
+	#Украина
+	
+	spriteType = {
+		name = "GFX_Portrait_Muzhenko"
+		texturefile = "gfx/leaders/UKR/Army/Portrait_Muzhenko.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_Poltorak"
+		texturefile = "gfx/leaders/UKR/Army/Portrait_Poltorak.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_Gritsak"
+		texturefile = "gfx/leaders/UKR/Army/Portrait_Gritsak.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_Krutov"
+		texturefile = "gfx/leaders/UKR/Army/Portrait_Krutov.dds"
+	}
+	
+	#ДНР
+	
+	spriteType = {
+		name = "GFX_Portrait_Strelkov"
+		texturefile = "gfx/leaders/NOVORUSSIA/Army/Portrait_Strelkov.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_Khakimzyanov"
+		texturefile = "gfx/leaders/NOVORUSSIA/Army/Portrait_Khakimzyanov.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_Petrovich"
+		texturefile = "gfx/leaders/NOVORUSSIA/Army/Portrait_Petrovich.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_Portrait_Sinenkov"
+		texturefile = "gfx/leaders/NOVORUSSIA/Army/Portrait_Sinenkov.dds"
+	}
+	
+}

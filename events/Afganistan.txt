@@ -1,0 +1,48 @@
+add_namespace = afgan_events
+
+country_event = {
+	id = afgan_events.1
+	title = afgan_events.1.t
+	desc = afgan_events.1.d
+	picture = GFX_event_afg_election
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = AFG
+		has_government = neutrality
+		date > 2014.9.29
+	}
+	
+	option = {
+	name = afgan_events.1.a
+	ai_chance = { factor = 200 }
+	retire_country_leader = yes
+	create_country_leader = {
+		name = "Ashraf Ghani"
+		desc = " "
+		picture = "gfx/leaders/AFG/Portrait_Ghani.dds"
+		expire = "2030.1.1"
+		ideology = centrism
+		traits = {
+			#
+		}
+	}
+	effect_tooltip = {
+		add_popularity = {
+			    ideology = democratic
+			    popularity = 0.05
+			}
+	}
+	}
+
+	option = {
+	name = afgan_events.1.b
+	start_civil_war = {
+		ruling_party = fascism
+		ideology = ROOT
+		size = 0.4
+		states = 415
+		}
+	}
+}

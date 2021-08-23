@@ -1,0 +1,24 @@
+﻿l_russian:
+ foreign_shipbuilders_tt: "§RЕсли начнется война, эта идея будет потеряна! §!"
+ foreign_investor_tt: "§YЧем больше у вашей страны дипломатов, тем выше бонус к потребительским товарам.§!"
+ foreign_science_tt: "§YЧем больше у вашей страны дипломатов, тем выше бонус к скорости исследования.§!"
+ foreign_license_tt: "Получите лицензионный бонус в каждой стране, с которой у вас есть дипломаты."
+ sell_guns_to_aggressor:0 "Продать пехотное оборудование [From.GetName]"
+ sell_meds_to_aggressor:0 "Продать вспомогательное оборудование [From.GetName]"
+ sell_cars_to_aggressor:0 "Продать моторизованное оборудование [From.GetName]"
+ bought_stuff_recently:0 "Недавно приобретенные товары"
+
+ UKR_volounters: "Добровольцы Правого сектора"
+
+ GEN_diplomatic_license:0 "Фокус лицензирования"
+ war_profiteering_efforts:0 "Выгодная продажа вооружения"
+ 
+ FOCUS_FILTER_POLITICAL: "Политический фокус"
+ FOCUS_FILTER_HISTORICAL: "Исторический фокус"
+ 
+ Novorussiya:0 "Новороссия"
+ Commonwealth_of_Nations:0 "Содружество Наций"
+ ISIS:0 "ИГИЛ"
+ dnr_union:0 "Союз Свободных Народов"
+ ODKB:0 "ОДКБ"
+ ANZUS:0 "АНЗЮС"

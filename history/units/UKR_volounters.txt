@@ -1,0 +1,78 @@
+##### Division Templates #####
+division_template = {
+	name = "Volounters Korpus"			# Rifle Division
+	division_names_group = SOV_INF_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+	}
+}
+
+units = {	
+	division= {	# "1y Volounter. Korp."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 525
+		division_template = "Volounters Korpus"
+		start_experience_factor = 0.70
+		start_equipment_factor = 0.85
+	}
+	division= {	# "2y Volounter. Korp."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 525
+		division_template = "Volounters Korpus"
+		start_experience_factor = 0.70
+		start_equipment_factor = 0.85
+	}
+	division= {	# "3y Volounter. Korp."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 525
+		division_template = "Volounters Korpus"
+		start_experience_factor = 0.70
+		start_equipment_factor = 0.85
+	}
+	division= {	# "4y Volounter. Korp."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 525
+		division_template = "Volounters Korpus"
+		start_experience_factor = 0.70
+		start_equipment_factor = 0.85
+	}
+	division= {	# "5y Volounter. Korp."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 525
+		division_template = "Volounters Korpus"
+		start_experience_factor = 0.70
+		start_equipment_factor = 0.85
+	}
+	division= {	# "6y Volounter. Korp."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 525
+		division_template = "Volounters Korpus"
+		start_experience_factor = 0.70
+		start_equipment_factor = 0.85
+	}
+}

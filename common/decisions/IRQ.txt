@@ -1,0 +1,26 @@
+political_actions = {
+	IRQ_nationalise_the_oil = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = IRQ
+		}
+		available = {
+			controls_state = 676
+			controls_state = 291
+		}
+		visible = {
+			
+		}
+		cost = 50
+		fire_only_once = yes
+		ai_will_do = {
+			factor = 1
+		}
+		complete_effect = {
+			add_war_support = 0.1
+			add_stability = 0.1
+		}
+	}
+}	

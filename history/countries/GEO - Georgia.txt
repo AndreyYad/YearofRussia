@@ -1,0 +1,156 @@
+﻿capital = 231
+
+oob = "GEO_2014"
+
+set_research_slots = 2
+
+set_technology = {
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1
+	basic_heavy_tank = 1
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+2020.1.1 = {
+
+	oob = "GEO_2020"
+
+	add_political_power = 1198
+
+	set_technology = {
+		CAS1 = 1
+		improved_light_tank = 1 
+		basic_heavy_tank = 1
+		basic_medium_tank = 1
+		tactical_bomber1 = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+	
+		support_weapons = 1
+		support_weapons2 = 1
+		paratroopers = 1
+
+		#doctrines
+		pocket_defence = 1
+		defence_in_depth = 1
+		battlefleet_concentration = 1
+		submarine_operations = 1
+
+		#Air
+		formation_flying = 1		
+		dive_bombing = 1
+		direct_ground_support = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		oil_processing = 1
+		fuel_refining2 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		concentrated_industry3 = 1
+	}
+	
+	set_party_name = {
+		ideology = democratic
+		name = GEO_liberal_party
+		long_name = GEO_liberal_party_long
+	}
+	
+	set_politics = {
+	ruling_party = democratic
+	last_election = "2018.12.16"
+	election_frequency = 48
+	elections_allowed = yes
+	}
+	
+	create_country_leader = {
+	name = "Salome Zurabishvili"
+	desc = ""
+	picture = "gfx/leaders/GEO/Portrait_Zurabishvili.dds"
+	expire = "2030.3.1"
+	ideology = liberalism
+	traits = {
+		
+	}
+	}
+
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2013.11.17"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 60
+	neutrality = 10
+	fascism = 25
+	communism = 5
+}
+
+create_country_leader = {
+	name = "Giorgi Margvelashvili" 
+	desc = ""
+	picture = "gfx/leaders/GEO/Portrait_Margvelashvili.dds"
+	expire = "2018.12.16"
+	ideology = conservatism
+	traits = {
+		
+	}
+}
+
+create_country_leader = {
+	name = "Kandid Charkviani"
+	desc = ""
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+	expire = "2030.3.1"
+	ideology = stalinism
+	traits = {
+		
+	}
+}
+
+#couldnt find anything else, the commies simply forced everyone else into exile

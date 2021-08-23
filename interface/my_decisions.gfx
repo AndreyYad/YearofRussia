@@ -1,0 +1,63 @@
+spriteTypes = {
+	
+	SpriteType = {
+		name = "GFX_ukraine_politic_icon"
+		texturefile = "gfx/interface/decisions/GFX_ukraine_politic_icon.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_alliance_novorussia"
+		texturefile = "gfx/interface/decisions/GFX_alliance_novorussia.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_form_novorussia"
+		texturefile = "gfx/interface/decisions/GFX_form_novorussia.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_to_retire_leader"
+		texturefile = "gfx/interface/decisions/GFX_to_retire_leader.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_decision_cat_generic_soviet_union"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_soviet_union.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_decision_cat_generic_great_ukraine"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_great_ukraine.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_form_Unite_Cypr"
+		texturefile = "gfx/interface/decisions/GFX_form_Unite_Cypr.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_form_Czehoslovak"
+		texturefile = "gfx/interface/decisions/GFX_form_Czehoslovak.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_form_Maya"
+		texturefile = "gfx/interface/decisions/GFX_form_Maya.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_form_Malorossiya"
+		texturefile = "gfx/interface/decisions/GFX_form_Malorossiya.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_end_anarchy"
+		texturefile = "gfx/interface/decisions/GFX_end_anarchy.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_anarchy"
+		texturefile = "gfx/interface/decisions/GFX_anarchy.dds"
+	}
+
+}

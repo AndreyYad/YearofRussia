@@ -1,0 +1,142 @@
+ideas = {
+
+	civil_service = {
+		law = yes
+		use_list_view = yes
+		
+		civil_service_1 = {
+						
+			cost = 100
+			removal_cost = -1
+			level = 5
+				
+			modifier = {
+				consumer_goods_factor = -0.01
+				industrial_capacity_factory = -0.04
+				production_speed_buildings_factor = -0.04
+			}
+			
+			cancel_if_invalid = yes
+
+			ai_will_do = {
+   				factor = 0
+				
+				}
+   			}
+		
+		civil_service_2 = {
+		
+			available = {
+				has_stability > 0.1
+			}
+			
+			visible = {
+				NOT = { has_government = anarchy }
+				}
+
+			cost = 100
+			removal_cost = -1
+			level = 4
+				
+			modifier = {
+				stability_factor = 0.05
+				industrial_capacity_factory = 0.03
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = yes
+
+			ai_will_do = {
+   				factor = 4
+
+   			}
+		}
+		
+		civil_service_3 = {
+			
+			available = {
+				has_stability > 0.3
+			}
+			
+			visible = {
+				NOT = { has_government = anarchy }
+				}
+			
+			cost = 100
+			removal_cost = -1
+			level = 3
+				
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.005
+				industrial_capacity_factory = 0.06
+				production_speed_buildings_factor = 0.06
+			}
+			
+			cancel_if_invalid = yes
+
+			ai_will_do = {
+   				factor = 6
+				}
+   		}
+		
+		civil_service_4 = {
+			
+			available = {
+				has_stability > 0.5
+			}
+			
+			visible = {
+				NOT = { has_government = anarchy }
+				}
+			
+			cost = 100
+			removal_cost = -1
+			level = 2
+				
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.01
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+			
+			cancel_if_invalid = yes
+
+			ai_will_do = {
+   				factor = 8
+
+   			}
+		}
+		
+		civil_service_5 = {
+			
+			available = {
+				has_government = anarchy
+			}
+			
+			visible = {
+				has_government = anarchy
+			}
+			
+			cost = 10
+			removal_cost = -1
+			level = 6
+				
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.01
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1
+			}
+			
+			cancel_if_invalid = yes
+
+			ai_will_do = {
+   				factor = 1000
+   			}
+		}
+		
+	}
+}

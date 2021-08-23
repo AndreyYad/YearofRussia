@@ -1,0 +1,343 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ideology_VEN_socialism21cen"
+		texturefile = "gfx/interface/ideologies/VEN/socialism21cen.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_PAL_national_communism"
+		texturefile = "gfx/interface/ideologies/PAL/national_communism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_ISR_national_communism"
+		texturefile = "gfx/interface/ideologies/ISR/national_communism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_GRN_stalinism"
+		texturefile = "gfx/interface/ideologies/DEN/grn.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_KNR_stalinism"
+		texturefile = "gfx/interface/ideologies/NOVORUSSIA/KNR_C.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_DNR_stalinism"
+		texturefile = "gfx/interface/ideologies/NOVORUSSIA/DNR_C.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_LNR_stalinism"
+		texturefile = "gfx/interface/ideologies/NOVORUSSIA/LNR_GERB.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_BRA_libertarian_communism"
+		texturefile = "gfx/interface/ideologies/BRA/communism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_GRE_stalinism"
+		texturefile = "gfx/interface/ideologies/GRE/communism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_CUB_socialism21cen"
+		texturefile = "gfx/interface/ideologies/CUB/com.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_KUR_libertarian_communism"
+		texturefile = "gfx/interface/ideologies/KUR/communism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_POL_stalinism"
+		texturefile = "gfx/interface/ideologies/POL/stalinism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_PAP_stalinism"
+		texturefile = "gfx/interface/ideologies/ITA/pci.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_FRA_stalinism"
+		texturefile = "gfx/interface/ideologies/FRA/com.dds"
+	}
+
+	spriteType = {
+		name = "GFX_ideology_GER_stalinism"
+		texturefile = "gfx/interface/ideologies/GER/kpd.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_PRS_stalinism"
+		texturefile = "gfx/interface/ideologies/GER/kpd.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_BDN_stalinism"
+		texturefile = "gfx/interface/ideologies/GER/kpd.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_MEK_stalinism"
+		texturefile = "gfx/interface/ideologies/GER/kpd.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SAX_stalinism"
+		texturefile = "gfx/interface/ideologies/GER/kpd.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_WGR_stalinism"
+		texturefile = "gfx/interface/ideologies/GER/kpd.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_DDR_stalinism"
+		texturefile = "gfx/interface/ideologies/GER/sed.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SOV_stalinism"
+		texturefile = "gfx/interface/ideologies/SOV/aucp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SOV_leninism"
+		texturefile = "gfx/interface/ideologies/SOV/cpsu.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SOV_marxism"
+		texturefile = "gfx/interface/ideologies/SOV/cpsu.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_ENG_national_communism"
+		texturefile = "gfx/interface/ideologies/ENG/angsoc.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_USA_national_communism"
+		texturefile = "gfx/interface/ideologies/ENG/angsoc.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SOV_national_communism"
+		texturefile = "gfx/interface/ideologies/SOV/national_communism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_ITA_stalinism"
+		texturefile = "gfx/interface/ideologies/ITA/pci.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_JAP_marxism"
+		texturefile = "gfx/interface/ideologies/JAP/jcp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_USA_libertarian_communism"
+		texturefile = "gfx/interface/ideologies/USA/cpusa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_CAL_stalinism"
+		texturefile = "gfx/interface/ideologies/USA/cpusa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_TEX_stalinism"
+		texturefile = "gfx/interface/ideologies/USA/cpusa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_MON_stalinism"
+		texturefile = "gfx/interface/ideologies/MON/mpp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_TAN_stalinism"
+		texturefile = "gfx/interface/ideologies/TAN/prp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_KOR_stalinism"
+		texturefile = "gfx/interface/ideologies/KOR/wpk.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_KPR_stalinism"
+		texturefile = "gfx/interface/ideologies/KOR/wpk.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_CHI_stalinism"
+		texturefile = "gfx/interface/ideologies/CHI/cpc.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_XSM_stalinism"
+		texturefile = "gfx/interface/ideologies/CHI/cpc.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_PRC_stalinism"
+		texturefile = "gfx/interface/ideologies/CHI/cpc.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SHX_stalinism"
+		texturefile = "gfx/interface/ideologies/CHI/cpc.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_GXC_stalinism"
+		texturefile = "gfx/interface/ideologies/CHI/cpc.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_YUN_stalinism"
+		texturefile = "gfx/interface/ideologies/CHI/cpc.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_TUR_marxism"
+		texturefile = "gfx/interface/ideologies/TUR/tkp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_HUN_stalinism"
+		texturefile = "gfx/interface/ideologies/HUN/kmp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_YUG_stalinism"
+		texturefile = "gfx/interface/ideologies/YUG/skj.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SER_libertarian_communism"
+		texturefile = "gfx/interface/ideologies/SER/communism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SER_stalinism"
+		texturefile = "gfx/interface/ideologies/SER/sks.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SAF_stalinism"
+		texturefile = "gfx/interface/ideologies/SAF/sacp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_NOR_stalinism"
+		texturefile = "gfx/interface/ideologies/NOR/nkp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_CZE_stalinism"
+		texturefile = "gfx/interface/ideologies/CZE/ksc.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_FIN_stalinism"
+		texturefile = "gfx/interface/ideologies/FIN/skp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_VIN_stalinism"
+		texturefile = "gfx/interface/ideologies/VIN/vcp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_CAN_stalinism"
+		texturefile = "gfx/interface/ideologies/CAN/cpc.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_AST_stalinism"
+		texturefile = "gfx/interface/ideologies/AST/cpa.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_UKR_stalinism"
+		texturefile = "gfx/interface/ideologies/UKR/stalinism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_UKR_national_communism"
+		texturefile = "gfx/interface/ideologies/UKR/stalinism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_GEO_stalinism"
+		texturefile = "gfx/interface/ideologies/GEO/cpg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_KAZ_stalinism"
+		texturefile = "gfx/interface/ideologies/KAZ/cpk.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_BLR_stalinism"
+		texturefile = "gfx/interface/ideologies/BLR/comblr.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SPR_libertarian_communism"
+		texturefile = "gfx/interface/ideologies/SPR/communism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_SPR_stalinism"
+		texturefile = "gfx/interface/ideologies/SPR/pce.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_ALB_stalinism"
+		texturefile = "gfx/interface/ideologies/ALB/alp.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_marxism"
+		texturefile = "gfx/interface/ideologies/marxism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_leninism"
+		texturefile = "gfx/interface/ideologies/leninism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_stalinism"
+		texturefile = "gfx/interface/ideologies/stalinism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_anti_revisionism"
+		texturefile = "gfx/interface/ideologies/anti_revisionism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_libertarian_communism"
+		texturefile = "gfx/interface/ideologies/libertarian_communism.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_national_communism"
+		texturefile = "gfx/interface/ideologies/national_communism.dds"
+	}
+
+}

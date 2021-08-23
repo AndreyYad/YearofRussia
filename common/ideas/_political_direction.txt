@@ -1,0 +1,955 @@
+ideas = {
+
+	country = {
+		unrecognized_state = {
+			available = {
+				NOT = {
+					has_government = anarchy
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+				has_government = communism
+				has_government = democratic
+				has_government = neutrality
+			}
+			
+			removal_cost = -1
+
+			picture = unrecognized_state
+			
+			modifier = {
+				political_power_factor = -0.05
+			}
+		}
+	}
+
+	political_advisor = {
+
+		# Политики
+	
+		direction_communism = {
+			
+			picture = communist_revolutionary_mod_2d
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { communist_revolutionary }
+
+			on_add = {
+				#country_event = political.1
+			}
+
+			do_effect = {
+				NOT = {
+					has_government = anarchy
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+					modifier = {
+						factor = 4
+						has_government = communism
+				}
+			}
+		}
+		
+		direction_fascism = {
+			
+			picture = fascist_demagogue_mod_2d
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { fascist_demagogue }
+			
+			on_add = {
+				#country_event = political.7
+			}
+
+			do_effect = {
+				NOT = {
+					has_government = anarchy
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+					modifier = {
+						factor = 4
+						has_government = fascism
+				}
+			}
+		}
+
+		direction_neutrality = {
+			
+			picture = neutrality_loyalist_mod_2d
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { staunch_monarchist }
+
+			do_effect = {
+				NOT = {
+					has_government = anarchy
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+					modifier = {
+						factor = 4
+						has_government = neutrality
+				}
+			}
+		}
+
+		direction_democraty = {
+			
+			picture = democratic_reformer_mod_2d
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { democratic_reformer }
+
+			on_add = {
+				#country_event = political.13
+			}
+
+			do_effect = {
+				NOT = {
+					has_government = anarchy
+				}
+			}
+			
+			ai_will_do = {
+				factor = 0
+					modifier = {
+						factor = 4
+						has_government = democratic
+				}
+			}
+		}
+		
+		# Министры
+		
+		ideas_revanchist = {
+
+			picture = syncretic_revanchist_mod_2d
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { syncretic_revanchist }		
+		}
+		
+		ROOT_pf = {
+
+			picture = generic_political_advisor_europe_2
+				
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { popular_figurehead }
+		}
+		
+		ROOT_pro = {
+
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { propaganda_expert }
+		}
+		
+		technocratic = {
+
+			picture = technocrat_mod_2d
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { technocrat }
+		}
+		
+		ROOT_sil = {
+
+			picture = generic_political_advisor_europe_4
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { silent_workhorse }
+		}
+		
+		ROOT_pot = {
+
+			picture = generic_political_advisor_europe_3
+
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { prince_of_terror }
+		}
+		
+		ROOT_stc = {
+
+			picture = generic_political_advisor_europe_2
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { compassionate_gentleman }
+		}
+		
+		backroom_backstabber = {
+
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { backroom_backstabber }
+		}
+		
+		smooth_talking_charmer = {
+
+			picture = generic_political_advisor_europe_2
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { smooth_talking_charmer }
+		}
+		
+		ROOT_ic = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { ideological_crusader }
+		}
+		
+		ROOT_fe = {
+
+			picture = generic_political_advisor_europe_4
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { fortification_engineer }
+		}
+		
+		ROOT_wi = {
+
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { war_industrialist }
+		}
+		
+		industry_council = {
+
+			picture = captain_of_industry_mod_2d
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { captain_of_industry }
+		}
+		
+		ROOT_fin = {
+
+			picture = generic_political_advisor_europe_3
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { financial_expert }
+		}
+		
+		ROOT_eco = {
+
+			picture = generic_political_advisor_europe_4
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { economist }
+		}
+		
+		ROOT_edi = {
+
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { editor }
+		}
+		
+		ROOT_ao = {
+
+			picture = generic_political_advisor_europe_2
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { armaments_organizer }
+		}
+		
+		humanitarian_interventionist = {
+
+			picture = reluctant_interventionist_mod_2d
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { reluctant_interventionist }
+		}
+		
+		ROOT_qg = {
+
+			picture = generic_political_advisor_europe_4
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { quartermaster_general }
+		}
+		
+		ROOT_rs = {
+
+			picture = generic_political_advisor_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { rocket_scientist }
+		}
+		
+		ROOT_ns = {
+
+			picture = generic_political_advisor_europe_2
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { nuclear_scientist }
+		}
+
+	}
+	
+	theorist = {
+
+		#Военные теоретики
+
+		military_theorist = {
+			ledger = army
+			
+			picture = generic_army_europe_3
+
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+			
+			traits = { military_theorist }
+		}
+		
+		air_warfare_theorist = {
+			ledger = air
+			
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			research_bonus = {
+				air_doctrine = 0.10
+			}
+			
+			traits = { air_warfare_theorist }
+		}
+		naval_theorist = {
+			ledger = navy
+			
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			research_bonus = {
+				naval_doctrine = 0.10
+			}
+			
+			traits = { naval_theorist }
+		}
+	}
+	
+	army_chief = {
+		
+		#Армия
+		
+		army_chief_offensive_2 = {
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+				is_major = no
+			}
+			
+			traits = { army_chief_offensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		army_chief_offensive_1 = {
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+				is_major = yes
+			}
+			
+			traits = { army_chief_offensive_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		army_chief_defensive_2 = {
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = ROOT
+				is_major = no
+			}
+			
+			traits = { army_chief_defensive_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		army_chief_defensive_1 = {
+			
+			allowed = {
+				original_tag = ROOT
+				is_major = yes
+			}
+			
+			traits = { army_chief_defensive_1 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		army_chief_maneuver_2 = {
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { army_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		army_entrenchment_2 = {
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = ROOT
+			}
+
+			
+			traits = { army_entrenchment_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		army_chief_organizational_2 = {
+
+			picture = generic_army_europe_4
+			
+			allowed = {
+				original_tag = ROOT
+			}		
+			
+			traits = { army_chief_organizational_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		army_chief_morale_2 = {
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { army_chief_morale_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	air_chief = {
+		
+		#Авиация
+		
+		air_chief_old_guard = {
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+
+			
+			traits = { air_chief_old_guard }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		air_chief_night_operations_2 = {
+			
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+
+			
+			traits = { air_chief_night_operations_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		air_chief_reform_2 = {
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { air_chief_reform_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		air_chief_ground_support_2 = {
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { air_chief_ground_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		air_naval_strike_2 = {
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { air_naval_strike_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		air_air_combat_training_2 = {
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { air_air_combat_training_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		air_chief_all_weather_2 = {
+			picture = generic_air_europe_3
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { air_chief_all_weather_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		air_chief_safety_2 = {
+			picture = generic_air_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { air_chief_safety_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	navy_chief = {
+		
+		#Флот
+		
+		navy_anti_submarine_2 = {
+		
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { navy_anti_submarine_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		navy_chief_commerce_raiding_2 = {
+
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = ROOT
+			}
+					
+			traits = { navy_chief_commerce_raiding_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		navy_chief_decisive_battle_2 = {
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { navy_chief_decisive_battle_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		navy_chief_naval_aviation_2 = {
+			picture = generic_navy_europe_3
+			
+			allowed = {
+				original_tag = ROOT
+			}
+		
+			traits = { navy_chief_naval_aviation_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		navy_chief_maneuver_2 = {
+			picture = generic_navy_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { navy_chief_maneuver_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	
+	high_command = {
+
+		#Военное командование
+
+		army_artillery_1 = {
+			ledger = army
+			
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { army_artillery_1 }			
+		}
+
+		army_logistics_2 = {
+			ledger = army
+
+			picture = generic_army_europe_3
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { army_logistics_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		army_concealment_2 = {
+			ledger = army
+
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { army_concealment_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		army_cavalry_2 = {
+			ledger = army
+
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { army_cavalry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		army_armored_2 = {
+			ledger = army
+
+			picture = generic_army_europe_2
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { army_armored_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		army_infantry_2 = {
+			ledger = army
+			picture = generic_army_europe_1
+			
+			allowed = {
+				original_tag = ROOT
+			}
+		
+			traits = { army_infantry_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		army_regrouping_2 = {
+			ledger = army
+
+			picture = generic_army_europe_4
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { army_regrouping_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		army_commando_2 = {
+			ledger = army
+
+			picture = generic_army_europe_5
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { army_commando_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		air_air_superiority_2 = {
+			ledger = air
+
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { air_air_superiority_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		air_bomber_interception_2 = {
+			ledger = air
+
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { air_bomber_interception_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		air_close_air_support_2 = {
+			ledger = air
+
+			picture = generic_air_europe_2
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { air_close_air_support_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		navy_fleet_logistics_1 = {
+			ledger = navy
+
+			picture = generic_navy_europe_1
+
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { navy_fleet_logistics_1 }			
+		}
+		
+		navy_capital_ship_2 = {
+			ledger = navy
+
+			picture = generic_navy_europe_2
+			
+			allowed = {
+				original_tag = ROOT
+			}
+			
+			traits = { navy_capital_ship_2 }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}

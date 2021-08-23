@@ -1,0 +1,1150 @@
+﻿
+add_namespace = modelection
+
+#Turkey
+country_event = {
+	id = modelection.1
+	title = modelection.1.t
+	desc = modelection.1.d
+	picture = GFX_event_elections_turkey
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = TUR
+		or = {
+		has_government = neutrality
+		has_government = democratic
+		}
+		date > 2014.8.28
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+			set_politics = {
+			ruling_party = neutrality
+			last_election = "2014.8.28"
+			election_frequency = 68
+			elections_allowed = yes
+			}
+			create_country_leader = {
+			name = "Recep Tayyip Erdogan"
+			desc = " "
+			picture = "gfx/leaders/TUR/Portrait_Erdogan.dds"
+			expire = "2030.3.1"
+			ideology = moderatism
+			traits = {
+				}
+			}
+		}
+	}
+}
+
+#Iraq 2014
+country_event = {
+	id = modelection.2
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = IRQ
+		or = {
+		has_government = neutrality
+		has_government = democratic
+		}
+		date > 2014.7.24
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+			set_politics = {
+			ruling_party = neutrality
+			last_election = "2014.7.24"
+			election_frequency = 48
+			elections_allowed = yes
+			}
+		
+			create_country_leader = {
+			name = "Muhammad Fuad Masum Hawrami"
+			desc = " "
+			picture = "gfx/leaders/IRQ/Portrait_Hawrami.dds"
+			expire = "2018.2.10"
+			ideology = moderatism
+			traits = {
+				#
+				}
+			}
+		}
+	}
+}
+
+#Iraq 2018
+country_event = {
+	id = modelection.3
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = IRQ
+		or = {
+		has_government = neutrality
+		has_government = democratic
+		}
+		date > 2018.2.10
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+			set_politics = {
+				ruling_party = neutrality
+				last_election = "2018.2.10"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+
+			create_country_leader = {
+				name = "Barham Ahmed Saleh"
+				desc = " "
+				picture = "gfx/leaders/IRQ/Portrait_Saleh.dds"
+				expire = "2030.3.1"
+				ideology = moderatism
+				traits = {
+					#
+				}
+			}
+		}
+	}
+}
+
+#Spain
+country_event = {
+	id = modelection.4
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = SPR
+		has_government = democratic
+		date > 2018.6.1
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+			set_politics = {
+			ruling_party = democratic
+			last_election = "2018.6.1"
+			election_frequency = 36
+			elections_allowed = yes
+			}
+			set_party_name = {
+			ideology = democratic
+			name = SPR_socialism_party
+			long_name = SPR_socialism_party_long
+			}
+			create_country_leader = {
+			name = "Pedro Sánchez"
+			desc = " "
+			picture = "gfx/leaders/SPR/Portrait_Sanchez.dds"
+			expire = "2030.1.1"
+			ideology = socialism
+			traits = {
+			}
+			}
+		}
+	}
+}
+
+#Poland
+country_event = {
+	id = modelection.5
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = POL
+		has_government = democratic
+		date > 2015.8.6
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+			set_party_name = {
+			ideology = democratic
+			name = POL_Prawo_party
+			long_name = POL_Prawo_party_long
+		}
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2015.8.6"
+			election_frequency = 36
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "Andrzej Duda"
+			desc = " "
+			picture = "gfx/leaders/POL/Portrait_Duda.dds"
+			expire = "2030.3.1"
+			ideology = conservatism
+			traits = {
+			}
+		}
+		}
+	}
+}
+
+#Canada
+country_event = {
+	id = modelection.6
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = CAN
+		has_government = democratic
+		date > 2015.11.4
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_party_name = {
+			ideology = democratic
+			name = CAN_liberal_party
+			long_name = CAN_liberal_party_long
+		}
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2015.11.4"
+			election_frequency = 60
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "Justin Trudeau"
+			desc = " "
+			picture = "gfx/leaders/CAN/Portrait_Trudeau.dds"
+			expire = "2030.3.1"
+			ideology = liberalism
+			traits = {
+			}
+		}
+		}
+	}
+}
+
+#Portugal
+country_event = {
+	id = modelection.7
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = POR
+		has_government = democratic
+		date > 2016.3.9
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2016.3.9"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+
+		create_country_leader = {
+			name = "Marcelo Rebelo de Sousa"
+			desc = " "
+			picture = "gfx/leaders/POR/Portrait_Marcelo.dds"
+			expire = "2030.1.1"
+			ideology = conservatism
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#Austria
+country_event = {
+	id = modelection.8
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = AUS
+		has_government = democratic
+		date > 2016.7.8
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_party_name = {
+			ideology = democratic
+			name = AUS_green_party
+			long_name = AUS_green_party_long
+		}
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2016.7.8"
+			election_frequency = 60
+			elections_allowed = yes
+		}
+
+		create_country_leader = {
+			name = "Alexander Van der Bellen"
+			desc = " "
+			picture = "gfx/leaders/AUS/Portrait_Bellen.dds"
+			expire = "2016.7.8"
+			ideology = progressivism
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#Slovakia - 2014
+country_event = {
+	id = modelection.9
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = SLO
+		has_government = democratic
+		date > 2014.4.15
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+			create_country_leader = {
+				name = "Andrej Kiska"
+				desc = " "
+				picture = "gfx/leaders/SLO/Portrait_Kiska.dds"
+				expire = "2019.4.15"
+				ideology = conservatism
+				traits = {
+					#
+				}
+			}
+
+			set_politics = {
+				ruling_party = democratic
+				last_election = "2014.4.15"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+		}
+	}
+}
+
+#Slovakia - 2019
+country_event = {
+	id = modelection.10
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = SLO
+		has_government = democratic
+		date > 2019.4.15
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+			set_party_name = {
+				ideology = democratic
+				name = SLO_progressivism_party
+				long_name = SLO_progressivism_party_long
+			}
+
+			create_country_leader = {
+				name = "Zuzana Chaputova"
+				desc = " "
+				picture = "gfx/leaders/SLO/Portrait_Chaputova.dds"
+				expire = "2030.1.1"
+				ideology = progressivism
+				female = yes
+				traits = {
+					#
+				}
+			}
+
+			set_politics = {
+				ruling_party = democratic
+				last_election = "2019.4.15"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+		}
+	}
+}
+
+#Bulgaria
+country_event = {
+	id = modelection.11
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = BUL
+		has_government = democratic
+		date > 2017.1.22
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+			set_party_name = {
+				ideology = democratic
+				name = BUL_independent_party
+				long_name = BUL_independent_party_long
+			}
+
+			set_politics = {
+				ruling_party = democratic
+				last_election = "2017.1.22"
+				election_frequency = 60
+				elections_allowed = yes
+			}
+
+			create_country_leader = {
+				name = "Rumen Radev"
+				desc = " "
+				picture = "gfx/leaders/BUL/Portrait_Radev.dds"
+				expire = "2030.1.1"
+				ideology = socialism
+				traits = {
+					#
+				}
+			}
+		}
+	}
+}
+
+#Greece
+country_event = {
+	id = modelection.12
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = GRE
+		has_government = democratic
+		date > 2015.3.13
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_party_name = {
+			ideology = democratic
+			name = GRE_conservatism_party
+			long_name = GRE_conservatism_party_long
+		}
+
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2015.3.13"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+
+		create_country_leader = {
+			name = "Prokopis Pavlopoulos"
+			desc = " "
+			picture = "gfx/leaders/GRE/Portrait_Pavlopoulos.dds"
+			expire = "2020.3.13"
+			ideology = conservatism
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#Albania
+country_event = {
+	id = modelection.13
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = ALB
+		has_government = democratic
+		date > 2017.7.24
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_party_name = {
+			ideology = democratic
+			name = ALB_socialism_party
+			long_name = ALB_socialism_party_long
+		}
+
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2017.7.24"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+
+		create_country_leader = {
+			name = "Ilir Meta"
+			desc = " "
+			picture = "gfx/leaders/ALB/Portrait_Meta.dds"
+			expire = "2030.1.1"
+			ideology = socialism
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#Lebanon
+country_event = {
+	id = modelection.14
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = LEB
+		has_government = democratic
+		date > 2016.12.18
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_party_name = {
+			ideology = democratic
+			name = LEB_liberal_party
+			long_name = LEB_liberal_party_long
+		}
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2016.12.18"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+
+		create_country_leader = {
+			name = "Michelle Aoun"
+			desc = ""
+			picture = "gfx/leaders/LEB/Portrait_Aoun.dds"
+			expire = "2030.1.1"
+			ideology = liberalism
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#Croatia
+country_event = {
+	id = modelection.15
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = CRO
+		has_government = democratic
+		date > 2015.2.18
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_party_name = {
+			ideology = democratic
+			name = CRO_conservatism_party
+			long_name = CRO_conservatism_party_long
+		}
+
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2015.2.18"
+			election_frequency = 58
+			elections_allowed = yes
+		}
+
+		create_country_leader = {
+			name = "Kolinda Grabar-Kitarović"
+			desc = " "
+			picture = "gfx/leaders/CRO/Portrait_Kolinda.dds"
+			expire = "2030.1.1"
+			ideology = conservatism
+			female = yes
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#Mongolia
+country_event = {
+	id = modelection.16
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = MON
+		has_government = democratic
+		date > 2017.7.10
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2017.7.10"
+			election_frequency = 60
+			elections_allowed = yes
+		}
+
+		create_country_leader = {
+			name = "Khaltmaagiin Battulga"
+			desc = ""
+			picture = "gfx/leaders/MON/Portrait_Battulga.dds"
+			expire = "2030.1.1"
+			ideology = liberalism
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#Uzbekistan
+country_event = {
+	id = modelection.17
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = UZB
+		has_government = neutrality
+		date > 2016.9.2
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "2016.9.2"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Shavkat Mirziyoyev"
+			picture = "gfx/leaders/UZB/Portrait_Mirziyoyev.dds"
+			expire = "2030.1.1"
+			ideology = despotism
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#Kyrgystan
+country_event = {
+	id = modelection.18
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = KYR
+		or = {
+		has_government = neutrality
+		has_government = democratic
+		}
+		date > 2017.11.24
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "2017.11.24"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "Sooronbai Jeenbekov"
+			desc = " "
+			picture = "gfx/leaders/KYR/Portrait_Jeenbekov.dds"
+			expire = "2020.10.15"
+			ideology = oligarchism
+			traits = {
+
+			}
+		}
+		}
+	}
+}
+
+#Iceland
+country_event = {
+	id = modelection.19
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = ICE
+		has_government = democratic
+		date > 2016.8.1
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_party_name = {
+			ideology = democratic
+			name = ICE_independent_party
+			long_name = ICE_independent_party_long
+		}
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2016.8.1"
+			election_frequency = 48
+			elections_allowed = yes
+			}
+		create_country_leader = {
+			name = "Gvudni Johannesson"
+			desc = ""
+			picture = "gfx/leaders/ICE/Portrait_Johannesson.dds"
+			expire = "2030.1.1"
+			ideology = conservatism
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#Romania
+country_event = {
+	id = modelection.20
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = ROM
+		has_government = democratic
+		date > 2014.12.21
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_party_name = {
+			ideology = democratic
+			name = ROM_conservatism_party
+			long_name = ROM_conservatism_party_long
+		}
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2014.12.21"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "Klaus Iohannis"
+			desc = " "
+			picture = "gfx/leaders/ROM/Portrait_Iohannis.dds"
+			expire = "2030.1.1"
+			ideology = conservatism
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#Taiwan
+country_event = {
+	id = modelection.21
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = CHI
+		has_government = democratic
+		date > 2016.5.20
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_party_name = {
+			ideology = democratic
+			name = CHI_liberalism_party
+			long_name = CHI_liberalism_party_long
+		}
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2016.5.20"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "Klaus Iohannis"
+			desc = " "
+			picture = "gfx/leaders/ROM/Portrait_Iohannis.dds"
+			expire = "2030.1.1"
+			ideology = liberalism
+			female = yes
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#Liberia
+country_event = {
+	id = modelection.22
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = LIB
+		has_government = democratic
+		date > 2018.1.22
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.2
+		}
+		set_cosmetic_tag = LIB_democratic
+		create_country_leader = {
+			name = "George Weah"
+			desc = ""
+			picture = "gfx/leaders/LIB/Portrait_Weah.dds"
+			expire = "2030.1.1"
+			ideology = moderatism
+			traits = {
+				#
+			}
+		}
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "2018.1.22"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		}
+	}
+}
+
+#Estonia
+country_event = {
+	id = modelection.23
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = EST
+		has_government = democratic
+		date > 2016.10.10
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_party_name = {
+			ideology = democratic
+			name = EST_conservatism_party
+			long_name = EST_conservatism_party_long
+		}
+			set_politics = {
+			ruling_party = democratic
+			last_election = "2016.10.10"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+			create_country_leader = {
+			name = "Kersti Kaljulaid"
+			desc = ""
+			picture = "gfx/leaders/EST/Portrait_Kaljulaid.dds"
+			expire = "2030.1.1"
+			ideology = conservatism
+			female = yes
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#Ethiopia
+country_event = {
+	id = modelection.24
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = ETH
+		or = {
+		has_government = neutrality
+		has_government = democratic }
+		date > 2016.10.10
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_party_name = {
+			ideology = neutrality
+			name = ETH_nonparty_party
+			long_name = ETH_nonparty_party_long
+		}
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "2018.10.25"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Sahlevork Zewde"
+			desc = " "
+			picture = "gfx/leaders/ETH/Portrait_Zewde.dds"
+			expire = "2030.1.1"
+			ideology = centrism
+			female = yes
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#Korea
+country_event = {
+	id = modelection.25
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = KOR
+		has_government = democratic
+		date > 2016.10.10
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_party_name = {
+			ideology = neutrality
+			name = ETH_nonparty_party
+			long_name = ETH_nonparty_party_long
+		}
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "2018.10.25"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Sahlevork Zewde"
+			desc = " "
+			picture = "gfx/leaders/ETH/Portrait_Zewde.dds"
+			expire = "2030.1.1"
+			ideology = centrism
+			female = yes
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#Latvia - 2015
+country_event = {
+	id = modelection.26
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = LAT
+		has_government = democratic
+		date > 2015.7.8
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2015.7.8"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Raimonds Vejonis"
+			desc = ""
+			picture = "gfx/leaders/LAT/Portrait_Vejonis.dds"
+			expire = "2019.7.8"
+			ideology = socialism
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}
+
+#Latvia - 2019
+country_event = {
+	id = modelection.27
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = LAT
+		has_government = democratic
+		date > 2019.7.8
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_party_name = {
+			ideology = neutrality
+			name = LAT_liberalism_party
+			long_name = LAT_liberalism_party_long
+			}
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2019.7.8"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Egils Levits"
+			desc = ""
+			picture = "gfx/leaders/LAT/Portrait_Levits.dds"
+			expire = "2030.1.1"
+			ideology = socialism
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}

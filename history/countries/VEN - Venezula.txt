@@ -1,0 +1,101 @@
+﻿capital = 307
+
+oob = "VEN_2014"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+	tech_recon = 1
+	tech_support = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	early_fighter = 1
+	CAS1 = 1
+	gwtank = 1
+	basic_light_tank = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+}
+
+2020.1.1 = {
+
+	add_political_power = 1198
+	
+	oob = "VEN_2020"
+	set_technology = {
+		fighter1 = 1
+		early_bomber = 1
+		tactical_bomber1 = 1
+		interwar_artillery = 1
+	
+		support_weapons = 1
+
+		#doctrines
+		air_superiority = 1
+
+		mass_assault = 1
+		pocket_defence = 1
+		defence_in_depth = 1
+		
+		fleet_in_being = 1
+		convoy_sailing = 1
+		submarine_operations = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		synth_oil_experiments = 1
+		fuel_silos = 1
+		oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+set_convoys = 60
+
+set_politics = {
+	ruling_party = communism
+	last_election = "2014.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 35
+	fascism = 5
+	communism = 45
+	neutrality = 15
+}
+
+create_country_leader = {
+	name = "Nicolas Maduro"
+	desc = " "
+	picture = "gfx/leaders/VEN/Portrait_Maduro.dds"
+	expire = "2030.1.1"
+	ideology = socialism21cen
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Juan Guaido"
+	desc = " "
+	picture = "gfx/leaders/VEN/Portrait_Guaido.dds"
+	expire = "2030.1.1"
+	ideology = progressivism
+	traits = {
+		#
+	}
+}

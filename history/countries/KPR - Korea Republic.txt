@@ -1,0 +1,122 @@
+﻿capital = 527
+
+oob = "KPR_2014"
+
+add_ideas = {
+	extensive_conscription
+	closed_economy
+	low_economic_mobilisation
+	party_economy_policy_state_capitalism
+}
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	transport = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	CAS1 = 1
+	early_fighter = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	gw_artillery = 1
+	atomic_research = 1
+	nuclear_reactor = 1
+	nukes = 1
+}
+
+2020.1.1 = {
+
+	add_political_power = 1198
+	
+	oob = "KPR_2020"
+
+	set_technology = {
+		
+		early_fighter = 1
+		fighter1 = 1
+		force_rotation = 1
+		fighter_baiting = 1
+		grand_battle_plan = 1
+		interwar_artillery = 1
+		trench_warfare = 1
+		prepared_defense = 1
+		battlefleet_concentration = 1
+		subsidiary_carrier_role = 1
+		convoy_sailing = 1
+		convoy_escorts = 1
+		submarine_operations = 1
+
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		decimetric_radar = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		fuel_refining2 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+		atomic_research = 1
+		nuclear_reactor = 1
+		nukes = 1
+	}
+}
+
+set_convoys = 55
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2014.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	communism = 40
+	fascism = 10
+	neutrality = 50
+}
+
+create_country_leader = {
+	name = "Park Geun Hye"
+	desc = ""
+	picture = "gfx/leaders/KOR/Portrait_Hye.dds"
+	expire = "2030.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Kim Chen In"
+	desc = ""
+	picture = "gfx/leaders/KOR/Portrait_Chen.dds"
+	expire = "2030.1.1"
+	ideology = nationalism_ideology
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Kim Chen In"
+	desc = ""
+	picture = "gfx/leaders/KOR/Portrait_Chen.dds"
+	expire = "2030.1.1"
+	ideology = fascism_ideology
+	traits = {
+		#
+	}
+}

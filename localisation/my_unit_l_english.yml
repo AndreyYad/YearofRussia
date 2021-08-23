@@ -1,0 +1,5 @@
+﻿l_english:
+ cavalry:0 "Mobile Infantry"
+ cavalry_desc:0 "Infantry with vehicles available. More expensive, but more mobile."
+ camelry:0 "Mobile Infantry (Desert)"
+ camelry_desc:0 "Infantry with off-road vehicles available. More expensive, but better adapted to desert conditions."

@@ -1,0 +1,40 @@
+state={
+	id=829
+	name="STATE_829"
+	
+		history={
+		owner = UKR
+		#owner = LNR
+
+		buildings = {
+			industrial_complex = 1
+			arms_factory = 1
+			infrastructure = 5
+			11487 = {
+				bunker = 1
+
+			}
+			570 = {
+				bunker = 2
+
+			}
+
+		}
+		victory_points = {
+			6519 3 
+		}
+		#add_core_of = LNR
+		add_core_of = UKR
+		
+		2020.1.1 = {
+		add_core_of = LNR
+		}
+
+	}
+	
+	provinces={
+		523 547 570 6519 9476 11487 11513 
+	}
+	manpower = 1736411
+	state_category=town
+}

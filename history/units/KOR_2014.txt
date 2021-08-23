@@ -1,0 +1,97 @@
+﻿start_equipment_factor = 0.8
+division_template = {
+	name = "Binary Infantry"
+	division_names_group = KOR_INF_01
+	regiments = { 
+		infantry = { x = 0 y = 0 } 
+		infantry = { x = 0 y = 1 } 
+		infantry = { x = 0 y = 2 } 
+		infantry = { x = 1 y = 0 } 
+		infantry = { x = 1 y = 1 } 
+		infantry = { x = 1 y = 2 } 
+	} 
+}
+
+division_template = {
+	name = "Triangular Infantry"
+	division_names_group = KOR_INF_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+	}
+	support = {
+		engineer = { x = 0 y = 1 }
+		artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Mounted police"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 1 }
+	}
+		support = {
+		recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Garrison"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "Infantry"
+		location = 7221
+		division_template = "Triangular Infantry"		
+	}
+	
+		division = {
+		name = "Light Infantry"
+		location = 7125
+		division_template = "Binary Infantry"		
+	}
+	
+		division = {
+		name = "Infantry"
+		location = 7125
+		division_template = "Triangular Infantry"		
+	}
+	
+		division = {
+		name = "Infantry"
+		location = 4004
+		division_template = "Triangular Infantry"		
+	}
+	
+		division = {
+		name = "Infantry"
+		location = 11958
+		division_template = "Triangular Infantry"		
+	}
+	
+			division = {
+		name = "Cavalry"
+		location = 11958
+		division_template = "Mounted police"		
+	}
+
+}

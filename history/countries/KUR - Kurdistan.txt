@@ -1,0 +1,124 @@
+﻿capital = 817
+
+oob = "KUR_2014"
+
+set_research_slots = 2
+
+add_ideas = {
+	limited_conscription
+}
+
+set_technology = {
+	infantry_weapons = 1
+
+	tech_mountaineers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	early_fighter = 1
+	CAS1 = 1
+}
+
+2020.1.1 = {
+
+	add_political_power = 1198
+	
+	oob = "KUR_2020"
+		
+	set_technology = {
+		fighter1 = 1
+		early_bomber = 1
+		tactical_bomber1 = 1
+		interwar_artillery = 1
+	
+		support_weapons = 1
+
+		#doctrines
+		air_superiority = 1
+
+		mass_assault = 1
+		pocket_defence = 1
+		defence_in_depth = 1
+		
+		fleet_in_being = 1
+		convoy_sailing = 1
+		submarine_operations = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		synth_oil_experiments = 1
+		fuel_silos = 1
+		oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = communism
+	last_election = "2005.2.8"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 40
+	communism = 25
+	fascism = 30
+	neutrality = 5
+}
+
+create_country_leader = {
+	name = "Hadiya Yousef"
+	desc = " "
+	picture = "gfx/leaders/KUR/Portrait_Yousef.dds"
+	expire = "2030.1.1"
+	ideology = libertarian_communism
+	traits = {
+		freedom_fighter
+	}
+}
+
+create_country_leader = {
+	name = "Hadiya Yousef"
+	desc = " "
+	picture = "gfx/leaders/KUR/Portrait_Yousef.dds"
+	expire = "2030.1.1"
+	ideology = socialism
+	traits = {
+		freedom_fighter
+	}
+}
+
+create_field_marshal = {
+	name = "Îhsan Nûrî Paşa"
+	picture = "GFX_portrait_kur_ihsan_nuri"
+	traits = { war_hero inflexible_strategist unyielding_defender desert_fox commando }
+	skill = 3
+
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Ferzende Begê Hesenî"
+	portrait_path = "gfx/leaders/SYR/Portrait_Arabia_Generic_land_1.dds"
+	traits = { war_hero commando desert_fox }
+	skill = 2 #13
+
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+}

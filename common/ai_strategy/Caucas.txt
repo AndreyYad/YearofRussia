@@ -1,0 +1,213 @@
+Karabach_1 = {
+	enable = {
+		or = {
+		original_tag = AZR
+		}
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = NKR
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "GEO"	
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "TUR"	
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "TUR"	
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "TUR"	
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "GEO"	
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "GEO"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "NKR"
+		value = 300
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "ARM"
+		value = 200
+	}
+}
+
+Karabach_2 = {
+	enable = {
+		original_tag = ARM
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = NKR
+		}
+	}
+	
+	ai_strategy = {
+		type = diplo_action_desire
+		id = "NKR"
+		target = guarantee
+		value = 20
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "AZR"
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "NKR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "NKR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "NKR"			
+		value = 200
+	}
+}
+
+Karabach_3 = {
+	enable = {
+		original_tag = NKR
+	}
+	
+	abort = {
+		NOT = {
+		or = {
+			country_exists = AZR
+			country_exists = ARM
+			}
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "AZR"
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "ARM"			
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "ARM"			
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "ARM"			
+		value = 200
+	}
+
+}
+
+Turkey_1 = {
+	enable = {
+		original_tag = TUR
+		country_exists = AZR
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = AZR
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "ARM"
+		value = 50
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "NKR"
+		value = 50
+	}
+	ai_strategy = {
+		type = befriend
+		id = "AZR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "AZR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "AZR"			
+		value = 200
+	}
+}
+
+RUSSIA = {
+	enable = {
+		original_tag = SOV
+		country_exists = ARM
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = ARM
+		}
+	}
+	
+	ai_strategy = {
+		type = befriend
+		id = "ARM"			
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "ARM"			
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "ARM"			
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "NKR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "NKR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "NKR"			
+		value = 200
+	}
+}

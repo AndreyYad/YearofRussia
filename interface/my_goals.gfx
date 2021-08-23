@@ -1,0 +1,283 @@
+spriteTypes = {	
+
+	### Ukraine
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_placeholder"
+		texturefile = "gfx/interface/goals/focus_ukr_placeholder.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_maidan_goals"
+		texturefile = "gfx/interface/goals/focus_ukr_maidan_goals.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_democracy_patch"
+		texturefile = "gfx/interface/goals/focus_ukr_democracy_patch.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_oppression_russian_lang"
+		texturefile = "gfx/interface/goals/focus_ukr_oppression_russian_lang.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_nationalism_patch"
+		texturefile = "gfx/interface/goals/focus_ukr_nationalism_patch.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_right_radical"
+		texturefile = "gfx/interface/goals/focus_ukr_right_radical.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_Elect_Poroshenko2014"
+		texturefile = "gfx/interface/goals/focus_ukr_Elect_Poroshenko2014.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_Elect_Timoshenko2014"
+		texturefile = "gfx/interface/goals/focus_ukr_Elect_Timoshenko2014.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_Elect_Lyashko2014"
+		texturefile = "gfx/interface/goals/focus_ukr_Elect_Lyashko2014.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_UKR_elect_dictator"
+		texturefile = "gfx/interface/goals/focus_ukr_UKR_elect_dictator.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_Elect_Zelenskiy2019"
+		texturefile = "gfx/interface/goals/focus_ukr_Elect_Zelenskiy2019.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_UKR_Crimea"
+		texturefile = "gfx/interface/goals/focus_ukr_UKR_Crimea.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_UKR_great_ukraine"
+		texturefile = "gfx/interface/goals/focus_ukr_UKR_great_ukraine.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_UKR_home_politic"
+		texturefile = "gfx/interface/goals/focus_ukr_UKR_home_politic.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_right_radical"
+		texturefile = "gfx/interface/goals/focus_ukr_right_radical.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_UKR_stop_nazi_focus"
+		texturefile = "gfx/interface/goals/focus_ukr_UKR_stop_nazi_focus.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_Elect_Ryabinovich"
+		texturefile = "gfx/interface/goals/focus_ukr_Elect_Ryabinovich.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_national_republic"
+		texturefile = "gfx/interface/goals/focus_ukr_national_republic.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_stop_maidan"
+		texturefile = "gfx/interface/goals/focus_ukr_stop_maidan.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_loose_trait"
+		texturefile = "gfx/interface/goals/focus_ukr_loose_trait.dds"
+	}
+	
+	### China
+
+	### GENERIC
+	
+	SpriteType = {
+		name = "GFX_goal_ukr_attack_russia"
+		texturefile = "gfx/interface/goals/focus_ukr_attack_russia.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_friend_russia"
+		texturefile = "gfx/interface/goals/goal_friend_russia.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_export_the_revolution"
+		texturefile = "gfx/interface/goals/focus_export_the_revolution.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_sweeping_reform"
+		texturefile = "gfx/interface/goals/focus_sweeping_reform.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_national_communism"
+		texturefile = "gfx/interface/goals/focus_national_communism.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_anarchist_society"
+		texturefile = "gfx/interface/goals/focus_anarchist_society.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_extreme_liberty"
+		texturefile = "gfx/interface/goals/focus_goal_extreme_liberty.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_war_of_equality"
+		texturefile = "gfx/interface/goals/focus_class_war.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_end_state"
+		texturefile = "gfx/interface/goals/focus_end_state.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_focus_anarchist_society2"
+		texturefile = "gfx/interface/goals/focus_anarchist_society2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_secret_police"
+		texturefile = "gfx/interface/goals/focus_secret_police.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_puppetmaster"
+		texturefile = "gfx/interface/goals/focus_puppetmaster.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_emperor"
+		texturefile = "gfx/interface/goals/focus_emperor.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_fascist_emperor"
+		texturefile = "gfx/interface/goals/focus_fascist_emperor.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_liberte_egalite_solidarite"
+		texturefile = "gfx/interface/goals/focus_liberte_egalite_solidarite.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_nazi"
+		texturefile = "gfx/interface/goals/focus_nazi.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_political_manoeuvres"
+		texturefile = "gfx/interface/goals/focus_political_manoeuvres.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_ultimate_nation"
+		texturefile = "gfx/interface/goals/focus_ultimate_nation.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_mine_steel"
+		texturefile = "gfx/interface/goals/focus_mine_steel.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_mine_aluminum"
+		texturefile = "gfx/interface/goals/focus_mine_aluminum.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_mine_tungsten"
+		texturefile = "gfx/interface/goals/focus_mine_tungsten.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_mine_chromium"
+		texturefile = "gfx/interface/goals/focus_mine_chromium.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_war_depo"
+		texturefile = "gfx/interface/goals/focus_war_depo.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_war_1"
+		texturefile = "gfx/interface/goals/focus_war_1.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_war_2"
+		texturefile = "gfx/interface/goals/focus_war_2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_focus_war_3"
+		texturefile = "gfx/interface/goals/focus_war_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_rel_old_authority"
+		texturefile = "gfx/interface/goals/focus_rel_old_authority.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_rel_influence_clerics"
+		texturefile = "gfx/interface/goals/focus_rel_influence_clerics.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_rel_clerical_parties"
+		texturefile = "gfx/interface/goals/focus_rel_clerical_parties.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_rel_chrisitan_country"
+		texturefile = "gfx/interface/goals/focus_rel_chrisitan_country.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_rel_chrisitan_country_ortodox"
+		texturefile = "gfx/interface/goals/focus_rel_chrisitan_country_ortodox.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_rel_muslims_country"
+		texturefile = "gfx/interface/goals/focus_rel_muslims_country.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_rel_heretics_country"
+		texturefile = "gfx/interface/goals/focus_rel_heretics_country.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_rel_leader"
+		texturefile = "gfx/interface/goals/focus_rel_leader.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_rel_community"
+		texturefile = "gfx/interface/goals/focus_rel_community.dds"
+	}
+}

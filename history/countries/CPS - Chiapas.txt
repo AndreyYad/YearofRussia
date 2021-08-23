@@ -1,0 +1,103 @@
+﻿capital = 475
+
+oob = "CPS_2014"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+
+set_convoys = 45
+set_stability = 0.8
+set_war_support = 0.9
+
+2020.1.1 = {
+	add_political_power = 1198
+	
+	oob = "CPS_2020"
+	
+	set_technology = {
+		interwar_artillery = 1
+	
+	
+		support_weapons = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		fuel_refining2 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = anarchy
+	last_election = "1994.1.1"
+	election_frequency = 72
+	elections_allowed = no
+}
+set_popularities = {
+	anarchy = 90
+	communism = 10
+}
+
+create_country_leader = {
+	name = "Subcommandant"
+	desc = " "
+	picture = "gfx/leaders/CPS/Portrait_Subcommandant.dds"
+	expire = "2030.1.1"
+	ideology = libertarian_communism
+	traits = {
+		cornered_fox
+	}
+}
+
+create_country_leader = {
+	name = "Subcommandant"
+	desc = " "
+	picture = "gfx/leaders/CPS/Portrait_Subcommandant.dds"
+	expire = "2030.1.1"
+	ideology = anarchist_communism
+	traits = {
+		cornered_fox
+	}
+}
+
+create_field_marshal = {
+	name = "Subcommandant"
+	picture = "gfx/leaders/CPS/Portrait_Subcommandant.dds"
+	traits = { infantry_officer }
+	skill = 5
+	attack_skill = 5
+	defense_skill = 5
+	planning_skill = 5
+	logistics_skill = 5
+}

@@ -1,0 +1,4171 @@
+﻿ focus_tree = {
+	id = donetsk_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = DNR
+		}
+	}
+	
+	continuous_focus_position = { x = 50 y = 1970 }
+	default = no
+
+	initial_show_position = {
+		focus = DNR_foreign_policy
+	}
+	
+	#Образование Государства
+	focus = {
+		id = DNR_build_country
+		icon = GFX_goal_generic_demand_territory
+		x = 12
+		y = 0
+		cost = 1
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			country_event = {
+					days = 1 
+				id = dnr_events.1 }
+		}
+	}
+	
+	#Баррикады
+	focus = {
+		id = DNR_barricades
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		relative_position_id = DNR_build_country
+		cost = 1
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		prerequisite = { focus = DNR_build_country }
+		bypass = { not = { controls_state = 828 } }
+		ai_will_do = {
+			factor = 35
+			modifier = {
+				factor = 115
+				is_historical_focus_on = yes
+			}
+		}
+
+		completion_reward = {
+		828 = {
+			add_building_construction = { type = bunker province = 3491 level = 1 instant_build = yes }
+			add_building_construction = { type = bunker province = 502 level = 2 instant_build = yes }
+			add_building_construction = { type = bunker province = 3466 level = 2 instant_build = yes }
+			add_building_construction = { type = bunker province = 3449 level = 3 instant_build = yes }
+			add_building_construction = { type = bunker province = 6776 level = 2 instant_build = yes }
+			add_building_construction = { type = bunker province = 6420 level = 1 instant_build = yes }
+			}
+		227 = {
+			add_building_construction = { type = bunker province = 6474 level = 5 instant_build = yes }
+			}
+		228 = {
+			add_building_construction = { type = bunker province = 9461 level = 5 instant_build = yes }
+			add_building_construction = { type = bunker province = 6505 level = 4 instant_build = yes }
+			}
+		}
+	}
+	
+	#Русский мир
+	focus = {
+		id = DNR_prorussian
+		icon = GFX_goal_friend_russia
+		x = 0
+		y = 1
+		relative_position_id = DNR_barricades
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_barricades 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL } 
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			every_country = {
+			limit = {
+				OR = {
+				original_tag = SOV
+				original_tag = BLR }
+			}
+			add_opinion_modifier = {  
+				target = ROOT
+				modifier = medium_increase 
+				}
+			}
+		}
+	}
+	
+	#Восстановить стабильность
+	focus = {
+		id = DNR_instability
+		icon = GFX_goal_generic_demand_territory
+		x = -2
+		y = 0
+		relative_position_id = DNR_barricades
+		cost = 5.8
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_build_country }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		ai_will_do = {
+			factor = 15
+			modifier = {
+				factor = 50
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			add_political_power = -50
+			add_stability = -0.2
+		}
+	}
+	
+	#Экспроприировать имущество беженцев
+	focus = {
+		id = DNR_expropriate_property
+		icon = GFX_goal_generic_major_war
+		x = -2
+		y = 1
+		relative_position_id = DNR_instability
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_instability }
+		mutually_exclusive = { focus = DNR_respect_ownership }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL } 
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			every_country = {
+				limit = {
+					original_tag = UKR
+				}
+			add_opinion_modifier = { 
+				target = ROOT
+				modifier = large_decrease
+			}
+			}
+			country_event = {
+					days = 1 
+				id = dnr_events.16 }
+			add_timed_idea = { 
+				idea = generic_change_through_violence
+				days = 70
+			}
+		}
+	}
+
+	#Уважать право собственности
+	focus = {
+		id = DNR_respect_ownership
+		icon = GFX_goal_generic_military_deal
+		x = 0
+		y = 1
+		relative_position_id = DNR_instability
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_instability }
+		mutually_exclusive = { focus = DNR_expropriate_property }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 20
+		}
+		completion_reward = {
+			add_popularity = {
+				ideology = democratic 
+				popularity = 0.1 
+			}
+			add_timed_idea = { 
+				idea = generic_change_through_politics
+				days = 140
+			}
+		}
+	}
+	
+	#Воззвать к патриотизму
+	focus = {
+		id = DNR_patriotism
+		icon = GFX_goal_generic_neutrality_focus
+		x = 2
+		y = 0
+		relative_position_id = DNR_barricades
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_build_country }
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_timed_idea = {
+				idea = generic_maintain_regime
+				days = 365
+				
+			}
+		}
+	}
+
+	#Пропаганда независимости
+	focus = {
+		id = DNR_regime_propaganda
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		relative_position_id = DNR_patriotism
+		cost = 4.4
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_HISTORICAL }
+		prerequisite = { focus = DNR_patriotism }
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			add_stability = 0.10
+			add_popularity = {
+				ideology = neutrality 
+				popularity = 0.05 
+			}
+		}
+	}
+	
+	#Жестко подавлять инакомыслие
+	focus = {
+		id = DNR_brutal_oppression
+		icon = GFX_goal_generic_attack_allies
+		x = 0
+		y = 1
+		relative_position_id = DNR_regime_propaganda
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_regime_propaganda 
+		}
+		available = { has_completed_focus = Elect_Medvedev2014 }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 6
+		}
+		completion_reward = {
+			add_ideas = generic_brutal_oppression
+		}
+	}
+	
+	#Выборы 2014 (Исторический)
+	focus = {
+		id = DNR_elections_in2014
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 1
+		relative_position_id = DNR_prorussian
+		cost = 4.4
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		bypass = { date > 2015.5.24 }
+		prerequisite = { focus = DNR_prorussian }
+		prerequisite = { focus = DNR_regime_propaganda }
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			country_event = {
+					days = 1 
+				id = dnr_events.9 }
+		}
+	}
+	
+	#Путь Захарченко (Исторический)
+	focus = {
+		id = Elect_Zacharchenko2014
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 0
+		y = 1
+		relative_position_id = DNR_elections_in2014
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_elections_in2014 }
+		mutually_exclusive = { 
+		focus = Elect_Medvedev2014
+		focus = Coup_Litvinov
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL } 
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		available = {
+			has_country_leader = {
+				name = "Alexander Zakharchenko"
+				ruling_only = yes
+			}
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_country_leader_trait = elected_dictator
+		}
+	}
+	
+	#Усиление государства
+	focus = {
+		id = DNR_embrace_authoritarianism
+		icon = GFX_focus_ger_return_of_the_kaiser
+		x = 0
+		y = 1
+		relative_position_id = Elect_Zacharchenko2014
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = Elect_Zacharchenko2014 }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL } 
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 3
+				any_neighbor_country = {
+					is_major = yes
+				}
+			}
+		}
+		completion_reward = {
+			add_timed_idea = { 
+			idea = generic_empower_regime
+			days = 280 }
+			add_stability = 0.1
+		}
+	}
+	
+	#Запретить компартию
+	focus = {
+		id = DNR_crush_dissent
+		icon = GFX_focus_rom_parties_end
+		x = -1
+		y = 1
+		relative_position_id = DNR_embrace_authoritarianism
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_embrace_authoritarianism }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL } 
+		ai_will_do = {
+			factor = 8
+		}
+		completion_reward = {
+			add_stability = -0.10
+			add_ideas = generic_crush_dissent
+		}
+	}
+
+	#Обучение ополченцев в РФ
+	focus = {
+		id = DNR_necessity_of_war
+		icon = GFX_focus_ger_oppose_hitler
+		x = 1
+		y = 1
+		relative_position_id = DNR_embrace_authoritarianism
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_embrace_authoritarianism focus = DNR_nationalist_sentiment }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			army_experience = 20
+			add_war_support = 0.1
+			every_country = {
+			limit = {
+				tag = SOV
+			}
+			add_opinion_modifier = {  
+				target = ROOT
+				modifier = medium_increase 
+				}
+			}
+		}
+	}
+
+	#Новые хозяева заводов
+	focus = {
+		id = DNR_enact_a_war_economy
+		icon = GFX_goal_generic_consumer_goods
+		x = 0
+		y = 1
+		relative_position_id = DNR_crush_dissent
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_crush_dissent }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL } 
+		ai_will_do = {
+			factor = 7
+			modifier = {
+				factor = 25
+				has_war = yes
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {NOT = {has_idea = war_economy} }
+				add_stability = -0.10
+				add_ideas = war_economy
+			}
+			else = {
+			add_political_power = 150
+			}
+		}
+	}
+	
+	#Пророссийская риторика
+	focus = {
+		id = DNR_political_manoeuvres
+		icon = GFX_goal_political_manoeuvres
+		x = 0
+		y = 1
+		relative_position_id = DNR_necessity_of_war
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_necessity_of_war }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_popularity = { 
+			ideology = fascism 
+			popularity = 0.2
+			}
+			add_popularity = { 
+			ideology = neutrality 
+			popularity = 0.2
+			}
+			add_political_power = 250
+		}
+	}
+	
+	#Стабильность
+	focus = {
+		id = DNR_proud_not_to_conform
+		icon = GFX_goal_generic_neutrality_focus
+		x = 1
+		y = 1
+		relative_position_id = DNR_enact_a_war_economy
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_enact_a_war_economy }
+		prerequisite = { 
+			focus = DNR_political_manoeuvres
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		available = {
+			OR = {
+			neutrality > 0.90
+			democratic > 0.90
+			}
+			num_of_factories > 75
+		}
+		completion_reward = {
+			add_ideas = generic_proud_not_confrom
+		}
+	}
+	
+	#Путь Медведева
+	focus = {
+		id = Elect_Medvedev2014
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 2
+		y = 1
+		relative_position_id = DNR_elections_in2014
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_elections_in2014 }
+		mutually_exclusive = { 
+		focus = Elect_Zacharchenko2014
+		focus = Coup_Litvinov
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			has_country_leader = {
+				name = "Vladimir Medvedev"
+				ruling_only = yes
+			}
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_country_leader_trait = pragmatic_ideologue
+		}
+	}
+	
+	#Возвышение русской нации
+	focus = {
+		id = DNR_nationalist_sentiment
+		icon = GFX_goal_support_fascism
+		x = 0
+		y = 1
+		relative_position_id = Elect_Medvedev2014
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { focus = Elect_Medvedev2014 }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+		add_popularity = { 
+				ideology = fascism 
+				popularity = 0.3 
+			}
+			add_timed_idea = {
+				idea = nationalism
+				days = 720
+			}
+		}
+	}
+	
+	#Военные училища
+	focus = {
+		id = DNR_enforce_militarism
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		relative_position_id = DNR_nationalist_sentiment
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_nationalist_sentiment }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER} 
+		ai_will_do = {
+			factor = 4
+		}
+		available = {
+			fascism > 0.30
+		}
+		completion_reward = {
+			add_ideas = militarism_focus
+			army_experience = 10
+		}
+	}
+	
+	#Монополия на воспитание
+	focus = {
+		id = DNR_control_the_youth
+		icon = GFX_focus_generic_little_entente
+		x = 0
+		y = 1
+		relative_position_id = DNR_enforce_militarism
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_enforce_militarism }
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = military_youth_focus
+		}
+	}
+
+	#Монополия на власть
+	focus = {
+		id = DNR_enforce_party_loyalty
+		icon = GFX_goal_generic_propaganda
+		x = 3
+		y = 1
+		relative_position_id = DNR_nationalist_sentiment
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_nationalist_sentiment 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY} 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = { 
+				ideology = fascism 
+				popularity = 0.1
+			}
+		}
+	}
+	
+	#Самостоятельная экономика
+	focus = {
+		id = DNR_autarky
+		icon = GFX_focus_generic_steel
+		x = 2
+		y = 1
+		relative_position_id = DNR_enforce_party_loyalty
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_enforce_party_loyalty 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 6
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = { has_idea = closed_economy }
+				}
+				add_ideas = closed_economy
+			}
+			else = {
+				add_political_power = 150
+			}
+			remove_ideas = unrecognized_state
+			every_country = {
+				limit = { 
+					AND = { 
+						has_idea = unrecognized_state
+						is_subject_of = DNR
+					}
+				}
+				remove_ideas = unrecognized_state
+			}
+		}
+	}
+
+	#Парамилитаризм
+	focus = {
+		id = DNR_paramilitarism
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		relative_position_id = DNR_enforce_party_loyalty
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_enforce_party_loyalty 
+		}
+		ai_will_do = {
+			factor = 6
+		}
+		completion_reward = {
+			add_ideas = paramilitarism_focus
+		}
+	}
+	
+	#Русские превыше всех
+	focus = {
+		id = DNR_masters_over_all
+		icon = GFX_goal_support_fascism
+		x = -1
+		y = 1
+		relative_position_id = DNR_paramilitarism
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_paramilitarism 
+		}
+		prerequisite = { 
+			focus = DNR_control_the_youth 
+		}
+		prerequisite = { 
+			focus = DNR_autarky 
+		}
+		mutually_exclusive = { focus = DNR_the_will_of_the_people }
+		ai_will_do = {
+			factor = 5
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			num_of_factories > 75
+			fascism > 0.90
+		}
+		completion_reward = {
+			add_ideas = generic_masters_over_all
+		}
+	}
+	
+	#Капитализм превыше всех
+	focus = {
+		id = DNR_the_will_of_the_people
+		icon = GFX_goal_support_democracy
+		x = 1
+		y = 1
+		relative_position_id = DNR_paramilitarism
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_paramilitarism 
+		}
+		prerequisite = { 
+			focus = DNR_control_the_youth 
+		}
+		prerequisite = { 
+			focus = DNR_autarky 
+		}
+		mutually_exclusive = { focus = DNR_masters_over_all }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			num_of_factories > 75
+		}
+		completion_reward = {
+			add_ideas = generic_the_will_of_the_people
+		}
+	}
+	
+	#Переворот Литвинова
+	focus = {
+		id = Coup_Litvinov
+		icon = GFX_goal_generic_forceful_treaty
+		x = -2
+		y = 1
+		relative_position_id = DNR_elections_in2014
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_elections_in2014 }
+		mutually_exclusive = { 
+		focus = Elect_Zacharchenko2014
+		focus = Elect_Medvedev2014
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			has_country_leader = {
+				name = "Vladimir Medvedev"
+				ruling_only = yes
+			}
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = internationalism
+				days = 720
+			}
+			add_stability = -0.05
+			add_country_leader_trait = leninist
+		}
+	}
+	
+	#Коллективизм
+	focus = {
+		id = DNR_collectivisation
+		icon = GFX_goal_generic_soviet_construction
+		x = 0
+		y = 1
+		relative_position_id = DNR_expropriate_property
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = DNR_expropriate_property 
+			focus = DNR_respect_ownership
+		}
+		available = {
+			has_completed_focus = Coup_Litvinov 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_ideas = generic_collectivisation
+		}
+	}
+	
+	#Корпоративизм
+	focus = {
+		id = DNR_corporatism
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 2
+		y = 1
+		relative_position_id = DNR_expropriate_property
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = DNR_expropriate_property 
+			focus = DNR_respect_ownership
+		}
+		available = {
+		or = {
+			has_completed_focus = Elect_Medvedev2014 
+			has_completed_focus = Elect_Zacharchenko2014 }
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_ideas = generic_corporatism
+		}
+	}
+	
+	#Организовать народную армию
+	focus = {
+		id = DNR_peoples_army
+		icon = GFX_focus_hol_liberation
+		x = -1
+		y = 1
+		relative_position_id = DNR_collectivisation
+		cost = 8.6
+		available_if_capitulated = yes 
+		prerequisite = { focus = DNR_collectivisation }
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+		available = {
+		has_completed_focus = Coup_Litvinov
+		}
+		ai_will_do = {
+			factor = 6
+		}
+		completion_reward = {
+			add_ideas = generic_people_army
+		}
+	}
+	
+	#Изгнать олигархов
+	focus = {
+		id = DNR_stop_oligharch
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 0
+		y = 1
+		relative_position_id = Coup_Litvinov
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = Coup_Litvinov }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER} 
+		ai_will_do = {
+			factor = 4
+		}
+		available = {
+			communism > 0.20
+		}
+		completion_reward = {
+			add_ideas = generic_class_struggle
+			every_country = {
+				limit = {
+					original_tag = SOV
+				}
+			add_opinion_modifier = { 
+				target = ROOT
+				modifier = large_decrease
+			}
+			}
+		}
+	}
+	
+	#Новое воспитание молодёжи
+	focus = {
+		id = DNR_indoctrination
+		icon = GFX_goal_generic_propaganda
+		x = -4
+		y = 1
+		relative_position_id = Coup_Litvinov
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = Coup_Litvinov }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = indoctrination_focus
+			add_political_power = 150
+		}
+	}
+
+	#Примирение нации
+	focus = {
+		id = DNR_political_correctness
+		icon = GFX_goal_generic_dangerous_deal
+		x = -2
+		y = 1
+		relative_position_id = Coup_Litvinov
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = Coup_Litvinov }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {		
+			add_political_power = 200
+			add_ideas = idea_political_correctness
+		}
+	}
+	
+	#Коммунистическое подполье в Украине
+	focus = {
+		id = DNR_anti_colonial_ukraine
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = { focus = DNR_indoctrination focus = DNR_political_correctness focus = DNR_stop_oligharch }
+		x = 1
+		y = 1
+		relative_position_id = DNR_indoctrination
+		cost = 8.6
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			UKR = {
+				add_timed_idea = { idea = communist_pressure days = 1095 }
+			}
+		}
+	}
+	
+	#Коммунистическое подполье на Дону
+	focus = {
+		id = DNR_anti_colonial_rostov
+		icon = GFX_goal_ukr_attack_russia
+		prerequisite = { focus = DNR_indoctrination focus = DNR_political_correctness focus = DNR_stop_oligharch }
+		x = -1
+		y = 1
+		relative_position_id = DNR_indoctrination
+		available = {
+		has_completed_focus = DNR_export_the_revolution
+		}
+		cost = 8.6
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			SOV = {
+				add_timed_idea = { idea = communist_pressure days = 1095 }
+			}
+		}
+	}
+	
+	#Революция на Луганщине
+	focus = {
+		id = DNR_anti_putin_lnr
+		icon = GFX_focus_generic_soviet_politics
+		prerequisite = { focus = DNR_indoctrination focus = DNR_political_correctness focus = DNR_stop_oligharch }
+		x = 3
+		y = 1
+		relative_position_id = DNR_indoctrination
+		cost = 8.6
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			LNR = {
+				add_timed_idea = { idea = communist_pressure days = 1095 }
+			}
+			if = {
+			limit = {
+				country_exists = LNR
+				OR = {
+					has_dlc = "Together for Victory"
+					has_dlc = "Man the Guns"
+				}
+			}
+			set_autonomy = {
+				target = LNR
+				autonomous_state = autonomy_colony
+				freedom_level = 0.35
+			}
+			else = {
+				puppet = LNR
+			}
+			}
+			hidden_effect = {
+			if = {
+			limit = {
+				country_exists = KNR
+				OR = {
+					has_dlc = "Together for Victory"
+					has_dlc = "Man the Guns"
+				}
+			}
+			set_autonomy = {
+				target = KNR
+				autonomous_state = autonomy_colony
+				freedom_level = 0.35
+			}
+			else = {
+				puppet = KNR
+			}
+			}
+			}
+		}
+	}
+	
+	#Независимость от мировой экономики
+	focus = {
+		id = DNR_new_state
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 0
+		y = 1
+		relative_position_id = DNR_anti_putin_lnr
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_anti_putin_lnr 
+			focus = DNR_anti_colonial_ukraine
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			num_of_factories> 40
+		}
+		completion_reward = {
+			remove_ideas = unrecognized_state
+			every_country = {
+				limit = { 
+					AND = { 
+						has_idea = unrecognized_state
+						is_subject_of = DNR
+					}
+				}
+				remove_ideas = unrecognized_state
+			}
+		}
+	}
+	
+	#Союз с непризнанными государствами
+	focus = {
+		id = DNR_new_union
+		icon = GFX_focus_usa_union_representation_act
+		x = -2
+		y = 1
+		relative_position_id = DNR_anti_putin_lnr
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_anti_putin_lnr 
+			focus = DNR_anti_colonial_ukraine
+		}
+		available = { not = { has_idea = unrecognized_state } }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 20
+		}
+		available = {
+			num_of_factories> 40
+		}
+		completion_reward = {
+		set_global_flag = call_dnr_union
+		create_faction = dnr_union
+			every_country = {
+				limit = {
+					AND = {
+						not = { original_tag = ROOT }
+						has_idea = unrecognized_state
+					}
+				}
+				country_event = { days = 1 id = dnr_events.17 }
+			}
+		}
+	}
+	
+	#Социалистическая революция
+	focus = {
+		id = DNR_the_true_revolution
+		icon = GFX_goal_support_communism
+		x = -1
+		y = 1
+		relative_position_id = DNR_new_state
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_new_state focus = DNR_new_union }
+		available = {
+		has_government = communism }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+			num_of_factories> 75
+			communism > 0.9
+		}
+		completion_reward = {
+			add_ideas = generic_the_true_revolution
+		}
+	}
+	
+	#Внешняя политика
+	focus = {
+		id = DNR_foreign_policy
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 2
+		y = 5
+		cost = 2
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+		NOT = { has_idea = unrecognized_state }
+		}
+
+		completion_reward = {
+			add_political_power = 300
+			add_ideas = generic_diplomat_corps
+			set_rule = { can_send_volunteers = yes}
+		}
+	}
+	
+	#Экспорт революции
+	focus = {
+		id = DNR_export_the_revolution
+		icon = GFX_goal_export_the_revolution
+		x = 2
+		y = 0
+		relative_position_id = DNR_foreign_policy
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_foreign_policy 
+		}
+		prerequisite = {
+			focus = DNR_create_an_equal_society
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 6
+		}
+		available = {
+			any_neighbor_country = {
+				exists = yes
+			NOT = {	
+				OR = {
+					has_government = communism
+					}
+				}
+			}
+		}
+		completion_reward = {
+			every_neighbor_country = {
+				limit = {
+					NOT = {
+						has_government = communism
+					}
+					is_major = no
+				}
+				country_event = {
+					hours = 16
+					random = 12
+					id = genericfocustree.12
+				}
+			}
+		}
+	}
+	
+	#Военные приготовления
+	focus = {
+		id = DNR_prepare_for_war
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 1
+		y = 2
+		relative_position_id = DNR_foreign_policy
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_profit_from_war }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_HISTORICAL }
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_ideas = generic_prepare_for_war
+			add_war_support = 0.1
+		}
+	}
+	
+	#Центр планирования
+	focus = {
+		id = DNR_planning_centr
+		icon = GFX_goal_generic_demand_territory
+		x = -1
+		y = 1
+		relative_position_id = DNR_foreign_policy
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_foreign_policy 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 15
+				has_war = yes
+			}
+		}
+
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+	
+	#План на худшее
+	focus = {
+		id = DNR_plan_for_the_worst
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 1
+		relative_position_id = DNR_planning_centr
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_planning_centr }
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_ideas = generic_prepare_for_war
+		}
+	}
+
+	#Ставка на оборону
+	focus = {
+		id = DNR_desperate_defense
+		icon = GFX_goal_generic_military_sphere
+		x = 0
+		y = 1
+		relative_position_id = DNR_plan_for_the_worst
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_plan_for_the_worst }
+		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL }
+		mutually_exclusive = { focus = DNR_relentless_reconquest }
+		ai_will_do = {
+			factor = 5
+			modifier = {
+			factor = 10
+			has_government = democratic
+			}
+		}
+		completion_reward = {
+			add_ideas = generic_desperate_def
+		}
+	}
+
+	#Ставка на атаку
+	focus = {
+		id = DNR_relentless_reconquest
+		icon = GFX_goal_generic_major_war
+		x = 2
+		y = 1
+		relative_position_id = DNR_plan_for_the_worst
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_prepare_for_war }
+		mutually_exclusive = { focus = DNR_desperate_defense }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		ai_will_do = {
+			factor = 5
+			modifier = {
+			factor = 10
+			has_government = fascism
+			}
+		}
+		completion_reward = {
+			add_ideas = generic_reconquest
+		}
+	}
+	
+	#Черный рынок
+	focus = {
+		id = DNR_profit_from_war
+		icon = GFX_focus_mex_privatisation
+		x = 1
+		y = 1
+		relative_position_id = DNR_foreign_policy
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_foreign_policy 
+		}
+		bypass = { not = { any_country = { has_war = yes } has_war = no } }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+			any_country = {
+					has_war = yes 
+				}
+			has_war = no
+		}
+		completion_reward = {
+			add_ideas = generic_war_profit
+			unlock_decision_category_tooltip = war_profiteering_efforts
+		}
+	}
+	
+	#Внутренняя политика
+	focus = {
+		id = DNR_assemble_government
+		icon = GFX_focus_generic_home_defense
+		x = 1
+		y = 0
+		cost = 5.8
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_HISTORICAL }
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		date > 2015.2.1
+		}
+		completion_reward = {
+			add_political_power = 250
+		}
+	}
+	
+	#Власть советам
+	focus = {
+		id = DNR_soviet_system
+		icon = GFX_goal_generic_forceful_treaty
+		x = 5
+		y = 1
+		relative_position_id = DNR_assemble_government
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_assemble_government 
+		}
+		mutually_exclusive = { 
+		focus = DNR_liberal_government
+		focus = DNR_national_government
+		focus = DNR_authoritarianl_government
+		}
+		available = {
+		has_government = communism
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_political_power = 100
+			add_ideas = political_commissars_focus
+		}
+	}
+	
+	#Отряды самообороны
+	focus = {
+		id = DNR_people_militia
+		icon = GFX_goal_generic_small_arms
+		x = -1
+		y = 1
+		relative_position_id = DNR_soviet_system
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_soviet_system 
+		focus = DNR_authoritarianl_government }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER FOCUS_FILTER_STABILITY }
+		available = {
+		has_government = communism
+		}
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = people_militia_focus
+			add_political_power = 50
+		}
+	}
+	
+	#Социалистическая экономика
+	focus = {
+		id = DNR_socialist_economic
+		icon = GFX_focus_YUG_pan_slavic_congress
+		x = -1
+		y = 1
+		relative_position_id = DNR_people_militia
+		cost = 8.6
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		prerequisite = { 
+			focus = DNR_people_militia 
+		}
+		mutually_exclusive = { focus = DNR_unrestricted_trade
+		focus = DNR_protectionist_economics }
+		ai_will_do = {
+			factor = 6
+		}
+		completion_reward = {
+			add_ideas = generic_evolve_past_socialism
+			add_ideas = generic_tariffs
+			every_neighbor_country = {
+				limit = {
+					not = {
+						has_government = communism
+					}
+				}
+				add_opinion_modifier {
+					target = ROOT
+					modifier = tariffs
+				}
+			}
+		}
+	}
+	
+	#Равноправие для всех наций
+	focus = {
+		id = DNR_create_an_equal_society
+		icon = GFX_goal_liberte_egalite_solidarite
+		x = 0
+		y = 2
+		relative_position_id = DNR_people_militia
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_people_militia 
+		}
+		prerequisite = { 
+			focus = DNR_socialist_economic
+		}
+		search_filters = { FOCUS_FILTER_STABILITY } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			hidden_effect = {
+				set_rule = {
+					can_generate_female_aces = yes
+				}
+			}
+			add_popularity = {
+					ideology = communism
+					popularity = 0.15
+				}
+			add_ideas = generic_equal_society
+		}
+	}
+	
+	#Восстановление системы образования
+	focus = {
+		id = DNR_freedom_to_research
+		icon = GFX_focus_research
+		x = 2
+		y = 0
+		relative_position_id = DNR_assemble_government
+		cost = 17.2
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_assemble_government
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			num_of_factories > 40
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	
+	#Либеральное правительство
+	focus = {
+		id = DNR_liberal_government
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		x = -1
+		y = 1
+		relative_position_id = DNR_assemble_government
+		cost = 8.6
+		available_if_capitulated = yes
+		mutually_exclusive = { 
+		focus = DNR_national_government
+		focus = DNR_authoritarianl_government
+		focus = DNR_soviet_system
+		}
+		prerequisite = { 
+			focus = DNR_assemble_government 
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 5
+			modifier = {
+			factor = 10
+			has_government = democratic
+			}
+		}
+		completion_reward = {
+			add_ideas = generic_light_darkness
+		}
+	}
+	
+	#Националистическое правительство
+	focus = {
+		id = DNR_national_government
+		icon = GFX_goal_ultimate_nation
+		x = 1
+		y = 1
+		relative_position_id = DNR_assemble_government
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_MANPOWER} 
+		cost = 8.6
+		available_if_capitulated = yes
+		mutually_exclusive = { 
+		focus = DNR_liberal_government
+		focus = DNR_authoritarianl_government
+		focus = DNR_soviet_system
+		}
+		prerequisite = { focus = DNR_assemble_government }
+		ai_will_do = {
+			factor = 5
+			modifier = {
+			factor = 10
+			has_government = fascism
+			}
+		}
+		completion_reward = {
+			add_ideas = generic_the_ultimate_nation
+		}
+	}
+	
+	#Авторитарное правительство
+	focus = {
+		id = DNR_authoritarianl_government
+		icon = GFX_goal_generic_occupy_states_coastal
+		x = 3
+		y = 1
+		relative_position_id = DNR_assemble_government
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_MANPOWER FOCUS_FILTER_HISTORICAL } 
+		cost = 8.6
+		available_if_capitulated = yes
+		mutually_exclusive = { 
+		focus = DNR_national_government
+		focus = DNR_liberal_government
+		focus = DNR_soviet_system
+		}
+		prerequisite = { 
+			focus = DNR_assemble_government 
+		}
+		
+		ai_will_do = {
+			factor = 5
+			modifier = {
+			factor = 22
+			is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			add_ideas = generic_long_live
+		}
+	}
+	
+	#Цензура
+	focus = {
+		id = DNR_censorship
+		icon = GFX_goal_secret_police
+		x = 0
+		y = 2
+		relative_position_id = DNR_assemble_government
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_liberal_government
+			focus = DNR_national_government 
+			focus = DNR_authoritarianl_government 
+			focus = DNR_soviet_system
+		}
+		search_filters = { FOCUS_FILTER_HISTORICAL }
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_ideas = generic_secret_police
+			
+		}
+	}
+	
+	#Наша сфера влияния
+	focus = {
+		id = DNR_sphere_influence
+		icon = GFX_goal_generic_territory_or_war
+		x = 2
+		y = 2
+		relative_position_id = DNR_assemble_government
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_liberal_government
+			focus = DNR_national_government 
+			focus = DNR_authoritarianl_government 
+			focus = DNR_soviet_system
+		}
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			set_rule = { 
+				can_create_factions = yes 
+			}
+			add_country_leader_trait = warmonger
+		}
+	}
+	
+	#Неограниченная торговля
+	focus = {
+		id = DNR_unrestricted_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		x = -1
+		y = 3
+		relative_position_id = DNR_assemble_government
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = DNR_sphere_influence 
+			focus = DNR_censorship
+		}
+		available = { not = { has_government = communism } }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		mutually_exclusive = { focus = DNR_protectionist_economics
+		focus = DNR_socialist_economic }
+		ai_will_do = {
+			factor = 5
+			modifier = {
+			factor = 10
+			has_government = democratic
+			}
+		}
+		completion_reward = {
+			add_ideas = free_trade
+		}
+	}
+
+	#Протекционистская экономика
+	focus = {
+		id = DNR_protectionist_economics
+		icon = GFX_goal_generic_trade
+		x = 1
+		y = 3
+		relative_position_id = DNR_assemble_government
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = {
+			focus = DNR_sphere_influence 
+			focus = DNR_censorship
+			focus = DNR_soviet_system
+		}
+		available = { not = { has_government = communism } }
+		mutually_exclusive = { focus = DNR_unrestricted_trade
+		focus = DNR_socialist_economic }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL } 
+		ai_will_do = {
+			factor = 5
+			modifier = {
+			factor = 10
+				or = {
+				has_government = neutrality
+				has_government = fascism
+				has_government = communism
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = generic_tariffs
+			hidden_effect = {
+			if = {
+			limit = { 
+				OR = {
+					has_idea = free_trade
+					has_idea = export_focus
+					}
+				}
+				add_ideas = limited_exports
+			}
+			}
+		
+			every_neighbor_country = {
+				limit = {
+					NOT = {
+						tag = ROOT
+					}
+				}
+				add_opinion_modifier {
+					target = ROOT
+					modifier = tariffs
+				}
+			}
+		}
+	}
+	
+	#Индустриализация
+	focus = {
+		id = DNR_focus_on_industrial_research
+		icon = GFX_goal_generic_production
+		x = 26
+		y = 0
+		cost = 14.3
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		available = {
+			date > 2017.1.1
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 1
+				num_of_military_factories > 10
+			}
+			modifier = {
+				factor = 10
+				num_of_military_factories < 10
+			}
+		}
+
+		completion_reward = {
+					random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+					random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	#Восстановление шахт
+	focus = {
+		id = DNR_expand_mines_1
+		icon = GFX_goal_mine_steel
+		x = -3
+		y = 1
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_focus_on_industrial_research }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		
+		available = {
+		num_of_civilian_factories > 10
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_resource = { 
+			type = steel 
+			amount = 18 
+				}
+			}
+		}
+	}
+	
+	#Реорганизация добычи
+	focus = {
+		id = DNR_expand_mines_2
+		icon = GFX_goal_mine_aluminum
+		x = -3
+		y = 2
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_expand_mines_1 }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		
+		available = {
+		num_of_civilian_factories > 20
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_resource = {
+			type = aluminium
+			amount = 18 
+				}
+			}
+		}
+	}
+	
+	#Модернизация шахт
+	focus = {
+		id = DNR_expand_mines_3
+		icon = GFX_goal_mine_tungsten
+		x = -3
+		y = 3
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_expand_mines_2 }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		
+		available = {
+		num_of_civilian_factories > 30
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_resource = {
+			type = tungsten 
+			amount = 8 
+				}
+			}
+		}
+	}
+	
+	#Открытие новых шахт
+	focus = {
+		id = DNR_expand_mines_4
+		icon = GFX_goal_mine_chromium
+		x = -3
+		y = 4
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_expand_mines_3 }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		
+		available = {
+		num_of_civilian_factories > 40
+		}
+		
+		ai_will_do = {
+			factor = 10
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_resource = {
+			type = chromium  
+			amount = 8 
+				}
+			}
+		}
+	}
+
+	#Восстановление заводов
+	focus = {
+		id = DNR_civilian_expansion
+		icon = GFX_focus_generic_industry_1
+		x = -1
+		y = 1
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_focus_on_industrial_research }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		
+		ai_will_do = {
+			factor = 4
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Восстановление жилых домов
+	focus = {
+		id = DNR_additional_civilian_expansion
+		icon = GFX_focus_generic_industry_2
+		x = -1
+		y = 2
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_civilian_expansion }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		
+		ai_will_do = {
+			factor = 2
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Урбанизация
+	focus = {
+		id = DNR_finalise_civilian_expansion
+		icon = GFX_focus_generic_industry_3
+		x = -1
+		y = 3
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_additional_civilian_expansion }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		
+		ai_will_do = {
+			factor = 3
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Построить военные склады
+	focus = {
+		id = DNR_armaments_expansion
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 1
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_focus_on_industrial_research }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1
+				num_of_military_factories > 6
+			}
+			modifier = {
+				factor = 3
+				num_of_military_factories < 6
+			}
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Заполнить военные склады
+	focus = {
+		id = DNR_additional_armaments_expansion
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 2
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_armaments_expansion }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		ai_will_do = {
+			factor = 2
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Новые военные заводы
+	focus = {
+		id = DNR_finalise_armaments_expansion
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 3
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_additional_armaments_expansion }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		ai_will_do = {
+			factor = 2
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Восстановить дороги
+	focus = {
+		id = DNR_improve_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 4
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_finalise_armaments_expansion 
+			focus = DNR_finalise_civilian_expansion 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 2
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Новая дорожная система
+	focus = {
+		id = DNR_continue_improving_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 0
+		y = 5
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_improve_infrastructure }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 2
+		}
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Узнать секрет атомных технологий
+	focus = {
+		id = DNR_research_nuclear_technology
+		icon = GFX_focus_wonderweapons
+		x = -2
+		y = 6
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_continue_improving_infrastructure }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = -10
+					is_historical_focus_on = yes
+					is_major = no
+				}
+			}
+		completion_reward = {
+			add_tech_bonus = {
+				name = nuclear_bonus
+				ahead_reduction = 2
+				category = nuclear
+			}
+			hidden_effect = {
+				news_event = { id = news.174 hours = 16 random = 8 }
+			}
+		}
+	}
+
+	#Гранты ученым
+	focus = {
+		id = DNR_provide_for_scientists
+		icon = GFX_focus_research
+		x = 0
+		y = 6
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_continue_improving_infrastructure }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			num_of_factories > 60
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Укрепить науку
+	focus = {
+		id = DNR_technological_developments
+		icon = GFX_focus_research
+		x = 0
+		y = 7
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_provide_for_scientists }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 4
+		}
+		available = {
+			num_of_factories > 70
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	#Ракетостроение
+	focus = {
+		id = DNR_research_secret_weapons
+		icon = GFX_goal_generic_secret_weapon
+		x = 2
+		y = 6
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_continue_improving_infrastructure }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+		add_tech_bonus = {
+			 bonus = 1 
+			uses = 4 
+			category = electronics
+			category = nuclear
+			category = rocketry
+			category = mech
+			}
+		}
+	}
+
+	#Урбанизм
+	focus = {
+		id = DNR_urbanity
+		icon = GFX_goal_generic_construct_civ_factory
+		x = -7
+		y = 1
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_focus_on_industrial_research }
+		mutually_exclusive = { focus = DNR_rurality }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 4
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			add_ideas = generic_urban_focus
+		}
+	}
+
+	#Индустриальные районы
+	focus = {
+		id = DNR_industrial_hubs
+		icon = GFX_goal_generic_construct_mil_factory
+		x = -7
+		y = 2
+		relative_position_id = DNR_focus_on_industrial_research
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_urbanity }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			swap_ideas = {
+				remove_idea = generic_urban_focus
+				add_idea = generic_urban_focus_2
+			}
+		}
+	}
+
+	#Студ-города
+	focus = {
+		id = DNR_urban_learning_centres
+		icon = GFX_focus_research2
+		x = -7
+		y = 3
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_industrial_hubs }
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = generic_urban_focus_2
+				add_idea = generic_urban_focus_3
+			}
+		}
+	}
+
+	#Рурализм
+	focus = {
+		id = DNR_rurality
+		icon = GFX_goal_generic_consumer_goods
+		x = -5
+		y = 1
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_focus_on_industrial_research }
+		mutually_exclusive = { focus = DNR_urbanity }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = generic_rural_focus
+		}
+	}
+
+	#Шахтёрские посёлки
+	focus = {
+		id = DNR_improve_mining_towns
+		icon = GFX_goal_generic_construction2
+		x = -5
+		y = 2
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_rurality }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = generic_rural_focus 
+				add_idea = generic_rural_focus_2 
+			}
+			random_owned_controlled_state = {
+			add_resource = { 
+			type = steel 
+			amount = 16
+				}
+			}
+		}
+	}
+
+	#Строить больше лицеев
+	focus = {
+		id = DNR_the_great_outdoors
+		icon = GFX_goal_generic_cavalry
+		x = -5
+		y = 3
+		relative_position_id = DNR_focus_on_industrial_research
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_improve_mining_towns }
+		search_filters = { FOCUS_FILTER_STABILITY } 
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = generic_rural_focus_2 
+				add_idea = generic_rural_focus_3 
+			}
+		}
+	}
+	
+	#Донецкий флот
+	focus = {
+		id = DNR_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 5
+		y = 0
+		cost = 8.6
+		relative_position_id = DNR_focus_on_industrial_research
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		available_if_capitulated = yes
+		available = {
+		has_completed_focus = DNR_army_effort
+		controls_state = 828
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = DNR_naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = DNR_naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = DNR_naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = DNR_naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+	
+	#Морская доктрина
+	focus = {
+		id = DNR_navy_doctrine_efforts
+		icon = GFX_goal_generic_air_doctrine
+		x = 0
+		y = 1
+		relative_position_id = DNR_naval_effort
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_naval_effort 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 4
+		}
+		complete_tooltip = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name =  naval_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name =  naval_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+
+	#Гибкий флот
+	focus = {
+		id = DNR_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = DNR_navy_doctrine_efforts }
+		mutually_exclusive = { focus = DNR_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = DNR_navy_doctrine_efforts
+		cost = 4.4
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	#Тяжеловесный флот
+	focus = {
+		id = DNR_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = DNR_navy_doctrine_efforts }
+		mutually_exclusive = { focus = DNR_flexible_navy }
+		x = 1
+		y = 2
+		relative_position_id = DNR_naval_effort
+		cost = 4.4
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	#Подводный флот
+	focus = {
+		id = DNR_submarine_effort
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = DNR_flexible_navy focus = DNR_large_navy }
+		x = 0
+		y = 1
+		relative_position_id = DNR_flexible_navy
+		cost = 4.4
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	#Основной флот
+	focus = {
+		id = DNR_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = DNR_large_navy focus = DNR_flexible_navy }
+		x = 0
+		y = 1
+		relative_position_id = DNR_large_navy
+		cost = 4.4
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	#Береговая служба
+	focus = {
+		id = DNR_destroyer_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = DNR_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = DNR_submarine_effort
+		cost = 4.4
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	#Крупные корабли
+	focus = {
+		id = DNR_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = DNR_cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = DNR_cruiser_effort
+		cost = 4.4
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+	
+	#Защита берегов
+	focus = {
+		id = DNR_coastal_defense
+		icon = GFX_focus_generic_coastal_fort
+		x = 0
+		y = 1
+		relative_position_id = DNR_destroyer_effort
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_capital_ships_effort
+		focus = DNR_destroyer_effort }
+		available = { has_completed_focus = DNR_naval_effort }
+		mutually_exclusive = { focus = DNR_allow_foreign_shipbuilders }
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = generic_coastal_defense
+		}
+	}
+	
+	#Защита морей
+	focus = {
+		id = DNR_allow_foreign_shipbuilders
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 2
+		y = 0
+		relative_position_id = DNR_coastal_defense
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_capital_ships_effort
+		focus = DNR_destroyer_effort }
+		available = { has_completed_focus = DNR_naval_effort }
+		mutually_exclusive = { focus = DNR_coastal_defense }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_ideas = generic_foreign_shipbuilders
+			custom_effect_tooltip = foreign_shipbuilders_tt
+		}
+	}
+	
+	#Приоритет флота
+	focus = {
+		id = DNR_naval_primacy
+		icon = GFX_goal_generic_amphibious_assault
+		x = 1
+		y = 2
+		relative_position_id = DNR_destroyer_effort
+		cost = 8.6
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH} 
+		prerequisite = { focus = DNR_coastal_defense
+		focus = DNR_allow_foreign_shipbuilders }
+
+		mutually_exclusive = { 
+			focus = DNR_air_force_primacy 
+		}
+		mutually_exclusive = { 
+			focus = DNR_army_primacy 
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			num_of_factories> 60
+			num_of_naval_factories > 25
+			has_navy_experience > 150
+		}
+		completion_reward = {
+			navy_experience = 100
+			add_tech_bonus = {
+			 bonus = 1 
+			uses = 3 
+			category = naval_doctrine
+			}
+			add_ideas = generic_naval_primacy
+		}
+	}
+	
+	#Модернизация армии
+	focus = {
+		id = DNR_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 5
+		y = 0
+		relative_position_id = DNR_naval_effort
+		cost = 8.6
+		search_filters = {  FOCUS_FILTER_RESEARCH FOCUS_FILTER_HISTORICAL }
+		available = { has_completed_focus = DNR_build_country }
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 100
+				is_historical_focus_on = yes
+			}
+		}
+		completion_reward = {
+			country_event = {
+				hours = 16
+				random = 12
+				id = dnr_events.15
+			}
+			army_experience = 10
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	#Производство экипировки
+	focus = {
+		id = DNR_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = DNR_army_effort }
+		x = -2
+		y = 1
+		relative_position_id = DNR_army_effort
+		cost = 8.6
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	#Моторизация армии
+	focus = {
+		id = DNR_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = DNR_army_effort }
+		x = 0
+		y = 1
+		relative_position_id = DNR_army_effort
+		cost = 8.6
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			country_event = {
+				hours = 1
+				random = 1
+				id = army_events.1
+			}
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	#Уроки пост-советских конфликтов
+	focus = {
+		id = DNR_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = DNR_army_effort }
+		x = 2
+		y = 1
+		relative_position_id = DNR_army_effort
+		cost = 8.6
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			country_event = {
+				hours = 1
+				random = 1
+				id = army_events.2
+			}
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	#Модернизация экипировки
+	focus = {
+		id = DNR_equipment_effort_2
+		icon = GFX_goal_generic_army_artillery
+		prerequisite = { focus = DNR_equipment_effort }
+		x = 0
+		y = 1
+		relative_position_id = DNR_equipment_effort
+		cost = 8.6
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+			}
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	#Механизация армии
+	focus = {
+		id = DNR_mechanization_effort
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = DNR_motorization_effort }
+		x = 0
+		y = 1
+		relative_position_id = DNR_motorization_effort
+		cost = 4.4
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	#Уроки современных конфликтов
+	focus = {
+		id = DNR_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = DNR_doctrine_effort }
+		x = 0
+		y = 1
+		relative_position_id = DNR_doctrine_effort
+		cost = 8.6
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	
+	#Обучение генералов за границей
+	focus = {
+		id = DNR_improve_the_general_staff
+		icon = GFX_focus_generic_military_academy
+		x = 0
+		y = 1
+		relative_position_id = DNR_doctrine_effort_2
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_doctrine_effort_2 }
+		ai_will_do = {
+			factor = 3
+		}
+		completion_reward = {
+			add_ideas = generic_improved_general_staff
+			every_army_leader = {
+				add_planning = 1
+			}
+		}
+	}
+
+	#Экипировка будущего
+	focus = {
+		id = DNR_equipment_effort_3
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = DNR_equipment_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = DNR_equipment_effort_2
+		cost = 8.6
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 4000
+			}
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	#Новые танки
+	focus = {
+		id = DNR_armor_effort
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = DNR_mechanization_effort }
+		x = 0
+		y = 1
+		relative_position_id = DNR_mechanization_effort
+		cost = 4.4
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+	
+	#Приоритет танков
+	focus = {
+		id = DNR_armour_primacy
+		icon = GFX_focus_generic_tank_production
+		x = 0
+		y = 1
+		relative_position_id = DNR_armor_effort
+		cost = 8.6
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY}
+		prerequisite = { 
+			focus = DNR_armor_effort 
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_ideas = generic_armour_primacy
+		}
+	}
+	
+	#Приоритет артиллерии
+	focus = {
+		id = DNR_artillery_primacy
+		icon = GFX_goal_generic_army_artillery
+		x = 0
+		y = 1
+		relative_position_id = DNR_armour_primacy
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_armour_primacy 
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 5
+		}
+		completion_reward = {
+			add_ideas = generic_artillery_primacy
+		}
+	}
+	
+	#Приоритет армии
+	focus = {
+		id = DNR_army_primacy
+		icon = GFX_goal_generic_small_arms
+		x = 0
+		y = 1
+		relative_position_id = DNR_artillery_primacy
+		cost = 8.6
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH FOCUS_FILTER_MANPOWER} 
+		prerequisite = { focus = DNR_artillery_primacy }
+		mutually_exclusive = { 
+			focus = DNR_air_force_primacy 
+		}
+		mutually_exclusive = { 
+			focus = DNR_naval_primacy 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			num_of_factories > 40
+			num_of_military_factories > 30
+			has_army_experience > 50
+		}
+		completion_reward = {
+			army_experience = 50
+			add_ideas = generic_army_primacy
+			add_tech_bonus = {
+				bonus = 1 
+				uses = 2 
+				category = land_doctrine 
+			}
+		}
+	}
+
+	#Военные колледжи
+	focus = {
+		id = DNR_army_war_college
+		icon = GFX_goal_generic_construct_military
+		x = 0
+		y = 1
+		relative_position_id = DNR_equipment_effort_3
+		cost = 4.4
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_equipment_effort_3 } prerequisite = { focus = DNR_armor_effort }
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = generic_army_war_college
+		}
+	}
+
+	#Патриотическое воспитание
+	focus = {
+		id = DNR_meritocratic_promotion
+		icon = GFX_goal_rhineland
+		x = 0
+		y = 1
+		relative_position_id = DNR_army_war_college
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_army_war_college }
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = generic_army_war_college
+				add_idea = generic_army_war_college_2
+			}
+		}
+	}
+
+	#Диверсионные группы
+	focus = {
+		id = DNR_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = DNR_improve_the_general_staff }
+		prerequisite = { focus = DNR_armor_effort }
+		x = 4
+		y = 1
+		relative_position_id = DNR_equipment_effort_3
+		cost = 4.4
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = DNR_special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = paratroopers
+				technology = paratroopers2
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+	
+	#Обучение спецназа
+	focus = {
+		id = DNR_establish_special_forces
+		icon = GFX_goal_generic_special_forces
+		x = 0
+		y = 1
+		relative_position_id = DNR_special_forces
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_special_forces
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 6
+		}
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 2
+				category = marine_tech
+				category = para_tech
+				category = mountaineers_tech
+			}
+		}
+	}
+
+	#Строительство самолётов
+	focus = {
+		id = DNR_aviation_effort
+		icon = GFX_goal_generic_build_airforce
+		x = 5
+		y = 0
+		relative_position_id = DNR_army_effort
+		cost = 8.6
+		available = { has_completed_focus = DNR_army_effort controls_state = 828 }
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = DNR_aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
+				limit = {
+					capital_scope = {
+						NOT = {
+							free_building_slots = {
+								building = air_base
+								size > 1
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = DNR_aviation_effort_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = DNR_aviation_effort_AB }
+				}
+			}
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	#Упор на истребители
+	focus = {
+		id = DNR_fighter_focus
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = DNR_aviation_effort }
+		mutually_exclusive = { focus = DNR_bomber_focus }
+		x = -1
+		y = 1
+		relative_position_id = DNR_aviation_effort
+		cost = 4.4
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+
+	#Упор на бомбардировщики
+	focus = {
+		id = DNR_bomber_focus
+		icon = GFX_goal_generic_air_bomber
+		prerequisite = { focus = DNR_aviation_effort }
+		mutually_exclusive = { focus = DNR_fighter_focus }
+		x = 1
+		y = 1
+		relative_position_id = DNR_aviation_effort
+		cost = 4.4
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = bomber_bonus
+				bonus = 1.0
+				uses = 2
+				technology = strategic_bomber1
+				technology = strategic_bomber2
+				technology = strategic_bomber3
+				category = tactical_bomber
+			}
+		}
+	}
+
+	#Воздушная доктрина
+	focus = {
+		id = DNR_aviation_effort_2
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = DNR_bomber_focus focus = DNR_fighter_focus }
+		x = -1
+		y = 1
+		relative_position_id = DNR_bomber_focus
+		cost = 4.4
+		search_filters = { FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = DNR_aviation_effort_2_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+		completion_reward = {
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = DNR_aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = DNR_aviation_effort_2_AB }
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	#Совершенствование ракетостроения
+	focus = {
+		id = DNR_rocket_effort
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = DNR_aviation_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = DNR_aviation_effort_2
+		cost = 4.4
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	#Упор на штурмовики
+	focus = {
+		id = DNR_CAS_effort
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = DNR_rocket_effort }
+		x = -1
+		y = 1
+		relative_position_id = DNR_rocket_effort
+		cost = 4.4
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cas_bomber
+			}
+		}
+	}
+	
+	#Упор на палубные самолёты
+	focus = {
+		id = DNR_NAV_effort
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = DNR_rocket_effort }
+		x = 1
+		y = 1
+		relative_position_id = DNR_rocket_effort
+		cost = 4.4
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = naval_bomber
+			}
+		}
+	}
+	
+	#Качество самолётов
+	focus = {
+		id = DNR_high_quality_plane_production
+		icon = GFX_goal_generic_air_production
+		x = 0
+		y = 1
+		relative_position_id = DNR_CAS_effort
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_CAS_effort
+		focus = DNR_NAV_effort }
+		mutually_exclusive = { focus = DNR_cheap_plane_production }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = generic_quality_aircraft_production
+		}
+	}
+
+	#Количество самолётов
+	focus = {
+		id = DNR_cheap_plane_production
+		icon = GFX_goal_generic_production
+		x = 2
+		y = 1
+		relative_position_id = DNR_CAS_effort
+		cost = 8.6
+		available_if_capitulated = yes
+		prerequisite = { focus = DNR_CAS_effort
+		focus = DNR_NAV_effort }
+		mutually_exclusive = { focus = DNR_high_quality_plane_production }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 4
+		}
+		completion_reward = {
+			add_ideas = generic_cheap_aircraft_production
+		}
+	}
+	
+	#Приоритет авиации
+	focus = {
+		id = DNR_air_force_primacy
+		icon = GFX_goal_generic_air_doctrine
+		x = 1
+		y = 1
+		relative_position_id = DNR_high_quality_plane_production
+		cost = 8.6
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH} 
+		available_if_capitulated = yes
+		prerequisite = { 
+			focus = DNR_high_quality_plane_production 
+			focus = DNR_cheap_plane_production 
+		}
+		mutually_exclusive = { 
+			focus = DNR_army_primacy 
+		}
+		mutually_exclusive = { 
+			focus = DNR_naval_primacy 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			num_of_factories> 60
+			has_air_experience > 150
+		}
+		completion_reward = {
+			air_experience = 100
+			add_tech_bonus = {
+				bonus = 1 
+				uses = 3 
+				category = air_doctrine
+			}
+			add_ideas = generic_air_force_primacy
+		}
+	}
+}

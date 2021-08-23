@@ -1,0 +1,386 @@
+capital = 202 #Kiev
+
+oob = "UKR_2014"
+
+set_research_slots = 2
+
+set_technology = {
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1
+	basic_heavy_tank = 1
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		mtg_transport = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+2020.1.1 = {
+
+	add_ideas = {
+		party_trade_policy_free_trade
+		party_economy_policy_laissez_faire
+		party_religious_policy_pluralism
+		party_citizenship_policy_limited_citizenship
+		party_war_policy_jingoism
+		party_welfare_policy_paternalistic_welfare
+	}
+
+	add_political_power = 1198
+	
+	oob = "UKR_2020"
+	
+	set_technology = {
+		CAS1 = 1
+		improved_light_tank = 1 
+		basic_heavy_tank = 1
+		basic_medium_tank = 1
+		tactical_bomber1 = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+	
+		support_weapons = 1
+		support_weapons2 = 1
+		paratroopers = 1
+
+		#doctrines
+		pocket_defence = 1
+		defence_in_depth = 1
+		battlefleet_concentration = 1
+		submarine_operations = 1
+
+		#Air
+		formation_flying = 1		
+		dive_bombing = 1
+		direct_ground_support = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		oil_processing = 1
+		fuel_refining2 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		concentrated_industry3 = 1
+	}
+}
+
+#ВНЕШНЯЯ ПОЛИТИКА
+
+set_convoys = 80
+
+#ВНУТРЕННЯЯ ПОЛИТИКА
+
+add_ideas = {
+	party_trade_policy_free_trade
+	party_economy_policy_interventionism
+	party_religious_policy_pluralism
+	party_citizenship_policy_full_citizenship
+	party_war_policy_anti_military
+	party_welfare_policy_opposed_to_welfare
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2010.2.25"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 55
+	fascism = 25
+	neutrality = 20
+}
+2014.1.1 = {
+add_ideas = { Russophobia }
+add_ideas = { Maidan }
+}
+
+2020.1.1 = {
+remove_ideas = { Maidan }
+}
+
+#Коммунистическая Партия
+
+create_country_leader = {
+	name = "Pyotr Symonenko"
+	desc = ""
+	picture = "gfx/leaders/UKR/Portrait_Symonenko.dds"
+	expire = "2030.1.1"
+	ideology = stalinism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Pyotr Symonenko"
+	desc = ""
+	picture = "gfx/leaders/UKR/Portrait_Symonenko.dds"
+	expire = "2030.1.1"
+	ideology = national_communism
+	traits = {
+	}
+}
+
+#Лидеры Правого Сектора
+
+create_country_leader = {
+	name = "Dmitry Yarosh"
+	desc = ""
+	picture = "gfx/leaders/UKR/Portrait_Yarosh.dds"
+	expire = "2015.11.11"
+	ideology = gen_nazism
+	traits = {
+	}
+}
+
+2015.11.11 = {
+	create_country_leader = {
+		name = "Andrey Tarasenko"
+		desc = ""
+		picture = "gfx/leaders/UKR/Portrait_Tarasenko.dds"
+		expire = "2030.1.1"
+		ideology = gen_nazism
+		traits = {
+		}
+	}
+}
+
+#Кандидаты на выборах
+#create_country_leader = {
+#	name = "Oleg Lyashko"
+#	desc = ""
+#	picture = "gfx/leaders/UKR/Portrait_Lyashko.dds"
+#	expire = "2019.5.20"
+#	ideology = despotism
+#	traits = {
+#	}
+#}
+#set_party_name = {
+#	ideology = neutrality
+#	name = UKR_radical_party
+#	long_name = UKR_radical_party_long
+#	}
+
+#create_country_leader = {
+#	name = "Yulia Timoshenko"
+#	desc = ""
+#	picture = "gfx/leaders/UKR/Portrait_Timoshenko.dds"
+#	expire = "2030.1.1"
+#	ideology = progressivism
+#   female = yes
+#	traits = {
+#	}
+#}
+#set_party_name = {
+#	ideology = democratic
+#	name = UKR_fatherland_party
+#	long_name = UKR_fatherland_party_long
+#}
+
+2015.1.1 = {
+	create_country_leader = {
+		name = "Vadim Rabinovich"
+		desc = ""
+		picture = "gfx/leaders/UKR/Portrait_Rabinovich.dds"
+		expire = "2030.1.1"
+		ideology = centrism
+		traits = {
+		}
+	}
+	set_party_name = {
+		ideology = neutrality
+		name = UKR_opposition_party
+		long_name = UKR_opposition_party_long
+	}
+}
+
+create_country_leader = {
+	name = "Victor Yanukovich"
+	desc = ""
+	picture = "gfx/leaders/UKR/Portrait_Yanukovich.dds"
+	expire = "2014.2.22"
+	ideology = socialism
+	traits = {
+		unpopular_leader
+	}
+}
+
+#2014.2.22 Временный президент
+create_country_leader = {
+	name = "Alexander Turchinov"
+	desc = ""
+	picture = "gfx/leaders/UKR/Portrait_Turchinov.dds"
+	expire = "2014.5.25"
+	ideology = moderatism
+	traits = {
+	}
+}
+
+2014.5.25 = {
+
+	set_party_name = {
+	ideology = democratic
+	name = UKR_europe_party
+	long_name = UKR_europe_party_long
+	}
+
+	set_politics = {
+	ruling_party = democratic
+	last_election = "2014.5.25"
+	election_frequency = 60
+	elections_allowed = yes
+	}
+
+	create_country_leader = {
+	name = "Pyotr Poroshenko"
+	desc = ""
+	picture = "gfx/leaders/UKR/Portrait_Poroshenko.dds"
+	expire = "2019.5.20"
+	ideology = conservatism
+	traits = {
+	}
+	}
+}
+
+2019.5.20 = {
+
+	set_party_name = {
+	ideology = democratic
+	name = UKR_sluga_party
+	long_name = UKR_sluga_party_long
+	}
+
+	set_politics = {
+	ruling_party = democratic
+	last_election = "2019.5.20"
+	election_frequency = 60
+	elections_allowed = yes
+	}
+
+	create_country_leader = {
+	name = "Vladimir Zelensky"
+	desc = ""
+	picture = "gfx/leaders/UKR/Portrait_Zelensky.dds"
+	expire = "2024.3.31"
+	ideology = liberalism
+	traits = {
+		
+	}
+	}
+
+}
+
+#Генералы
+
+create_field_marshal = {
+	name = "Victor Muzhenko"
+	gfx = "GFX_Portrait_Muzhenko"
+	traits = { offensive_doctrine }
+	skill = 4
+	attack_skill = 4
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Stepan Poltorak"
+	gfx = "GFX_Portrait_Poltorak"
+	traits = { }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Vasily Gritsak"
+	gfx = "GFX_Portrait_Gritsak"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_corps_commander = {
+	name = "Vasily Krutov"
+	gfx = "GFX_Portrait_Krutov"
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 2
+}

@@ -1,0 +1,318 @@
+﻿capital = 49
+
+oob = "TUR_2014"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "TUR_2014_naval_mtg"
+	else = {
+		set_naval_oob = "TUR_2014_naval_legacy"
+	}
+}
+
+add_ideas = {
+	export_focus
+	NATO_member
+	supply_hospitals
+	build_school
+}
+
+set_research_slots = 2
+
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+	tech_recon = 1
+	tech_support = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	early_fighter = 1
+	CAS1 = 1
+	gwtank = 1
+	basic_light_tank = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+}
+
+2014.1.1 = {
+		
+		353 = {
+			start_resistance = yes
+			set_compliance = 25
+			set_resistance = 10
+			set_garrison_strength = 1.0
+		}
+		
+		350 = {
+			start_resistance = yes
+			set_compliance = 25
+			set_resistance = 35
+			set_garrison_strength = 1.0
+		}
+		
+		352 = {
+			start_resistance = yes
+			set_compliance = 25
+			set_resistance = 15
+			set_garrison_strength = 0.75
+		}
+		
+		800 = {
+			start_resistance = yes
+			set_compliance = 25
+			set_resistance = 15
+			set_garrison_strength = 0.75
+		}
+
+	if = { 
+		limit = { NOT = { has_dlc = "Battle for the Bosporus" }	}
+		add_ideas = {
+			limited_conscription
+			export_focus
+			civilian_economy
+		}
+	}
+}
+
+2020.1.1 = {
+	
+	add_ideas = {
+		NATO_member
+		build_school
+	}
+	
+	set_politics = {
+	ruling_party = neutrality
+	last_election = "2014.8.28"
+	election_frequency = 68
+	elections_allowed = yes
+	}
+	create_country_leader = {
+	name = "Recep Tayyip Erdogan"
+	desc = " "
+	picture = "gfx/leaders/TUR/Portrait_Erdogan.dds"
+	expire = "2030.3.1"
+	ideology = moderatism
+	traits = {
+	}
+	}
+	
+	add_political_power = 1198
+
+	oob = "TUR_2020"
+
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+			set_naval_oob = "TUR_2020_naval_mtg"
+		else = {
+			set_naval_oob = "TUR_2020_naval_legacy"
+		}
+	}
+
+	set_technology = {
+		fighter1 = 1
+		early_bomber = 1
+		tactical_bomber1 = 1
+		interwar_artillery = 1
+	
+		support_weapons = 1
+
+		#doctrines
+		air_superiority = 1
+
+		mass_assault = 1
+		pocket_defence = 1
+		defence_in_depth = 1
+		
+		fleet_in_being = 1
+		convoy_sailing = 1
+		submarine_operations = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		synth_oil_experiments = 1
+		fuel_silos = 1
+		oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+	if = {
+		limit = { not = { has_dlc = "Man the Guns" } }
+		set_technology = {
+			basic_submarine = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+		set_technology = {
+		}
+	}
+}
+
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_autonomy = {
+		target = TRC
+		autonomous_state = autonomy_puppet
+	}
+	else = {
+		puppet = TRC
+	}
+}
+
+set_convoys = 200
+set_stability = 0.5
+set_war_support = 0.3
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2007.8.28"
+	election_frequency = 68
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 46
+	neutrality = 54
+}
+
+create_country_leader = {
+	name = "Abdullah Gul"
+	desc = " "
+	picture = "gfx/leaders/TUR/Portrait_Gul.dds"
+	expire = "2014.8.28"
+	ideology = moderatism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Devlet Bahcheli"
+	desc = " "
+	picture = "gfx/leaders/TUR/Portrait_Bahcheli.dds"
+	expire = "2030.3.1"
+	ideology = fascism_ideology
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Selahattin Demirtash"
+	desc = " "
+	picture = "gfx/leaders/TUR/Portrait_Demirtash.dds"
+	expire = "2030.3.1"
+	ideology = socialism
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Aydemir Guler"
+	desc = " "
+	picture = "gfx/leaders/TUR/Portrait_Guler.dds"
+	expire = "2030.3.1"
+	ideology = marxism
+	traits = {
+	}
+}
+
+	create_field_marshal = {
+		name = "Fevzi Çakmak"
+		gfx = "GFX_portrait_tur_fevzi_cakmak"
+		traits = { old_guard war_hero media_personality defensive_doctrine desert_fox logistics_wizard }
+		skill = 3 #10
+		id = 901
+		attack_skill = 2
+		defense_skill = 2
+		planning_skill = 3
+		logistics_skill = 3
+	}
+	
+	create_corps_commander = {
+		name = "Fahrettin Altay"
+		gfx = "GFX_portrait_tur_fahrettin_altay"
+		traits = {  war_hero brilliant_strategist cavalry_officer hill_fighter }
+		skill = 4 #13
+		id = 902
+		attack_skill = 4
+		defense_skill = 3
+		planning_skill = 4
+		logistics_skill = 2
+	}
+	
+	create_corps_commander = {
+		name = "Kazim Orbay"
+		gfx = "GFX_portrait_tur_kazim_orbay"
+		traits = {  war_hero media_personality infantry_leader }
+		skill = 4 #13
+		id = 903
+		attack_skill = 2
+		defense_skill = 3
+		planning_skill = 5
+		logistics_skill = 3
+	}
+	
+	create_corps_commander = {
+		name = "Cemil Cahit Toydemir"
+		gfx = "GFX_portrait_tur_cemil_cahit_toydemir"
+		traits = {  career_officer infantry_officer hill_fighter }
+		skill = 3 #10
+		id = 904
+		attack_skill = 3
+		defense_skill = 2
+		planning_skill = 3
+		logistics_skill = 2
+	}
+	
+	create_corps_commander = {
+		name = "İzzettin Çalışlar"
+		gfx = "GFX_portrait_tur_izzettin_calislar"
+		traits = {  war_hero infantry_officer trait_mountaineer }
+		skill = 3 #10
+		id = 905
+		attack_skill = 4
+		defense_skill = 3
+		planning_skill = 2
+		logistics_skill = 1
+	}

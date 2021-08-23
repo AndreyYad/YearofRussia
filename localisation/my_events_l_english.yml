@@ -1,0 +1,349 @@
+﻿l_english:
+
+#Army
+
+army_events.1.t: "Army motorization"
+army_events.1.d: "Modern conditions are forcing us to begin the widespread introduction of technology into our troops."
+army_events.1.a: "Start motorization!"
+army_events.1.b: "Our budget can't handle it..."
+army_events.1.c: "Carry out moderate motorization"
+
+army_events.2.t: "Army reforms"
+army_events.2.d: "We are forced to carry out military reforms to protect ourselves"
+army_events.2.a: "Conduct immediately!"
+army_events.2.b: "Our budget can't handle it..."
+army_events.2.c: "Conduct reforms sparingly"
+
+genericfocustree.22.t: "A new war awaits us?"
+genericfocustree.22.d: "The politicians of the country called [Root.GetName] express concern about their citizens and their rights in other countries, these politicians claim that they are ready to defend the rights of their people with fire and sword!"
+
+#Elections
+
+modelection.1.t: "Turkey Presidential Election - 2014"
+modelection.1.d: "Recep Tayyip Erdoğan made a victory speech on the balcony of the AKP office in Ankara after his victory was confirmed. In his speech, he thanked his supporters for their help during his campaign and stated that the only losers of the election was "dirty politics" and stressed the need to leave hatred and rivalries in the "old Turkey." He further stated that he would be the President of all 77 million citizens of Turkey, and that he would not discriminate or marginalise minorities or political opponents. His speech drew criticism for not containing any mention of Mustafa Kemal Atatürk, the first President of Turkey."
+
+modelection.2.t: "Regular Presidential Election"
+modelection.2.d: "Preparing and holding elections, ensuring the implementation and protection of the electoral rights of citizens and monitoring the observance of these rights - this is what we must ensure immediately."
+
+modelectionministre.1.t: "Appointment of a new prime minister!"
+modelectionministre.1.d: "We are preparing for the upcoming elections, our task is to choose the most suitable candidate and appoint him as the new prime minister!"
+
+modvietnam.1.t: "National Assembly elects President"
+
+modelectionking.1.t: "The new monarch of our state"
+modelectionking.1.d: "Due to the fact that the previous Ruler (oh, glory to Him) can no longer fulfill his duties, the rights to govern the state are transferred to his heir, now we have a new Ruler, he will have many years!"
+
+#NATO
+
+nato_events.1.t: "We are under attack!"
+nato_events.1.d: "Since we are a member of NATO, our state has the ability to call on allies in the military bloc in this war!"
+nato_events.1.a: "Gather all NATO forces!"
+nato_events.1.b: "We can do it on our own!"
+
+nato_events.2.t: "We were expelled from NATO!"
+nato_events.2.d: "The issue was not limited to the introduction of sanctions, after we announced the beginning of our just war, we were expelled from NATO!"
+
+nato_events.3.t: "Our ally is under attack!"
+nato_events.3.d: "Since we are a member of NATO, our state is obliged to guarantee the security and independence of the allies in the military bloc. Today one of our allies was attacked, our decision?.."
+nato_events.3.a: "Help them. Join the war."
+nato_events.3.b: "Do not rush to the war, will we solve the problem through negotiations?"
+
+nato_events.4.t: "Leaving NATO!"
+nato_events.4.d: "NATO is a relic of the past, an instrument of Western capitalists. The day has come when we got rid of the slave shackles called "NATO"!"
+
+#Novorossiya
+
+dnr_events.1.t: "Protesters in Donetsk form interim people's government"
+dnr_events.1.d: "The People's Council began to form a provisional people's government. At the meeting of the People's Council, among other things, it was announced that the new government of Ukraine would not be recognized, that all the heads of the security structures of the region and the governor appointed by him Serhiy Taruta had been dismissed, and a referendum had also been held. The self-determination of Donbass was scheduled for May 11."
+dnr_events.2.t: "Arrival of Strelkov"
+dnr_events.2.d: "An armed detachment under the command of Igor Strelkov arrived in Slavyansk, united with the local people's squad. With his appearance, one of the nodes of confrontation with the central government was formed here."
+dnr_events.3.t: "Control over the media!"
+dnr_events.3.d: "Donetsk Regional State TV Company came under the control of DPR supporters. Additional equipment for broadcasting television of the DPR has been moved to the building, and the work of Russian television channels has been restored."
+dnr_events.4.t: "Referendum on self-determination of the Donetsk People's Republic"
+dnr_events.4.d: "The only question submitted to the referendum in two languages (Russian and Ukrainian): "Do you support the act of state independence of the Donetsk People's Republic?" The result was predictable!"
+dnr_events.5.t: "Battle for Donetsk Airport"
+dnr_events.5.d: "Fighting between Donetsk People's Republic separatist forces and Ukrainian military and volunteer forces broke out at Donetsk International Airport."
+dnr_events.6.t: "Confederation of Novorossia"
+dnr_events.6.d: "Donetsk and Lugansk people's republics signed a document on the unification of Novorossia into the Confederation. Novorossiya, according to the plan of the creators, was supposed to be a union of independent republics, which could be joined by other republics proclaimed on the territory of Ukraine. The Constitution of Novorossiya was planned to be adopted three months after the adoption of the constitutions of the Donetsk and Lugansk People's Republics."
+dnr_events.7.t: "Accident of Boeing 777 in Donetsk region"
+dnr_events.7.d: "All parties to the conflict in eastern Ukraine deny their involvement in the downing of the airliner. Investigation powers were transferred by Ukraine to the Netherlands and transferred to the Dutch Security Council and the Joint Investigation Team, which concluded that the airliner had been shot down by a surface-to-air missile of a Buk anti-aircraft missile system by the rebels. held territory."
+dnr_events.8.t: "Battle of Ilovaisk"
+dnr_events.8.d: "During the battles for Ilovaisk, large groups of the Ukrainian armed forces were surrounded and destroyed, this will be the first step towards a major offensive by the DPR forces in the south of Donbass!"
+dnr_events.9.t: "General Election - 2014"
+dnr_events.9.d: "Voters are invited to the People's Council of the Donetsk People's Republic, which consists of 100 deputies, elected for a term of four years. Elections are held only according to a proportional system, that is, according to republican lists. The local Communist Party was denied registration, so only two organizations are fighting for seats in the People's Council of the DPR, which have fulfilled the requirements of the Central Election Commission. These are the social and political movements "Donetsk Republic" and "Free Donbass"."
+dnr_events.9.a: "The people have elected Alexander Zakharchenko!"
+dnr_events.9.b: "We need a more radical head of the republic!.."
+dnr_events.9.c: "Communists take control of the electoral commission..."
+dnr_events.10.t: "Suspension of the Confederation of Novorossia"
+dnr_events.10.d: "DPR Foreign Minister Alexander Kofman said that the "Novorossiya project" is closed for an indefinite period. A similar statement was made by the speaker of the parliament of Novorossia, Oleg Tsarev, clarifying that the project is "frozen" due to the fact that the creation of Novorossia is not provided for by the Minsk agreements signed by the leadership of the DPR and LPR with Ukraine"
+dnr_events.11.t: "Issuing your own passports"
+dnr_events.11.d: "We have officially started issuing DNR passports to our citizens. This is another serious and important step on the path of state building, on the path of development of the republic."
+dnr_events.12.t: "The assassination attempt on Alexander Zakharchenko"
+dnr_events.12.d: "The explosion in the "Separ" cafe on Pushkin Boulevard took place at about 17:00. At this time, high-ranking officials of the DPR began to gather in the institution. As a result of the explosion of Zakharchenko ..."
+dnr_events.12.a: "...was killed! Denis Pushilin will become the new head of the republic."
+dnr_events.12.b: "...survived an assassination attempt! Zakharchenko escaped with only scars and burns!"
+dnr_events.13.t: "Russian passport system!"
+dnr_events.13.d: "Russia has finally begun to issue Russian passports to our citizens. This will strengthen us politically and economically, the integration of Donbass has reached a new level."
+dnr_events.14.t: "Humanitarian aid"
+dnr_events.14.d: "Since August 2014, Russia has regularly sent convoys with humanitarian supplies to the territory of the DPR and LPR. On August 12, 2014, the first humanitarian convoy of 280 trucks (with a total carrying capacity of 2000 tons) took place."
+dnr_events.15.t: "Our own army"
+dnr_events.15.d: "The chairman of the interim government of the DPR Denis Pushilin announced the beginning of the formation of his own people's army "to protect the people and the territorial integrity of the republic." Its first commander was Igor Khakimzyanov; former and current officers and activists of the self-defense forces created by the protesters were invited to join the people's army."
+dnr_events.16.t: "Arbitrariness of the militia"
+dnr_events.16.d: "Armed formations attack, kidnap and harass individuals who are suspected of supporting Kiev or simply considered undesirable elements. Their property, such as apartments and houses, was converted into barracks for the militia, and their personal vehicles were used for the "needs" of the army. Dozens of people became victims of abductions, in some cases it was accompanied by beatings and torture."
+dnr_events.17.t: "Union of Free Nations"
+dnr_events.17.d: "The Donetsk People's Republic appealed to the Unrepresented Nations and Peoples Organization to approve a plan for the construction of an economic and political union. "One by one we are hushed up and killed, but together we are a force - with which all world states will reckon!" - Representatives of the Republic said"
+dnr_events.17.a: "Join the union"
+dnr_events.17.b: "Do not join an alliance"
+
+lnr_events.1.t: "Luhansk self-determination referendum"
+lnr_events.1.d: "To the question "Do you support the act of state independence of the Lugansk People's Republic?" 96.2% voted in favor! The people gave the go-ahead for the creation of the republic!"
+lnr_events.2.t: "Seizure of the building of the regional administration and the prosecutor's office"
+lnr_events.2.d: "Law enforcement officers were provided with a residential corridor, and they voluntarily left the building occupied by the activists. The militiamen pulled St. George's ribbons and went over to the side of the protesters. Our militia has been replenished with detachments of the Ministry of Internal Affairs!"
+lnr_events.3.t: "Head of the Republic"
+lnr_events.3.d: "The main contenders for power in the LPR are the Don Cossacks, headed by Nikolai Kozitsin, but the official power, and the de facto head of the Republic is Igor Plotnitsky and the public movement Peace in Luhansk. We should..."
+lnr_events.3.a: "Purge the Cossacks, strengthen the power of Plotnitsky"
+lnr_events.3.b: "Destabilize the situation, the Kozaks will occupy the main ruling positions in the Republic"
+lnr_events.4.t: "General Election - 2014"
+lnr_events.4.d: "The LPR CEC printed about 1 million ballots, approximately the same number of people will vote in the elections for the head of the Republic. The main targets of the voters were the public movements "Peace in Lugansk region" and "Lugansk Economic Union". As a result of the elections, the head of the Republic became..."
+lnr_events.4.a: "Igor Plotnitsky"
+lnr_events.4.b: "Oleg Akimov"
+lnr_events.5.t: "Government purges"
+lnr_events.5.d: "Trusted sources keep reporting on upcoming conspiracies against our government! We are left with no other options but how to "optimize" the state apparatus"
+lnr_events.6.t: "Assassination attempt!"
+lnr_events.6.d: "Igor Plotnitskiy was assassinated. As a result of the explosion of a high-explosive shatterproof explosive device on a pillar, near which Plotnitskiy's car was passing, Plotnitskiy was injured and two more people were seriously injured and were urgently taken to the traumatology department of the Luhansk regional hospital."
+lnr_events.7.t: "Political crisis"
+lnr_events.7.d: "Due to internal disagreements, Igor Plotnitsky resigned from the post of head of the republic for health reasons. He was appointed plenipotentiary representative from the Lugansk People's Republic for the implementation of the Minsk agreements. People's Council of LPR will accept resignation."
+lnr_events.8.t: "General Election - 2018"
+lnr_events.8.d: "The elections of the head of the Republic and deputies of the People's Council held in the LPR do not contradict the spirit and letter of the Minsk agreements. Therefore, nothing and no one will prevent us from holding these elections. The new head of the republic will be..."
+lnr_events.8.a: "Leonid Pasechnik"
+lnr_events.8.b: "Deputy from the Luhansk Economic Union"
+
+#Ukraine
+
+ukr_events.1.t: "Minsk Protocol"
+ukr_events.1.d: "To ensure an immediate bilateral ceasefire. To ensure the monitoring and verification of the ceasefire by the OSCE. Decentralisation of power, including through the adoption of the Ukrainian law "On temporary Order of Local Self-Governance in Particular Districts of Donetsk and Luhansk Oblasts". To ensure the permanent monitoring of the Ukrainian-Russian border and verification by the OSCE with the creation of security zones in the border regions of Ukraine and the Russian Federation. Immediate release of all hostages and illegally detained persons. A law preventing the prosecution and punishment of persons in connection with the events that have taken place in some areas of Donetsk and Luhansk Oblasts. To continue the inclusive national dialogue. To take measures to improve the humanitarian situation in Donbass. To ensure early local elections in accordance with the Ukrainian law "On temporary Order of Local Self-Governance in Particular Districts of Donetsk and Luhansk Oblasts". To withdraw illegal armed groups and military equipment as well as fighters and mercenaries from the territory of Ukraine. To adopt a programme of economic recovery and reconstruction for the Donbass region. To provide personal security for participants in the consultations."
+ukr_events.1.a: "Sign the Minsk Protocol!"
+ukr_events.1.b: "Don't sign the Minsk Protocol!"
+
+ukr_events.2.t: "Presidential Election in Ukraine - 2014"
+ukr_events.2.d: "The elections were held by the decision of the Verkhovna Rada of May 25, 2014 in connection with the removal of Viktor Yanukovych from the presidency. The decision to postpone the elections scheduled for 2015 was made on February 22, 2014. A total of 23 candidates took part in the elections. But only three reached the final, the new president of Ukraine will be..."
+ukr_events.2.a: "...Petro Poroshenko"
+ukr_events.2.b: "...Yulia Tymoshenko"
+ukr_events.2.c: "...Oleg Lyashko"
+
+ukr_events.3.t: "Presidential Election in Ukraine - 2019"
+ukr_events.3.d: "The first round of elections in accordance with the resolution of the Verkhovna Rada took place on March 31, 2019, on April 30, 2019. The Central Election Commission of Ukraine has summed up the official results of the second round of the presidential elections. The new president of our country..."
+ukr_events.3.a: "...Vladimir Zelensky"
+ukr_events.3.b: "...Petro Poroshenko"
+ukr_events.3.c: "...Yulia Tymoshenko"
+
+ukr_events.4.t: "Russia will annex Crimea!"
+ukr_events.4.d: "They claim that since March 18, 2014 Russia considers Crimea and Sevastopol to be subjects of the Russian Federation, but they did not forget to ask us ?!"
+ukr_events.4.a: "We need to enlist the support of the West ..."
+ukr_events.4.b: "Declare war on the aggressor immediately!"
+
+ukr_events.5.t: "Return of Donbass!"
+ukr_events.5.d: "The time for peace has come. Now we are deciding the fate of Donbass, will the long-awaited peace come? Now we are deciding what the autonomy status of Donbass will be."
+ukr_events.5.a: "No autonomy, to include Donbass in Ukraine"
+ukr_events.5.b: "Grant autonomy to Donbass by making Ukraine a federation" 
+
+ukr_events.6.t: "Russian "passport system" of Donbass!"
+ukr_events.6.d: "Russia issues its passports to citizens of the temporarily occupied territories of Donbass, this is unthinkable!"
+
+ukr_events.7.t: "Battle of Ilovaisk"
+ukr_events.7.d: "In the battles for Ilovaisk, large groups of our troops were surrounded and destroyed! This loss cannot be allowed to become the first step towards a major offensive by the DPR forces in the south of Donbass!!"
+
+ukr_events.8.t: "Escape of Yanukovych"
+ukr_events.8.d: "The Verkhovna Rada adopted a resolution “On the self-removal of the President of Ukraine from the exercise of constitutional powers and the appointment of early elections of the President of Ukraine. Alexander Turchinov will be appointed interim president."
+
+ukr_events.9.t: "The emergence of an Opposition Bloc"
+ukr_events.9.d: "The Opposition bloc includes the Party of New Politics, the Party of Citizens, the Party of Ukraine - Forward! and the Labor Ukraine party. The "Opposition Bloc" stands for neutrality and the preservation of the non-aligned status of Ukraine, and a resolution in which they demanded that the president of Ukraine stop the bloodshed, resign, dissolve and ban illegal armed groups, bring to justice those responsible for shelling settlements in the east of the country!"
+
+ukr_events.10.t: "Protests in the South East"
+ukr_events.10.d: "In the Southeast, mass social and political actions against our government have begun, they defend the status of the Russian language under anti-government, federalist, pro-Russian and separatist slogans! The situation is getting out of control, we have partially lost control over these regions!"
+
+ukr_events.11.t: "DPR independence!"
+ukr_events.11.d: "The separatists adopted the so-called "Declaration of the Sovereignty of the Donetsk People's Republic". The adopted document proclaimed: “The people of the Donetsk People's Republic have exclusive ownership of land, its subsoil, airspace, water and other natural resources. The republic independently determines its economic status, forms the state budget. The declaration is valid from the moment of its adoption and is the basis for the adoption of the Constitution of the Donetsk People's Republic ""
+ukr_events.11.a: "Sounds convincing ... (Play as Donetsk)"
+ukr_events.11.b: "ABSURD!"
+
+ukr_events.12.t: "Construction of Novorossiya"
+ukr_events.12.d: "In Donetsk, a provisional people's government is being formed, and its own people's army is being formed "to protect the people and the territorial integrity of the republic." What do they allow themselves?"
+
+ukr_events.13.t: "Anti Terrorist operation"
+ukr_events.13.d: "Oleksandr Turchynov said in a televised address that in connection with the events in the east of the country, the National Security and Defense Council of Ukraine decided to conduct a large-scale anti-terrorist operation with the involvement of the armed forces. There will be no peaceful solution."
+
+ukr_events.14.t: "Lugansk People's Republic!?"
+ukr_events.14.d: "The Lugansk People's Republic was proclaimed in Lugansk. At the rally, it was announced that in case of aggression from Kiev, Lugansk would ask Russia to bring in peacekeeping forces. Russia has no right to interfere in our affairs!"
+ukr_events.14.a: "In general, they have the right... (Play for Luhansk)"
+ukr_events.14.b: "Russian puppets!"
+
+ukr_events.15.t: "The ultimatum of the Luhansk separatists!"
+ukr_events.15.d: "The Joint Headquarters of the Army of the South-East presented an ultimatum to the Lugansk Regional Council demanding an early referendum on the future fate of Lugansk!"
+
+ukr_events.16.t: "Rallies in Luhansk"
+ukr_events.16.d: "In Lugansk, in the center of the city, a large-scale rally was held, which gathered about 2 thousand people. Participants of the action with flags of the Russian Federation and anti-government slogans demanded that the current government be declared illegal!"
+
+ukr_events.17.t: "Rallies in Donetsk"
+ukr_events.17.d: "Mass protests on the territory of the Donetsk region continue throughout March, about 200 actions were held in the region, in which more than 130 thousand people took part. The protesters refuse to recognize the new Ukrainian government, stand for the federalization of Ukraine, as well as against the new governors, whose appointment is considered illegitimate!"
+
+ukr_events.18.t: "Rallies in Kharkov"
+ukr_events.18.d: "Throughout March, unrest continues in Kharkov, which alternate with processions of Maidan supporters and rallies of public organizations, anti-Maidan supporters, it comes to shooting and terrorist attacks!"
+
+ukr_events.19.t: "Kharkiv People's Republic ?!"
+ukr_events.19.d: "Pro-Russian protesters seized the regional administration building. The activists held a "meeting of the regional community", at which they expressed distrust to the deputies of the Kharkiv Regional Council and announced the list of "alternative deputies", the new deputies held an extraordinary meeting at which they proclaimed them sovereign state "Kharkiv People's Republic""
+ukr_events.19.a: "I sympathize with anti-Maidan (Play for Kharkiv)"
+ukr_events.19.b: "I sympathize with the supporters of the Maidan!"
+
+ukr_events.20.t: "Confederation of Novorossia"
+ukr_events.20.d: "Donetsk and Luhansk people's republics signed a document on the unification of Novorossiya into a confederation. They hope that by uniting, they will have a chance, how naive!"
+
+ukr_events.21.t: "Euromaidan"
+ukr_events.21.d: "For many days, a massive protest has been taking place in Kiev, which began on November 21, 2013 in response to the suspension of the Ukrainian government's preparations for the signing of an association agreement between Ukraine and the European Union, we are accused of trying to establish an authoritarian dictatorship, and the negotiations do not give no results, what will happen next..."
+
+ukr_events.22.t: "National revolution"
+ukr_events.22.d: "Radical nationalists, football ultras and other right-wing radicals began to take control of administrative buildings throughout the city, a number of ultimatums were put forward to the state, a national revolution was declared! Its goals are to eliminate the internal occupation regime and obtain a Ukrainian national state with a system of all-encompassing national democracy"
+
+ukr_events.23.t: "New leader"
+ukr_events.23.d: "The leader of the Right Sector was originally Dmitry Yarosh, one of the leaders of the Ukrainian nationalist organization Trident. On November 11, 2015, he announced that he was resigning as the leader of the movement. The movement was headed by Andrey Tarasenko, who was elected at the IV Congress of the RS!"
+
+ukr_events.24.t: "Under the flags of Antimaydan"
+ukr_events.24.d: "Ukraine will be torn apart by civil war! The east of Ukraine is completely unwilling to obey the ultra-right radicals from the Right Sector who have seized power in Kiev. With the rise of the Nazi regime, repressions against Russian-speaking citizens began, it became dangerous even to think in Russian. Underground communist forces, anarchists, pro-Russian forces and simply sane people united under the flags of Anti-Maidan."
+
+ukr_events.26.t: "Orthodox Church of Ukraine"
+ukr_events.26.d: "The Holy Synod of the Patriarchate of Constantinople announced the cancellation of the decision on the subordination of the Kiev Metropolitanate to the Moscow Patriarchate, restored in the hierarchical and priestly rank and returned to communion with the Church the primates of non-canonical Orthodox churches: the Ukrainian Orthodox Church of the Kiev Patriarchate and the Ukrainian Autocephalous Orthodox Church, as well as their followers"
+
+uks_events.1.t: "Civil War!"
+uks_events.1.d: "A more or less peaceful protest on the Maidan gradually developed into an uprising of right-wing radical forces. The "Right Sector" movement led the uprising in Lviv, and in the shortest possible time a Western Ukrainian army was organized, which had already begun its journey to Kiev!"
+
+#Russia
+
+russia_events.1.t: "We take our destiny into our own hands"
+russia_events.1.d: "Putin and his company are no more. Will the time come for the beautiful Russia of the future, or again for the kind tsar and the familiar stench?"
+
+genericfocustree.23.t: "Russian Empire return"
+genericfocustree.23.d: "Russian Empire return"
+genericfocustree.23.a: "not bad"
+genericfocustree.23.b: "bad?"
+
+russia_events.3.t: "Issuance of passports to citizens of Novorossiya"
+russia_events.3.d: "Residents of the DPR can obtain citizenship and obtain a Russian passport under a simplified scheme proposed by Russian President Vladimir Putin. This should stabilize the situation and accelerate the integration of Donbass into Russia!"
+
+#USA
+
+mod_usa_events.1.t: "2016 United States presidential election"
+mod_usa_events.1.d: "Both the Democratic and Republican parties, as well as third parties such as the Green and Libertarian parties, held a series of presidential primary elections and caucuses that took place between February and June 2016, staggered among the 50 states, the District of Columbia, and U.S. territories. This nominating process was also an indirect election, where voters cast ballots for a slate of delegates to a political party's nominating convention, who in turn elected their party's presidential nominee."
+mod_usa_events.1.a: "Donald Trump won this election"
+mod_usa_events.1.b: "Hillary Clinton won this election"
+
+mod_usa_events.2.t: "2020 United States presidential election"
+mod_usa_events.2.d: "The election saw a record number of ballots cast early and by mail due to the ongoing pandemic. Many more Democrats voted by mail compared to Republicans. As a result of a large number of mail-in ballots, some swing states saw delays in vote counting and reporting; this led to major news outlets delaying their projection of Biden and Harris as the president-elect and vice president-elect until the morning of November 7, three and a half days after the election. Major media networks project a state for a candidate once there is high mathematical confidence that the outstanding vote would be unlikely to prevent the projected winner from ultimately winning that state."
+mod_usa_events.2.a: "Joe Biden won this election"
+mod_usa_events.2.b: "Donald Trump won this election"
+
+#Britain
+
+modbritain.1.t: "New prime minister"
+modbritain.1.d: "On 30 June 2016, May announced her candidacy for the leadership of the Conservative Party to replace David Cameron, who resigned following the outcome of the European Union membership referendum in which 52% of voters voted in favour of leaving the EU. May emphasised the need for unity within the party regardless of positions on leaving the EU, saying she could bring "strong leadership" and a "positive vision" for the country's future."
+
+modbritain.2.t: "New prime minister"
+modbritain.2.d: "On 16 May 2019, Johnson confirmed that he would stand in the forthcoming Conservative Party leadership election following Theresa May's anticipated resignation."
+
+#France
+
+modfrance.1.t: "2017 French Presidential Election"
+modfrance.1.d: "In the second round, a struggle broke out between the representative of the "En Marche !" Emmanuel Macron and the leader of the right-wing National Front Marine Le Pen. When the vote count was completed, the new President of France became..."
+modfrance.1.a: "Emmanuel Macron"
+modfrance.1.b: "Marine Le Pen"
+
+#Italy
+
+moditaly.1.t: "Presidential Election in Italy - 2015"
+moditaly.1.d: "On January 14, 2015, President Giorgio Napolitano officially announced his resignation. On January 15, 2015, the President of the Chamber of Deputies, Laura Boldrini, appointed the first meeting of the electoral college for January 29, 2015. According to the Constitution, the elections were to start no later than 15 days after the president left."
+
+#Serbia
+
+modserbia.1.t: "Serbian Presidential Election - 2017"
+modserbia.1.d: "The current president, Tomislav Nikolic, has the right to run for a second five-year term, but does not want to do so. According to the results of the elections, Aleksandr Vucic won the victory!"
+
+modserbia.2.t: "Protests in Serbia!"
+modserbia.2.d: "Mass protests began, organized in Belgrade, Novi Sad, Niš and other cities and towns of Serbia against the elected President Alexander Vucic. The main participants are university students, but recently they have been joined by police officers, the army, taxi drivers, lawyers, post office workers and other trade unions ..."
+
+#kaucas
+
+kaucas_events.1.t: "Presidential elections in Georgia"
+kaucas_events.1.d: "On Sunday, December 16, Salome Zurabishvili officially took office as President of Georgia. In eastern Georgia, several hundred supporters of the radical opposition continue to attack police officers maintaining order in Telavi."
+kaucas_events.1.a: "Now ruled by the "Path of Georgia"
+
+kaucas_events.2.t: "Presidential elections in Armenia"
+kaucas_events.2.d: "The only candidate in the 2018 elections was Armen Sargsyan. The RPA was nominated with 58 votes, the ARF with 7 votes, Tsarukyan with 30 votes supported this decision. The Exodus faction voted against Sargsyan with 9 votes."
+kaucas_events.2.a: "Following the elections, Armen Sarkissian was elected President of Armenia."
+
+#Afganistan
+
+afgan_events.1.t: "2014 presidential election"
+afgan_events.1.d: "A total of 18 candidates were registered in the elections, four of whom subsequently refused to participate. It is obvious that Ashraf Ghani will win."
+afgan_events.1.a: "Ashraf Ghani wins with 50.64%"
+afgan_events.1.b: "Only Islamism will save our country"
+
+#World news
+
+mynews.1.t: "Games of the XXXI Olympiad"
+mynews.1.d: "These were the first Olympic Games to be held in South America, as well as the first to be held in a Portuguese-speaking country, the first summer edition to be held entirely in the host country's winter season, the first since 1968 to be held in Latin America, and the first since 2000 to be held in the Southern Hemisphere. These were the first Summer Olympics to take place under the International Olympic Committee presidency of Thomas Bach."
+mynews.1.a: "May the force be with us"
+
+mynews.2.t: "New War in Afghanistan"
+mynews.2.d: "2015 saw the Taliban make various gains in Afghanistan in an attempt to fracture the fledgling Afghan government with successes not seen since NATO intervened in 2001. The Taliban has increased suicide attacks and has made multiple territorial gains across the country."
+mynews.2.a: "What will NATO answer?"
+mynews.2.b: "War never changes!"
+
+afrika_events.1.t: "Ambazonia"
+afrika_events.1.d: "The Federal Republic of Ambazonia was proclaimed independent on October 1, 2017, during protests against the centralization of Cameroon and discrimination against the English-speaking population of the country! The Cameroon government said that the declaration of independence has no legal weight and declared war on the FRA, which de facto can be regarded as a recognition of the state's independence ..."
+afrika_events.1.a: "Is it possible that the British are somehow involved in this?"
+afrika_events.1.b: "Let's crush the separatists!"
+
+america_events.1.t: "Raul Castro leaves"
+america_events.1.d: "The first secretary of the Central Committee of the Communist Party of Cuba, Raul Castro, announced his resignation at the VIII Party Congress in Havana. The 89-year-old politician has held his post since 2006: for health reasons, his elder brother Fidel delegated his powers. In 2018, Raul Castro left the posts of Chairman of the Council of Ministers and Head of the State Council, where he was replaced by the current President of the Republic, Miguel Diaz-Canel."
+
+#Korea
+
+modkorea.1.t: "Impeachment!"
+modkorea.1.d: "The South Korean Constitutional Court unanimously approved the impeachment, after which the president's powers were terminated. Park Geun-hye has been arrested on charges of bribery, abuse of power, and transferring classified information to non-government officials. Elections for a new president will be held immediately."
+
+#Brazil
+
+modbrazil.1.t: "Impeachment!"
+modbrazil.1.d: "Due to the corruption schemes of our president, the Senate voted to declare impeachment! 55 senators voted for impeachment, 22 against. President Rousseff has been removed from office, her duties will be temporarily transferred to Vice President Michel Temer."
+
+modbrazil.2.t: "Brazilian general election - 2018"
+modbrazil.2.d: "The President and the Vice President of Brazil are elected using the two-round system. Citizens may field their candidacies for the presidency, and participate in the general elections, which are held on the first Sunday in October (in this instance, 7 October 2018). If the most-voted candidate takes more than 50% of the overall vote, he or she is declared elected. If the 50% threshold is not met by any candidate, a second round of voting is held on the last Sunday in October (in this instance, 28 October 2018). In the second round, only the two most-voted candidates from the first round may participate. The winner of the second round is elected President of Brazil. Candidates for President run for office jointly with a candidate for Vice-President, and the Vice-President is elected as a consequence of the election of the President."
+
+#Anarchy
+
+anarchism_events.1.t: "Abolish the State"
+anarchism_events.1.d: "The state will be put out to pasture. They will not like it. They will fight against it with everything they have, as if they do not they will be destroyed. Yet we will prevail. We have the people on our side!"
+anarchism_events.1.a: "Anarchist Commune"
+anarchism_events.1.b: "A Regional Council"
+
+#Macedonia
+
+macedonia_events.1.t: "Name dispute"
+macedonia_events.1.d: "Political disputes with Greece over the use of the name "Macedonia" led to the fact that the official designation used in 1993-2019 at the UN at the insistence of Greece - the former Yugoslav Republic of Macedonia. Despite the self-name of the state - the Republic of Macedonia. The governments of Greece and the Republic of Macedonia, after a long dispute, came to a consensus on the name of the country and signed the Prespani Treaty. It remains only to ratify this treaty."
+macedonia_events.1.a: "Change name"
+macedonia_events.1.b: "Leave current"
+
+#Arabia
+
+arabia_event.1.t: "King and Warden of the Two Holy Places"
+arabia_event.1.d: "As Crown Prince of Saudi Arabia, Salman became the Servants of the Two Shrines and King of Saudi Arabia. immediately after the death of his half-brother, King Abdullah. In honor of his coming to power, Salman ordered the remuneration of civil servants, pensioners and students in the amount of two months payment, forgiveness of 500 thousand civil and monetary fines up to 133 thousand US dollars."
+
+arabia_event.2.t: "Yemeni Civil War"
+arabia_event.2.d: "Shia rebels living in the north of the country opposed the alliance of the Yemeni authorities with the United States and for the restoration of the theocratic monarchy. The rebels have already occupied our capital - Sana, and they are not going to stop there!"
+
+#Form_mini
+
+Form_Unite_Cypr: "Unite Cyprus"
+form_country_Unite_Cypr: "Initiate Kofi Annan's Plan"
+
+Form_Czehoslovak: "Restore Czechoslovakia"
+form_country_Unite_Czehoslovak: "Unite the Czech Republic and Slovakia"

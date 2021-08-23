@@ -1,0 +1,96 @@
+﻿capital = 317
+
+oob = "NIC_2014"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+}
+set_country_flag = monroe_doctrine
+set_war_support = 0.1
+set_convoys = 10
+
+2020.1.1 = {
+
+	add_political_power = 1198
+	
+
+	
+	oob = "NIC_2020"
+	set_technology = {
+		interwar_artillery = 1
+	
+		support_weapons = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		fuel_silos = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "2005.11.8"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 15
+	fascism = 5
+	communism = 10
+	neutrality = 70
+}
+
+create_country_leader = {
+	name = "Juan Bautista Sacasa"
+	desc = "POLITICS_JUAN_BAUTISTA_SACASA_DESC"
+	picture = "gfx/leaders/South America/Portrait_South_America_Generic_land_4.dds"
+	expire = "2030.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+2020.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "2014.12.8"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}
+
+create_country_leader = {
+	name = "Anastasio Somoza García"
+	desc = "POLITICS_ANASTASIO_SOMOZA_GARCIA_DESC"
+	picture = "GFX_portrait_nicaragua_portrait_anastasio_somoza_garcia"
+	expire = "2030.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}

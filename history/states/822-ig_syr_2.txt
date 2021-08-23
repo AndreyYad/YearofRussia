@@ -1,0 +1,34 @@
+state={
+	id=822
+	name="STATE_822"
+	
+	history={
+		victory_points = {
+			12473 3 
+		}
+		victory_points = {
+			3942 5 
+		}
+		owner = IGI
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+
+		}
+		add_core_of = SYR
+		add_core_of = DSY
+		add_core_of = KUR
+		add_core_of = IGI
+
+	2020.1.1 = {
+		owner = KUR
+		controller = KUR
+	}
+}
+	provinces={
+		901 1606 3942 7671 12473 
+	}
+	manpower=5235594
+	buildings_max_level_factor=1.000
+	state_category=town
+}

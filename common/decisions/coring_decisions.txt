@@ -1,0 +1,212 @@
+CORING_decisions = {
+
+	coring_states_1 = {
+
+		name = coring_states.t
+
+		icon = generic_nationalism
+
+		allowed = { always = yes  }
+
+		available = {
+			has_war = no
+			FROM = {
+				compliance > 10
+			}
+		}
+		
+		ai_will_do = {
+			base = 150
+				modifier = {
+				factor = 250
+				has_stability > 85
+				}
+				modifier = {
+				factor = 0
+				has_stability < 85
+				}
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 10
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 120
+
+		modifier = {
+			stability_factor = -0.03
+		}
+
+		visible = {
+			has_war = no
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	coring_states_2 = {
+
+		name = coring_states.t
+
+		icon = generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+
+		available = {
+			OR = {
+				AND = {
+					has_war = no
+					FROM = {
+						compliance > 25
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			base = 200
+				modifier = {
+				factor = 0
+				has_stability < 60
+				}
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 10
+			}
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		days_remove = 60
+
+		modifier = {
+			stability_factor = -0.01
+		}
+
+		visible = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		complete_effect = { }
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+	
+	coring_states_3 = {
+
+		name = coring_states.t
+
+		icon = generic_nationalism
+
+		allowed = {
+			always = yes
+		}
+
+		available = {
+			has_war = yes
+			FROM = {
+				compliance > 70
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+				modifier = {
+				factor = 0
+				has_stability < 90
+				}
+		}
+
+		state_target = yes
+
+		on_map_mode = map_only
+
+		target_array = controlled_states
+
+		target_trigger = {
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+				compliance > 50
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 120
+
+		modifier = {
+			stability_factor = -0.05
+		}
+
+		visible = {
+			has_war = yes
+			FROM = {
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		complete_effect = { }
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+	}
+}

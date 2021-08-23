@@ -1,0 +1,50 @@
+add_namespace = russia_events
+
+#Новый правитель России
+country_event = {
+	id = russia_events.1
+	title = russia_events.1.t
+	desc = russia_events.1.d
+
+	picture = GFX_news_event_end_putinism
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		NOT = {
+			has_government = neutrality
+		}
+		has_civil_war = no
+	}
+	option = {
+	name = OK
+	add_stability = -0.1
+	add_political_power = 300
+	}
+}
+
+#Выдать паспорта гражданам Л-ДНР
+country_event = {
+	id = russia_events.3
+	title = russia_events.3.t
+	desc = russia_events.3.d
+	picture = GFX_DNR_PASPORTRUS
+	
+	fire_only_once = yes
+
+	trigger = {
+		original_tag = SOV
+		has_government = neutrality
+		date > 2019.4.24
+	}
+
+	option = {
+	name = OK
+		add_stability = 0.1
+		add_political_power = 150
+		UKR = { country_event = { id = ukr_events.6 days = 1 } }
+		DNR = { country_event = { id = dnr_events.13 days = 1 } }
+		LNR = { country_event = { id = dnr_events.13 days = 1 } }
+	}
+}

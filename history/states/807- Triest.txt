@@ -1,0 +1,30 @@
+state={
+	id=807
+	name="STATE_807"
+	
+	state_category = town
+
+	history={
+		victory_points = {
+			6626 1 
+		}
+		owner = ITA
+		add_core_of = ITA
+		add_core_of = SLV
+		buildings = {
+			infrastructure = 5
+			6626 = {
+				naval_base = 5
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		6626 
+	}
+	manpower=263159
+	buildings_max_level_factor=1.000
+}

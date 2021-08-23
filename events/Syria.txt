@@ -1,0 +1,20 @@
+﻿add_namespace = syr_events
+
+country_event = {
+	id = syr_events.1
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = DSY
+		SYR = { is_puppet_of = DSY }
+	}
+
+	hidden = yes
+
+	immediate = {
+		add_stability = 0.15
+		annex_country = { target = SYR }
+	}
+	
+}

@@ -1,0 +1,38 @@
+﻿add_namespace = afrika_events
+
+#Амбазония
+news_event = {
+	id = afrika_events.1
+	title = afrika_events.1.t
+	desc = afrika_events.1.d
+	picture = GFX_event_ambazonia
+
+	fire_only_once = yes
+	
+	trigger = {
+		date > 2017.10.1
+		834 = { is_owned_by = CMR }
+	}
+	
+	option = {
+		name = afrika_events.1.a
+		trigger = { 
+			NOT = { original_tag = CMR }
+		}
+		hidden_effect = {
+		AMB = { transfer_state = 834 }
+		834 = { add_core_of = AMB }
+		AMB = { 
+            declare_war_on = {
+                target = FROM 
+                type = annex_everything 
+    		}
+    	}	}
+	}
+	option = {
+		name = afrika_events.1.b
+		trigger = { tag = CMR }
+		AMB = { transfer_state = 834 }
+		834 = { add_core_of = AMB }
+	}
+}

@@ -1,0 +1,26 @@
+state={
+	id=823
+	name="STATE_823"
+	
+	history={
+		owner = AZR
+		victory_points = { #Нахичевань
+			6997 5 
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			air_base = 1
+		}
+		
+		add_core_of = AZR
+
+	}
+	
+	provinces={
+		6997 
+	}
+	manpower=94500
+	buildings_max_level_factor=1.000
+	state_category=town
+}

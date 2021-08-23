@@ -1,0 +1,114 @@
+﻿division_template = {
+	name = "Infantry Division"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+	}
+}
+
+division_template = { 
+	name = "Light Infantry" 
+
+	regiments = { 
+		infantry = { x = 0 y = 0 } 
+		infantry = { x = 0 y = 1 } 
+		infantry = { x = 0 y = 2 } 
+		infantry = { x = 1 y = 0 } 
+		infantry = { x = 1 y = 1 } 
+		infantry = { x = 1 y = 2 } 
+	} 
+}
+
+division_template = {
+	name = "Mounted police"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Garrison"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+##### OOB #####
+units = {
+	division= {
+		#name = "Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7151
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+
+	}
+	division= {	
+		#name = "Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 7151
+		division_template = "Light Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+
+	}
+	division= {	
+		#name = "Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 7151
+		division_template = "Light Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+
+	}
+	division= {	
+		#name = "Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 7151
+		division_template = "Mounted police"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+
+	}
+	division= {	
+		#name = "Infantry Division"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 7151
+		division_template = "Mounted police"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+
+	}
+}

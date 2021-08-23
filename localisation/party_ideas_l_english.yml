@@ -1,0 +1,36 @@
+﻿l_english:
+
+ party_issues:0 "Party Issues"
+
+ party_trade_policy:0 "Trade Policy"
+ party_economy_policy:0 "Economic Policy"
+ party_religious_policy:0 "Religious Policy"
+ party_citizenship_policy:0 "Citizenship Policy"
+ party_war_policy:0 "War Policy"
+ party_welfare_policy:0 "State support for citizens"
+ 
+ party_trade_policy_free_trade:0 "Free Trade"
+ party_trade_policy_protectionism:0 "Protectionism"
+ 
+ party_economy_policy_laissez_faire:0 "Laissez-faire"
+ party_economy_policy_interventionism:0 "Interventionism"
+ party_economy_policy_state_capitalism:0 "State Capitalism"
+ party_economy_policy_planned_economy:0 "Planned Economy"
+ 
+ party_religious_policy_moralism:0 "Moralism"
+ party_religious_policy_pluralism:0 "Pluralism"
+ party_religious_policy_secularized:0 "Secularized"
+ party_religious_policy_atheism:0 "Atheism"
+ 
+ party_citizenship_policy_residency:0 "Residency"
+ party_citizenship_policy_limited_citizenship:0 "Limited Citizenship"
+ party_citizenship_policy_full_citizenship:0 "Full Citizenship"
+ 
+ party_war_policy_jingoism:0 "Jingoism"
+ party_war_policy_pro_military:0 "Pro-Military"
+ party_war_policy_anti_military:0 "Anti-Military"
+ party_war_policy_pacifism:0 "Pacifism"
+ 
+ party_welfare_policy_full_welfare:0 "High level"
+ party_welfare_policy_paternalistic_welfare:0 "Acceptable level"
+ party_welfare_policy_opposed_to_welfare:0 "Low level"

@@ -1,0 +1,681 @@
+ideas = {
+
+	party_trade_policy = {
+	
+		law = yes
+		use_list_view = yes
+	
+		party_trade_policy_free_trade = {
+				
+			available =
+				{  NOT = { has_idea = closed_economy } }
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = 0.05
+				trade_opinion_factor = 0.25
+				local_resources_factor = 0.2
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = generic_flexible_foreign_policy2
+
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		
+		party_trade_policy_protectionism = {
+			
+			available =
+				{  NOT = { has_idea = free_trade } }
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = -0.05
+				global_building_slots = 0.15
+				production_speed_arms_factory_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = protectionism_icon
+
+			ai_will_do = {
+				factor = 8
+			}
+		}
+	}
+	
+	
+	party_economy_policy = {
+	
+		law = yes
+		use_list_view = yes
+	
+		party_economy_policy_laissez_faire = {
+				
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = anarchy
+					has_government = neutrality
+				}
+			}
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = 0.20
+				consumer_goods_factor = -0.03
+				production_speed_buildings_factor = -0.3
+				production_factory_max_efficiency_factor = 0.25
+			}
+
+			cancel_if_invalid = yes
+
+			picture = generic_economic_increase
+			
+			ai_will_do = {
+				factor = 8
+					modifier = {
+					factor = 16 
+					has_government = democratic }
+			}
+		}
+		
+		party_economy_policy_interventionism = {
+				
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = fascism
+					has_government = neutrality
+					NOT = { has_government = anarchy }
+				}
+			}
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = 0.15
+				consumer_goods_factor = -0.01
+				production_speed_buildings_factor = -0.1
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = generic_central_management
+
+			ai_will_do = {
+				factor = 8
+					modifier = {
+					factor = 16 
+					has_government = democratic }
+			}
+		}
+		
+		party_economy_policy_state_capitalism = {
+				
+			available = {
+				NOT = {
+					has_government = communism
+					has_government = anarchy
+				}
+			}
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = 0.15
+				consumer_goods_factor = 0.01
+				production_speed_buildings_factor = 0.1
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = tur_etatism
+
+			ai_will_do = {
+				factor = 8
+					modifier = {
+					factor = 4 
+					has_government = democratic }
+			}
+		}
+		
+		party_economy_policy_planned_economy = {
+				
+			available = {
+				OR = {
+				has_government = communism
+				has_government = anarchy 
+				}
+			}
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = 0.10
+				consumer_goods_factor = 0.03
+				production_speed_buildings_factor = 0.5
+				industrial_capacity_factory = 0.25
+				industrial_capacity_dockyard = 0.25
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = eng_spirit_of_the_industrial_revolution
+
+			ai_will_do = {
+				factor = 8
+			}
+		}
+	}
+	
+	party_religious_policy = {
+	
+		law = yes
+		use_list_view = yes
+		
+		party_religious_policy_moralism = {
+				
+			available = {
+				NOT = {
+					has_government = communism
+					has_government = anarchy
+				}
+			}
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				industrial_capacity_factory	= -0.2
+				industrial_capacity_dockyard = -0.2
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = moralism_icon
+
+			ai_will_do = {
+				factor = 8
+			}
+		}
+	
+		party_religious_policy_pluralism = {
+				
+			available = {
+					not = { has_government = fascism
+				}
+			}
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.05
+				industrial_capacity_factory	= -0.1
+				industrial_capacity_dockyard = -0.1
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = raj_marginalized_muslim_community_happy
+
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		
+		party_religious_policy_secularized = {
+				
+			available = {
+				NOT = {
+					has_government = fascism
+					has_government = anarchy
+				}
+			}
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = -0.05
+				research_speed_factor = 0.02
+				industrial_capacity_factory	= 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = hol_aloof_neutrality
+
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		
+		party_religious_policy_atheism = {
+				
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = anarchy
+					has_government = communism
+				}
+			}
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = -0.1
+				research_speed_factor = 0.04
+				industrial_capacity_factory	= 0.2
+				industrial_capacity_dockyard = 0.2
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = atheism_icon
+
+			ai_will_do = {
+				factor = 8
+			}
+		}
+	}
+	
+	party_citizenship_policy = {
+	
+		law = yes
+		use_list_view = yes
+		
+		party_citizenship_policy_residency = {
+				
+			available = {
+				NOT = { OR = { has_government = democratic has_government = communism} }
+				}
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = 0.15
+				war_support_weekly = 0.005
+				stability_weekly = -0.0025
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = generic_oppression
+
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		
+		party_citizenship_policy_limited_citizenship = {
+				
+			available = {
+				NOT = { OR = { has_government = democratic has_government = communism} }
+				}
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = -0.1
+				war_support_weekly = 0.0025
+				stability_weekly = 0.0025
+				compliance_gain	= 0.001
+				}
+
+			cancel_if_invalid = yes
+			
+			picture = hol_the_foundations_of_defense
+
+			ai_will_do = {
+				factor = 8
+			}
+		}
+		
+		party_citizenship_policy_full_citizenship = {
+				
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = -0.25
+				stability_weekly = 0.005
+				compliance_gain	= 0.01
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = hol_liberation
+
+			ai_will_do = {
+				factor = 8
+			}
+		}
+	}
+		
+	party_war_policy = {
+	
+		law = yes
+		use_list_view = yes
+		
+		party_war_policy_jingoism = {
+				
+			available = {
+				NOT = {
+					has_government = anarchy
+				}
+			}
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = 0.05
+				war_support_weekly = 0.005
+				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.2
+				production_speed_dockyard_factor = 0.2
+				production_speed_fuel_silo_factor = 0.2
+				production_speed_buildings_factor = -0.1
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = generic_armor
+
+			ai_will_do = {
+				factor = 6
+					modifier = {
+					factor = 0 
+					num_of_military_factories < 10 }
+					modifier = {
+					factor = 30 
+					has_government = fascism }
+					modifier = {
+					factor = 60 
+					tag = IGI }
+					modifier = {
+					factor = 8 
+					has_government = neutrality }
+					modifier = {
+					factor = 3 
+					has_government = democratic }
+					modifier = {
+					factor = 4 
+					has_government = communism }
+			}
+		}
+		
+		party_war_policy_pro_military = {
+				
+			available = {
+				always = yes
+			}
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = 0.15
+				war_support_weekly = 0.0025
+				consumer_goods_factor = -0.015
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+				production_speed_fuel_silo_factor = 0.1
+				production_speed_buildings_factor = -0.05
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = ast_volunteer_defence_corps
+
+			ai_will_do = {
+				factor = 8
+					modifier = {
+					factor = 0 
+					num_of_military_factories < 5 }
+					modifier = {
+					factor = 16 
+					has_government = fascism }
+					modifier = {
+					factor = 4 
+					has_government = democratic }
+					modifier = {
+					factor = 4 
+					has_government = communism }
+			}
+		}
+		
+		party_war_policy_anti_military = {
+				
+			available = {
+				NOT = {
+					has_government = fascism
+				}
+			}
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = 0.20
+				stability_weekly = 0.0025
+				consumer_goods_factor = 0.005
+				production_speed_infrastructure_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_synthetic_refinery_factor = 0.1
+				production_speed_buildings_factor = -0.05
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = generic_army_problems
+
+			ai_will_do = {
+				factor = 8
+					modifier = {
+					 factor = 16
+					 has_war = no
+					 has_government = democratic
+					}
+					modifier = {
+					factor = 4 
+					has_war = no
+					has_government = communism }
+			}
+		}
+		
+		party_war_policy_pacifism = {
+				
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = anarchy
+					has_government = communism
+				}
+			}
+			
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				political_power_factor = 0.05
+				stability_weekly = 0.005
+				consumer_goods_factor = 0.05
+				production_speed_infrastructure_factor = 0.2
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_synthetic_refinery_factor = 0.2
+				production_speed_buildings_factor = -0.1
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = jap_militarism_showa
+
+			ai_will_do = {
+				factor = 8
+					modifier = {
+					 factor = 0
+					 has_war = yes
+					}
+					modifier = {
+					 factor = 16
+					 has_war = no
+					 tag = ICE
+					}
+					modifier = {
+					 factor = 16
+					 has_war = no
+					 tag = GRE
+					}
+					modifier = {
+					 factor = 16
+					 has_war = no
+					 tag = COS
+					}
+					modifier = {
+					 factor = 16
+					 has_war = no
+					 tag = FIJ
+					}
+					modifier = {
+					 factor = 16
+					 has_war = no
+					 tag = SAM
+					}
+					modifier = {
+					 factor = 16
+					 has_war = no
+					 tag = AND
+					}
+					modifier = {
+					 factor = 16
+					 has_war = no
+					 tag = FSM
+					}
+					modifier = {
+					 factor = 16
+					 has_war = no
+					 tag = BAS
+					}
+			}
+	}
+	}
+	
+	party_welfare_policy = {
+		
+		law = yes
+		use_list_view = yes
+
+		party_welfare_policy_full_welfare = {
+					
+			available = {
+				has_stability > 0.6
+			}
+				
+			cost = 20
+			removal_cost = 0
+					
+			modifier = {
+				research_speed_factor = 0.1
+				production_speed_buildings_factor = 0.1
+				monthly_population = -0.5
+				stability_factor = 0.1
+				consumer_goods_factor = 0.05
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = jap_supremacy_of_will
+
+			ai_will_do = {
+				factor = 16
+					modifier = {
+					factor = 8
+					is_major = no }
+			}
+		}
+		
+		party_welfare_policy_paternalistic_welfare = {
+					
+			available = {
+				has_stability > 0.2
+			}
+				
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				monthly_population = -0.25
+				stability_factor = 0.05
+				consumer_goods_factor = 0.05
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = SOV_scientist_defect
+
+			ai_will_do = {
+				factor = 8
+			}
+		}
+			
+		party_welfare_policy_opposed_to_welfare = {
+					
+			available = {
+			}
+				
+			cost = 20
+			removal_cost = 0
+				
+			modifier = {
+				research_speed_factor = -0.05
+				production_speed_buildings_factor = -0.05
+				monthly_population = 0.25
+				stability_factor = 0.1
+				consumer_goods_factor = -0.05
+			}
+
+			cancel_if_invalid = yes
+			
+			picture = generic_production_bonus
+
+			ai_will_do = {
+				factor = 4
+			}
+		}
+	}
+}

@@ -1,0 +1,80 @@
+﻿division_template = {
+	name = "Divizia de Infanterie"		# Infantry Division
+	division_names_group = SOV_INF_01
+	# Note: Divisions were nowhere near full strength until mobilized
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+units = {
+	######## LAND OOB ########
+	division = { # "1. Divizia de Infanterie"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 1
+		}
+		location = 3707
+		division_template = "Divizia de Infanterie"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "MOL" } }
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+
+	}
+	division = { # "2. Divizia de Infanterie"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 2
+		}
+		location = 3707
+		division_template = "Divizia de Infanterie"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "MOL" } }
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+
+	}
+	division = { # "3. Divizia de Infanterie"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 3
+		}
+		location = 3707
+		division_template = "Divizia de Infanterie"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "MOL" } }
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+
+	}
+	division = { # "4. Divizia de Infanterie"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 4
+		}
+		location = 3707
+		division_template = "Divizia de Infanterie"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "MOL" } }
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+
+	}
+	division = { # "5. Divizia de Infanterie"
+		division_name = {
+				is_name_ordered = yes
+				name_order = 5
+		}
+		location = 3707
+		division_template = "Divizia de Infanterie"
+		force_equipment_variants = { infantry_equipment_0 = { owner = "MOL" } }
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.9
+
+	}
+}

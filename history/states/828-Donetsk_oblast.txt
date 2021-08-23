@@ -1,0 +1,62 @@
+state={
+	id=828
+	name="STATE_828"
+	
+	state_category=city
+	
+	history={
+		owner = UKR
+		#owner = DNR
+		buildings = {
+			arms_factory = 2
+			industrial_complex = 1
+			infrastructure = 5
+
+		}
+		2020.1.1 = {
+		buildings = {
+			3491 = {
+				bunker = 1
+
+			}
+			502 = {
+				bunker = 2
+
+			}
+			3466 = {
+				bunker = 2
+
+			}
+			3449 = {
+				bunker = 2
+
+			}
+			6776 = {
+				bunker = 2
+
+			}
+			6420 = {
+				bunker = 1
+
+			}
+			}
+			}
+		victory_points = {
+			502 3 
+		}
+		#add_core_of = DNR
+		add_core_of = UKR
+		
+		2020.1.1 = {
+		add_core_of = DNR
+		}
+
+	}
+	
+	provinces={
+		502 3449 3466 3479 3491 6420 6776 
+	}
+	
+	manpower = 3367336
+
+}

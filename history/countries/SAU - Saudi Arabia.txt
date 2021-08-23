@@ -1,0 +1,123 @@
+﻿capital = 292
+
+oob = "SAU_2014"
+
+set_cosmetic_tag = SAU_Saud
+
+add_ideas = {
+	SAU_Monarchy
+	}
+
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+	tech_recon = 1
+	tech_support = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	early_fighter = 1
+	CAS1 = 1
+	gwtank = 1
+	basic_light_tank = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "Battle for the Bosporus"
+	}
+	set_technology = { camelry = 1 }
+}
+
+set_convoys = 5
+
+2020.1.1 = {
+
+	add_political_power = 1198
+	
+	oob = "SAU_2020"
+	
+	set_technology = {
+		fighter1 = 1
+		early_bomber = 1
+		tactical_bomber1 = 1
+		interwar_artillery = 1
+	
+		support_weapons = 1
+
+		#doctrines
+		air_superiority = 1
+
+		mass_assault = 1
+		pocket_defence = 1
+		defence_in_depth = 1
+		
+		fleet_in_being = 1
+		convoy_sailing = 1
+		submarine_operations = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		synth_oil_experiments = 1
+		fuel_silos = 1
+		oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+	}
+}
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "2005.8.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 20
+	fascism = 70
+	democratic = 10
+}
+
+create_country_leader = {
+	name = "Abdullah Ibn Saud"
+	desc = " "
+	picture = "gfx/leaders/SAU/Portrait_Abdullah.dds"
+	expire = "2015.1.23"
+	ideology = fundamentalism
+	traits = {
+		#
+	}
+}
+
+2015.1.23 = {
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "2015.1.23"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Salman Ibn Saud"
+	desc = " "
+	picture = "gfx/leaders/SAU/Portrait_Salman.dds"
+	expire = "2030.1.1"
+	ideology = fundamentalism
+	traits = {
+		#
+	}
+}
+
+}

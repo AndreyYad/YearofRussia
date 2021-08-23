@@ -1,0 +1,32 @@
+state={
+	id=827
+	name="STATE_827"
+	resources={
+		oil=8.000
+	}
+	history={
+		owner = IGI
+		
+		buildings = {
+			infrastructure = 2
+
+		}
+		
+		add_core_of = IRQ
+		add_core_of = IGI
+
+		2020.1.1 = {
+			owner = IRQ
+			controller = IRQ
+
+		}
+
+	}
+	
+	provinces={
+		1631 12413 
+	}
+	manpower=482741
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

@@ -1,0 +1,313 @@
+﻿capital = 46
+
+oob = "ROM_2014"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "ROM_2014_naval_mtg"
+	else = {
+		set_naval_oob = "ROM_2014_naval_legacy"
+	}
+}
+
+add_ideas = {
+	NATO_member
+	supply_hospitals
+	build_school
+}
+
+set_research_slots = 2
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	motorised_infantry = 1
+	trench_warfare = 1
+	early_fighter = 1
+	early_bomber = 1
+	fuel_silos = 1
+	synth_oil_experiments = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+	}
+}
+
+set_convoys = 10
+2020.1.1 = {
+
+	add_ideas = {
+		NATO_member
+		supply_hospitals
+		build_school
+	}
+
+	add_political_power = 1198
+	
+	oob = "ROM_2020"
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+			set_naval_oob = "ROM_2020_naval_mtg"
+		else = {
+			set_naval_oob = "ROM_2020_naval_legacy"
+		}
+	}
+
+	set_technology = {
+		tech_support = 1		
+		tech_engineers2 = 1
+		tech_recon = 1
+		early_fighter = 1
+		early_bomber = 1
+		CAS1 = 1
+		naval_bomber1 = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+		gwtank = 1
+		basic_light_tank = 1
+		motorised_infantry = 1
+		support_weapons = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		fleet_in_being = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		fuel_silos = 1
+		oil_processing = 1
+		improved_oil_processing = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+	}
+	if = {
+		limit = { not = { has_dlc = "Man the Guns" } }
+		set_technology = {
+			basic_submarine = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+		set_technology = {
+		}
+	}
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2004.12.20"
+	election_frequency = 96
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 70
+	fascism = 8
+	communism = 2
+	neutrality = 20
+}
+
+create_country_leader = {
+	name = "Traian Basescu"
+	desc = " "
+	picture = "gfx/leaders/ROM/Portrait_Basescu.dds"
+	expire = "2030.1.1"
+	ideology = centrism
+	traits = {
+		#
+	}
+}
+create_country_leader = {
+	name = "Traian Basescu"
+	desc = " "
+	picture = "gfx/leaders/ROM/Portrait_Basescu.dds"
+	expire = "2014.12.21"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+2014.12.21 = {
+set_party_name = {
+	ideology = democratic
+	name = ROM_conservatism_party
+	long_name = ROM_conservatism_party_long
+}
+set_politics = {
+	ruling_party = democratic
+	last_election = "2014.12.21"
+	election_frequency = 48
+	elections_allowed = yes
+}
+create_country_leader = {
+	name = "Klaus Iohannis"
+	desc = " "
+	picture = "gfx/leaders/ROM/Portrait_Iohannis.dds"
+	expire = "2030.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+}
+
+create_field_marshal = {
+	name = "Ariton Ionita"
+	picture = "Portrait_Romania_Ion_Antonescu.dds"
+	traits = { }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 4
+}
+
+create_corps_commander = {
+	name = "Konstantin Prezan"
+	gfx = GFX_Portrait_romania_ioan_mihail_racovita
+	traits = { hill_fighter }
+	skill = 3
+	attack_skill = 3
+	defense_skill = 4
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Alexandru Averescu"
+	gfx = GFX_Portrait_romania_gheorghe_avramescu
+	traits = { }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+
+create_navy_leader = {
+	name = "Horia Macellariu"
+	gfx = "GFX_Portrait_romania_horia_macellariu"
+	traits = { gentlemanly spotter }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	maneuvering_skill = 2
+	coordination_skill = 1
+}
+
+
+### VARIANTS ###
+# 2014 Start #
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Regele Ferdinand Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 1
+			destroyer_engine_upgrade = 1
+			ship_ASW_upgrade = 1
+			ship_anti_air_upgrade = 1
+		}
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {
+		name = "Delfinul Class"				
+		type = ship_hull_submarine_2
+		name_group = ROM_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_mine_layer_sub
+		}
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Marasti Class"				
+		type = ship_hull_light_1
+		name_group = ROM_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Regele Ferdinand Class"	
+		type = ship_hull_light_1
+		name_group = ROM_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+}
+
+# 2020 Start #
+2020.1.1 = {
+	if = {
+		limit = { not = { has_dlc = "Man the Guns" } }
+		# Ship variants #
+	}
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+	}
+}

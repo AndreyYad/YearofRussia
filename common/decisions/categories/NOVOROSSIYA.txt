@@ -1,0 +1,7 @@
+novorossiya_war = {
+	icon = GFX_ukraine_politic_icon 
+
+	allowed = {
+	original_tag = UKR
+	}
+}

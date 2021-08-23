@@ -1,0 +1,34 @@
+
+state={
+	id=817
+	name="STATE_817"
+
+	history={
+		owner = KUR
+		victory_points = { #Эль-Камышлы
+			1578 5 
+		}
+		victory_points = {
+			1549 1
+		}
+		victory_points = {
+			6883 1
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 3
+
+		}
+		add_core_of = SYR
+		add_core_of = DSY
+		add_core_of = KUR
+
+	}
+
+	provinces={
+		1549 1578 1634 6883 
+	}
+	manpower=3325594
+	buildings_max_level_factor=1.000
+	state_category=town
+}

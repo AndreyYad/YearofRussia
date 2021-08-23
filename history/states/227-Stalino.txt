@@ -1,0 +1,42 @@
+
+state={
+	id=227
+	name="STATE_227"
+
+	history={
+		owner = UKR
+		#owner = DNR
+		buildings = {
+			arms_factory = 3
+			industrial_complex = 2
+			infrastructure = 6
+
+		}
+		2020.1.1 = {
+		buildings = {
+			6474 = {
+				bunker = 5
+
+			}
+			}
+		}
+		victory_points = {
+			6474 10 
+		}
+		#add_core_of = DNR
+		add_core_of = UKR
+		2020.1.1 = {
+		owner = DNR
+		controller = DNR
+		add_core_of = DNR
+		}
+
+	}
+
+	provinces={
+		3421 6474 6493 
+	}
+	manpower=918536
+	buildings_max_level_factor=1.000
+	state_category=city
+}

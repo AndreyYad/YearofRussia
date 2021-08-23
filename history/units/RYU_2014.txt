@@ -1,0 +1,33 @@
+﻿division_template = {
+	name = "Okinawa Defensive Forces"
+
+	division_names_group = RYU_ARM_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+	priority = 2
+}
+
+units = {
+	#Imperial Okinawan Army
+	division = {
+		name = "Imperial Guard Division"
+		location = 11932
+		division_template = "Okinawa Defensive Forces"
+		start_experience_factor = 0.3
+	}
+}
+
+### Starting Equipment ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_0
+			creator = "RYU"
+		}
+		requested_factories = 1
+		progress = 0.28
+		efficiency = 100
+	}
+}

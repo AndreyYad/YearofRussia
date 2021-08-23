@@ -1,0 +1,29 @@
+
+state={
+	id=831
+	name="STATE_831"
+	resources={
+		oil=1.000
+	}
+
+	history={
+		owner = TUA
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = LBA
+		add_core_of = LBM
+		add_core_of = TUA
+		victory_points = {
+		5004 5
+		}
+	}
+	
+	provinces={
+		10884 5004
+	}
+	manpower=272132
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

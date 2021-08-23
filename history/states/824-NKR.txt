@@ -1,0 +1,26 @@
+state={
+	id=824
+	name="STATE_824"
+	
+	history={
+		owner = NKR
+		victory_points = { #Степанакерт
+			1467 10 
+		}
+		
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = NKR
+		add_core_of = ARM
+		add_core_of = AZR
+
+	}
+	
+	provinces={
+		1467 9715 
+	}
+	manpower=150932
+	buildings_max_level_factor=1.000
+	state_category=town
+}

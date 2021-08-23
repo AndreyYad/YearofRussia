@@ -1,0 +1,318 @@
+spriteTypes = {
+
+	### Country Ideas
+
+	spriteType = {
+		name = "GFX_idea_Peace_times"
+		texturefile = "gfx/interface/ideas/Peace_times.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_OMA_Monarchy"
+		texturefile = "gfx/interface/ideas/monarcy/OMA_Monarchy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_unrecognized_state"
+		texturefile = "gfx/interface/ideas/unrecognized_state.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_The_Uyghur_problem"
+		texturefile = "gfx/interface/ideas/The_Uyghur_problem.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_China_Socialism"
+		texturefile = "gfx/interface/ideas/China_Socialism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_NATO_member"
+		texturefile = "gfx/interface/ideas/NATO_member.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_Maidan"
+		texturefile = "gfx/interface/ideas/Maidan.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_Russophobia"
+		texturefile = "gfx/interface/ideas/Russophobia.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_A_divided_nation"
+		texturefile = "gfx/interface/ideas/A_divided_nation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SAU_Monarchy"
+		texturefile = "gfx/interface/ideas/monarcy/SAU_Monarchy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_CAM_Norodom"
+		texturefile = "gfx/interface/ideas/monarcy/CAM_Norodom.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_JOR_Abdullah"
+		texturefile = "gfx/interface/ideas/monarcy/JOR_Abdullah.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SWE_Gustav"
+		texturefile = "gfx/interface/ideas/monarcy/SWE_Gustav.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_NOR_Harald"
+		texturefile = "gfx/interface/ideas/monarcy/NOR_Harald.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_BEL_Leopold"
+		texturefile = "gfx/interface/ideas/monarcy/BEL_Leopold.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ENG_Elizabeth"
+		texturefile = "gfx/interface/ideas/monarcy/ENG_Elizabeth.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_DEN_Margrethe"
+		texturefile = "gfx/interface/ideas/monarcy/DEN_Margrethe.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_HOL_Willem-Alexander"
+		texturefile = "gfx/interface/ideas/monarcy/HOL_Willem-Alexander.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_idea_SWE_Gustaf_V"
+		texturefile = "gfx/interface/ideas/monarcy/SWE_Gustaf_V.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_emperor"
+		texturefile = "gfx/interface/ideas/monarcy/generic_emperor.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_idea_generic_fascist_emperor"
+		texturefile = "gfx/interface/ideas/monarcy/generic_fascist_emperor.dds"
+	}
+
+	### New Political
+	
+	SpriteType = {
+		name = "GFX_idea_protectionism_icon"
+		texturefile = "gfx/interface/ideas/protectionism_icon.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_atheism_icon"
+		texturefile = "gfx/interface/ideas/atheism_icon.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_moralism_icon"
+		texturefile = "gfx/interface/ideas/moralism_icon.dds"
+	}
+
+    ### Political directions
+	
+	spriteType = {
+		name = "GFX_idea_communist_revolutionary_mod_2d"
+		texturefile = "gfx/interface/ideas/idea_direction_communism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_democratic_reformer_mod_2d"
+		texturefile = "gfx/interface/ideas/idea_direction_democraty.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_fascist_demagogue_mod_2d"
+		texturefile = "gfx/interface/ideas/idea_direction_fascism.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_neutrality_loyalist_mod_2d"
+		texturefile = "gfx/interface/ideas/idea_direction_neutrality.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_technocrat_mod_2d"
+		texturefile = "gfx/interface/ideas/idea_technocrat.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_captain_of_industry_mod_2d"
+		texturefile = "gfx/interface/ideas/idea_captain_of_industry.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_reluctant_interventionist_mod_2d"
+		texturefile = "gfx/interface/ideas/idea_reluctant_interventionist.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_syncretic_revanchist_mod_2d"
+		texturefile = "gfx/interface/ideas/idea_syncretic_revanchist.dds"
+	}
+
+	### CIVIL SERVICE LAWS
+	
+	spriteType = {
+		name = "GFX_idea_civil_service_1"
+		texturefile = "gfx/interface/ideas/idea_civil_service_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_civil_service_2"
+		texturefile = "gfx/interface/ideas/idea_civil_service_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_civil_service_3"
+		texturefile = "gfx/interface/ideas/idea_civil_service_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_civil_service_4"
+		texturefile = "gfx/interface/ideas/idea_civil_service_4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_civil_service_5"
+		texturefile = "gfx/interface/ideas/idea_civil_service_5.dds"
+	}
+
+	### ANARCHISM LAWS
+
+	SpriteType = {
+		name = "GFX_idea_army_nation"
+		texturefile = "gfx/interface/ideas/idea_army_nation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_collectivized_society"
+		texturefile = "gfx/interface/ideas/idea_collectivized_society.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_individualist_society"
+		texturefile = "gfx/interface/ideas/idea_individualist_society.dds"
+	}
+	
+		SpriteType = {
+		name = "GFX_idea_cooperation_with_states"
+		texturefile = "gfx/interface/ideas/idea_cooperation_with_states.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_no_cooperation_with_states"
+		texturefile = "gfx/interface/ideas/idea_no_cooperation_with_states.dds"
+	}
+
+	### MEDICINE LAWS
+
+	SpriteType = {
+		name = "GFX_idea_complete_devastation"
+		texturefile = "gfx/interface/ideas/idea_complete_devastation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_radiation"
+		texturefile = "gfx/interface/ideas/idea_radiation.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_sick_nation"
+		texturefile = "gfx/interface/ideas/idea_sick_nation.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_health_promotion"
+		textureFile = "gfx/interface/ideas/idea_health_promotion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_hand_out_antibiotics"
+		textureFile = "gfx/interface/ideas/idea_hand_out_antibiotics.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_supply_hospitals"
+		textureFile = "gfx/interface/ideas/idea_supply_hospitals.dds"
+	}
+
+	
+	spriteType = {
+		name = "GFX_idea_vaccination"
+		textureFile = "gfx/interface/ideas/idea_vaccination.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_build_hospitals"
+		textureFile = "gfx/interface/ideas/idea_build_hospitals.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_vouchers_to_the_sanatorium"
+		textureFile = "gfx/interface/ideas/idea_vouchers_to_the_sanatorium.dds"
+	}
+	
+		spriteType = {
+		name = "GFX_idea_attractive_conditions_for_migrants"
+		textureFile = "gfx/interface/ideas/idea_migrants.dds"
+	}
+	
+	### EDUCATION LAWS
+
+	SpriteType = {
+		name = "GFX_idea_ruined_education"
+		texturefile = "gfx/interface/ideas/idea_education1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_common_superstitions"
+		texturefile = "gfx/interface/ideas/idea_education2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_education_promotion"
+		texturefile = "gfx/interface/ideas/idea_education3.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_research_grants"
+		textureFile = "gfx/interface/ideas/idea_education4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_supply_schools"
+		textureFile = "gfx/interface/ideas/idea_education5.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_build_school"
+		textureFile = "gfx/interface/ideas/idea_education6.dds"
+	}
+
+	
+	spriteType = {
+		name = "GFX_idea_education_reform"
+		textureFile = "gfx/interface/ideas/idea_education7.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_invite_scientists"
+		textureFile = "gfx/interface/ideas/idea_education8.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_attractive_conditions_for_scientists"
+		textureFile = "gfx/interface/ideas/idea_education9.dds"
+	}
+	
+}

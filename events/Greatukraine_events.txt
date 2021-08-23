@@ -1,0 +1,460 @@
+add_namespace = grukr_event
+
+#Ультиматум принят
+country_event = {
+	id = grukr_event.0
+	title = grukr_event.0.t
+	desc = grukr_event.0.d
+	picture = GFX_report_event_soviet_army_greeted
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ok
+		add_stability = 0.05
+		add_political_power = 100
+	}
+}
+
+#Ультиматум отвергнут
+country_event = {
+	id = grukr_event.7
+	title = grukr_event.7.t
+	desc = grukr_event.7.d
+	picture = GFX_report_event_stalin_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = Ok
+		create_wargoal = {
+			type = annex_everything
+			target = FROM
+		}
+	}
+}
+
+#Украина требует Северщину, Донщину и Кубань
+country_event = {
+	id = grukr_event.1
+	title = grukr_event.1.t
+	desc = grukr_event.1.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = grukr_event.1.a
+		ai_chance = {
+			factor = 51
+			modifier = {
+				factor = 0
+				OR = {
+					any_other_country = {
+						is_major = yes
+						NOT = { tag = UKR }
+						OR = {
+							is_in_faction_with = SOV
+							has_guaranteed = SOV
+						}
+					}
+				}
+			}
+		}
+		UKR = {
+			country_event = { days = 1 id = grukr_event.0 }
+			transfer_state = 217
+			transfer_state = 218
+			transfer_state = 220
+			transfer_state = 224
+			transfer_state = 233
+			transfer_state = 234
+			transfer_state = 235
+			transfer_state = 237
+			transfer_state = 238
+			transfer_state = 240
+			transfer_state = 245
+			transfer_state = 260
+			transfer_state = 265
+			transfer_state = 812
+		}
+		hidden_effect = {
+		CHE = {
+			set_cosmetic_tag = CHE_mountain_republic
+			transfer_state = 830
+			transfer_state = 232
+			transfer_state = 236
+			add_state_core = 830
+			add_state_core = 232
+			add_state_core = 236
+		}
+		GEO = {
+			if = {
+				limit = { country_exists = ABH country_exists = OSE }
+					transfer_state = 825
+					transfer_state = 826
+				}
+			}
+		}
+	}
+	option = {
+		name = grukr_event.1.b
+		ai_chance = {
+			base = 49
+			modifier = {
+				add = 10
+				is_in_faction = yes
+				NOT = { is_in_faction_with = SOV }
+			}
+			modifier = {
+				has_idea = NATO_member
+				factor = 51
+			}
+			modifier = {
+				is_major = yes
+				factor = 51
+			}
+		}
+		UKR = {
+			country_event = { days = 1 id = grukr_event.7 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = SOV
+				}
+			}
+		}
+	}
+}
+
+#Украина требует Берестейщину и Пинщину
+country_event = {
+	id = grukr_event.2
+	title = grukr_event.2.t
+	desc = grukr_event.2.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = grukr_event.1.a
+		ai_chance = {
+			factor = 61
+			modifier = {
+				factor = 0
+				OR = {
+					any_other_country = {
+						is_major = yes
+						NOT = { tag = UKR }
+						OR = {
+							is_in_faction_with = BLR
+							has_guaranteed = BLR
+						}
+					}
+				}
+			}
+		}
+		UKR = {
+			country_event = { days = 1 id = grukr_event.0 }
+			transfer_state = 94
+			transfer_state = 194
+			transfer_state = 241
+		}
+	}
+	option = {
+		name = grukr_event.1.b
+		ai_chance = {
+			base = 31
+			modifier = {
+				add = 10
+				is_in_faction = yes
+				NOT = { is_in_faction_with = BLR }
+			}
+			modifier = {
+				has_idea = NATO_member
+				factor = 51
+			}
+			modifier = {
+				is_major = yes
+				factor = 51
+			}
+		}
+		UKR = {
+			country_event = { days = 1 id = grukr_event.7 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = BLR
+				}
+			}
+		}
+	}
+}
+
+#Украина требует Поднестровье
+country_event = {
+	id = grukr_event.3
+	title = grukr_event.3.t
+	desc = grukr_event.3.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = grukr_event.1.a
+		ai_chance = {
+			factor = 61
+			modifier = {
+				factor = 0
+				OR = {
+					any_other_country = {
+						is_major = yes
+						NOT = { tag = UKR }
+						OR = {
+							is_in_faction_with = MOL
+							has_guaranteed = MOL
+						}
+					}
+				}
+			}
+		}
+		UKR = {
+			country_event = { days = 1 id = grukr_event.0 }
+			transfer_state = 78
+		}
+	}
+	option = {
+		name = grukr_event.1.b
+		ai_chance = {
+			base = 31
+			modifier = {
+				add = 10
+				is_in_faction = yes
+				NOT = { is_in_faction_with = MOL }
+			}
+			modifier = {
+				has_idea = NATO_member
+				factor = 51
+			}
+			modifier = {
+				is_major = yes
+				factor = 51
+			}
+		}
+		UKR = {
+			country_event = { days = 1 id = grukr_event.7 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = MOL
+				}
+			}
+		}
+	}
+}
+
+#Украина требует Юго-Восточные Воеводства
+country_event = {
+	id = grukr_event.4
+	title = grukr_event.4.t
+	desc = grukr_event.4.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = grukr_event.1.a
+		ai_chance = {
+			factor = 61
+			modifier = {
+				factor = 0
+				OR = {
+					any_other_country = {
+						is_major = yes
+						NOT = { tag = UKR }
+						OR = {
+							is_in_faction_with = POL
+							has_guaranteed = POL
+						}
+					}
+				}
+			}
+		}
+		UKR = {
+			country_event = { days = 1 id = grukr_event.0 }
+			transfer_state = 72
+			transfer_state = 88
+			transfer_state = 90
+			transfer_state = 92
+			transfer_state = 762
+		}
+	}
+	option = {
+		name = grukr_event.1.b
+		ai_chance = {
+			base = 41
+			modifier = {
+				add = 10
+				is_in_faction = yes
+				NOT = { is_in_faction_with = POL }
+			}
+			modifier = {
+				has_idea = NATO_member
+				factor = 51
+			}
+			modifier = {
+				is_major = yes
+				factor = 51
+			}
+		}
+		UKR = {
+			country_event = { days = 1 id = grukr_event.7 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = POL
+				}
+			}
+		}
+	}
+}
+
+#Украина требует Прящевский Край
+country_event = {
+	id = grukr_event.5
+	title = grukr_event.5.t
+	desc = grukr_event.5.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = grukr_event.1.a
+		ai_chance = {
+			factor = 61
+			modifier = {
+				factor = 0
+				OR = {
+					any_other_country = {
+						is_major = yes
+						NOT = { tag = UKR }
+						OR = {
+							is_in_faction_with = SLO
+							has_guaranteed = SLO
+						}
+					}
+				}
+			}
+		}
+		UKR = {
+			country_event = { days = 1 id = grukr_event.0 }
+			transfer_state = 71
+		}
+		hidden_effect = {
+		CZE = {
+			if = {
+				limit = { country_exists = HUN }
+			transfer_state = 70
+			add_state_core = 70
+			}
+		}
+		HUN = {
+			if = {
+				limit = { country_exists = HUN }
+					transfer_state = 664
+					transfer_state = 664
+				}
+			}
+		}
+	}
+	option = {
+		name = grukr_event.1.b
+		ai_chance = {
+			base = 41
+			modifier = {
+				add = 10
+				is_in_faction = yes
+				NOT = { is_in_faction_with = SLO }
+			}
+			modifier = {
+				has_idea = NATO_member
+				factor = 51
+			}
+			modifier = {
+				is_major = yes
+				factor = 51
+			}
+		}
+		UKR = {
+			country_event = { days = 1 id = grukr_event.7 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = SLO
+				}
+			}
+		}
+	}
+}
+
+#Украина требует Южную Мармарощину и Южную Буковину
+country_event = {
+	id = grukr_event.6
+	title = grukr_event.6.t
+	desc = grukr_event.6.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = grukr_event.1.a
+		ai_chance = {
+			factor = 61
+			modifier = {
+				factor = 0
+				OR = {
+					any_other_country = {
+						is_major = yes
+						NOT = { tag = UKR }
+						OR = {
+							is_in_faction_with = ROM
+							has_guaranteed = ROM
+						}
+					}
+				}
+			}
+		}
+		UKR = {
+			country_event = { days = 1 id = grukr_event.0 }
+			transfer_state = 79
+		}
+	}
+	option = {
+		name = grukr_event.1.b
+		ai_chance = {
+			base = 41
+			modifier = {
+				add = 10
+				is_in_faction = yes
+				NOT = { is_in_faction_with = ROM }
+			}
+			modifier = {
+				has_idea = NATO_member
+				factor = 51
+			}
+			modifier = {
+				is_major = yes
+				factor = 51
+			}
+		}
+		UKR = {
+			country_event = { days = 1 id = grukr_event.7 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = ROM
+				}
+			}
+		}
+	}
+}

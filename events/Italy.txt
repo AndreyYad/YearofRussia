@@ -1,0 +1,44 @@
+﻿add_namespace = moditaly
+
+country_event = {
+	id = moditaly.1
+	title = moditaly.1.t
+	desc = moditaly.1.d
+	picture = GFX_ITA_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = ITA
+		has_government = democratic
+		date > 2015.2.14
+	}
+
+	option = {
+		name = OK
+		hidden_effect = {
+			
+			set_party_name = {
+			ideology = democratic
+			name = ITA_socialism_party
+			long_name = ITA_socialism_party_long
+			}
+			
+			set_politics = {
+			ruling_party = democratic
+			last_election = "2015.2.14"
+			election_frequency = 48
+			elections_allowed = yes
+			}
+			
+			create_country_leader = {
+			name = "Sergio Mattarella"
+			desc = " "
+			picture = "gfx/leaders/ITA/Portrait_Mattarella.dds"
+			expire = "2030.1.1"
+			ideology = socialism
+			traits = {	}
+			}
+		}
+	}
+}

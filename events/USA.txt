@@ -1,0 +1,164 @@
+﻿add_namespace = mod_usa_events
+
+country_event = {
+	id = mod_usa_events.1
+	title = mod_usa_events.1.t
+	desc = mod_usa_events.1.d
+	picture = GFX_US_elections_2016
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		has_government = democratic
+		date > 2016.11.8
+	}
+	
+	option = {
+	name = mod_usa_events.1.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 200 is_historical_focus_on = yes }
+	}
+	add_stability = -0.05
+	
+	retire_country_leader = yes
+	
+	set_party_name = {
+		ideology = democratic
+		name = USA_republic_party
+		long_name = USA_republic_party_long
+	}
+
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2016.11.8"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	
+	create_country_leader = {
+	name = "Donald Trump"
+	desc = " "
+	picture = "gfx/leaders/USA/Portrait_Trump.dds"
+	expire = "2020.11.3"
+	ideology = conservatism
+	traits = {
+	}
+	}
+	}
+	
+	option = {
+	name = mod_usa_events.1.b
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+	add_stability = 0.05
+	
+	retire_country_leader = yes
+	
+	set_party_name = {
+		ideology = democratic
+		name = USA_democratic_party
+		long_name = USA_democratic_party_long
+	}
+
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2016.11.8"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	
+	create_country_leader = {
+	name = "Hillary Clinton"
+	desc = " "
+	picture = "gfx/leaders/USA/Portrait_Clinton.dds"
+	expire = "2030.3.1"
+	ideology = liberalism
+	traits = {
+	}
+	}
+	}
+	
+}
+
+country_event = {
+	id = mod_usa_events.2
+	title = mod_usa_events.2.t
+	desc = mod_usa_events.2.d
+	picture = GFX_US_elections_2020
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		has_government = democratic
+		date > 2020.11.3
+	}
+	
+	option = {
+	name = mod_usa_events.2.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 200 is_historical_focus_on = yes }
+	}
+	add_stability = -0.05
+	
+	retire_country_leader = yes
+	
+	set_party_name = {
+		ideology = democratic
+		name = USA_democratic_party
+		long_name = USA_democratic_party_long
+	}
+
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2020.11.3"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	
+	create_country_leader = {
+	name = "Joe Biden"
+	desc = " "
+	picture = "gfx/leaders/USA/Portrait_Biden.dds"
+	expire = "2030.3.1"
+	ideology = socialism
+	traits = {
+	}
+	}
+	}
+	
+	option = {
+	name = mod_usa_events.2.b
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+	add_stability = -0.3
+	
+	retire_country_leader = yes
+	
+	set_party_name = {
+		ideology = democratic
+		name = USA_republic_party
+		long_name = USA_republic_party_long
+	}
+
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2020.11.3"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	
+	create_country_leader = {
+	name = "Donald Trump"
+	desc = " "
+	picture = "gfx/leaders/USA/Portrait_Trump.dds"
+	expire = "2030.3.1"
+	ideology = conservatism
+	traits = {
+	}
+	}
+	}
+}

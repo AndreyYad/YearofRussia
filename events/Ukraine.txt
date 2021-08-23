@@ -1,0 +1,990 @@
+add_namespace = ukr_events
+
+#Протесты Майдан
+country_event = {
+	id = ukr_events.21
+	title = ukr_events.21.t
+	desc = ukr_events.21.d
+	picture = GFX_UKR_maidan
+	
+	is_triggered_only = yes
+
+	option = {
+	name = Ok
+		add_stability = -0.1
+	}
+}
+
+#Минские соглашения
+country_event = {
+	id = ukr_events.1
+	title = ukr_events.1.t
+	desc = ukr_events.1.d
+	picture = GFX_UKR_MinskTreaty
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = UKR
+		or = {
+		has_war_with = DNR
+		has_war_with = LNR
+		}
+		or = {
+		has_government = democratic
+		has_government = neutrality
+		}
+		or = {
+		and = {
+		date > 2014.9.5
+		has_full_control_of_state = 829
+		}
+		and = {
+		date > 2014.9.5
+		has_full_control_of_state = 828
+		}
+		}
+	}
+
+	option = {
+	name = ukr_events.1.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 200 is_historical_focus_on = yes }
+	}
+		white_peace = DNR
+		white_peace = LNR
+		transfer_state = 828
+		transfer_state = 829
+		SOV = {
+			puppet = DNR
+			puppet = LNR
+		}
+	}
+	
+	option = {
+	name = ukr_events.1.b
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+	add_popularity = {
+		ideology = fascism
+		popularity = 0.2
+		}
+	}
+}
+
+#Конец Майдана 2014.2.22
+country_event = {
+	id = ukr_events.8
+	title = ukr_events.8.t
+	desc = ukr_events.8.d
+	picture = GFX_UKR_ENDMAIDAN
+	
+	is_triggered_only = yes
+
+	option = {
+	name = Ok
+	hidden_effect = {
+		set_cosmetic_tag = UKR_Republic
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "2014.2.22"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+		}
+	}
+		create_country_leader = {
+			name = "Alexander Turchinov"
+			desc = ""
+			picture = "gfx/leaders/UKR/Portrait_Turchinov.dds"
+			expire = "2014.5.25"
+			ideology = moderatism
+			traits = {
+			}
+		}
+	}
+}
+
+#Фашистский переворот
+country_event = {
+	id = ukr_events.22
+	title = ukr_events.22.t
+	desc = ukr_events.22.d
+	picture = GFX_UKR_right_sector
+
+	is_triggered_only = yes
+
+	option = {
+	name = Ok
+		
+			hidden_effect = {
+		set_politics = {
+		ruling_party = fascism
+		last_election = "2014.5.22"
+		elections_allowed = no
+		}
+		}
+
+			create_country_leader = {
+		name = "Dmitry Yarosh"
+		desc = ""
+		picture = "gfx/leaders/UKR/Portrait_Yarosh.dds"
+		expire = "2015.11.11"
+		ideology = gen_nazism
+		traits = {
+		}
+		}
+	}
+}
+
+#Ярош ушел из партии
+country_event = {
+	id = ukr_events.23
+	title = ukr_events.23.t
+	desc = ukr_events.23.d
+	picture = GFX_UKR_right_sector_leader
+
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = UKR
+		has_country_leader = {
+			name = "Dmitry Yarosh"
+			ruling_only = yes
+		}
+		has_government = fascism
+		date > 2015.11.11
+	}
+
+	option = {
+	name = Ok
+		
+			hidden_effect = {
+		set_politics = {
+		ruling_party = fascism
+		last_election = "2015.11.11"
+		elections_allowed = no
+		}
+		}
+
+			create_country_leader = {
+		name = "Andrey Tarasenko"
+		desc = ""
+		picture = "gfx/leaders/UKR/Portrait_Tarasenko.dds"
+		expire = "2030.1.1"
+		ideology = gen_nazism
+		traits = {
+		}
+		}
+	}
+}
+
+#Президентские выборы в Украине (2014.5.24)
+country_event = {
+	id = ukr_events.2
+	title = ukr_events.2.t
+	desc = ukr_events.2.d
+	picture = GFX_UKR_elections_2014
+
+	is_triggered_only = yes
+
+	option = {
+	name = ukr_events.2.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 200 is_historical_focus_on = yes }
+	}
+		
+			hidden_effect = {
+		drop_cosmetic_tag = yes
+		add_popularity = {
+				ideology = neutrality
+				popularity = -0.4
+			}
+			set_politics = {
+		ruling_party = democratic
+		last_election = "2014.5.25"
+		election_frequency = 60
+		elections_allowed = yes
+		}
+		}
+
+			create_country_leader = {
+		name = "Pyotr Poroshenko"
+		desc = ""
+		picture = "gfx/leaders/UKR/Portrait_Poroshenko.dds"
+		expire = "2019.5.20"
+		ideology = conservatism
+		traits = {
+		}
+		}
+		
+			set_party_name = {
+		ideology = democratic
+		name = UKR_europe_party
+		long_name = UKR_europe_party_long
+		}
+	}
+	
+	option = {
+	name = ukr_events.2.b
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}	
+		
+			hidden_effect = {
+		drop_cosmetic_tag = yes
+		add_popularity = {
+				ideology = neutrality
+				popularity = -0.2
+			}
+			set_politics = {
+		ruling_party = democratic
+		last_election = "2014.5.25"
+		election_frequency = 60
+		elections_allowed = yes
+		}
+		}
+
+			create_country_leader = {
+		name = "Yulia Timoshenko"
+		desc = ""
+		picture = "gfx/leaders/UKR/Portrait_Timoshenko.dds"
+		expire = "2019.5.20"
+		ideology = progressivism
+		female = yes
+		traits = {
+		}
+		}
+			set_party_name = {
+		ideology = democratic
+		name = UKR_fatherland_party
+		long_name = UKR_fatherland_party_long
+		}
+	}
+	
+	option = {
+	name = ukr_events.2.c
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+		
+			hidden_effect = {
+		set_cosmetic_tag = UKR_Republic
+		add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}
+			set_politics = {
+		ruling_party = neutrality
+		last_election = "2014.5.25"
+		election_frequency = 60
+		elections_allowed = yes
+		}
+		}
+
+			create_country_leader = {
+		name = "Oleg Lyashko"
+		desc = ""
+		picture = "gfx/leaders/UKR/Portrait_Lyashko.dds"
+		expire = "2019.5.20"
+		ideology = despotism
+		traits = {
+		}
+		}
+			set_party_name = {
+		ideology = neutrality
+		name = UKR_radical_party
+		long_name = UKR_radical_party_long
+		}
+	}
+}
+
+#Президентские выборы в Украине (2019.3.31)
+country_event = {
+	id = ukr_events.3
+	title = ukr_events.3.t
+	desc = ukr_events.3.d
+	picture = GFX_UKR_elections_2019
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+	name = ukr_events.3.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 200 is_historical_focus_on = yes }
+	}
+		
+			set_party_name = {
+		ideology = democratic
+		name = UKR_sluga_party
+		long_name = UKR_sluga_party_long
+		}
+		
+			hidden_effect = {
+			set_politics = {
+		ruling_party = democratic
+		last_election = "2019.5.20"
+		election_frequency = 60
+		elections_allowed = yes
+		}
+		}
+
+			create_country_leader = {
+		name = "Vladimir Zelensky"
+		desc = ""
+		picture = "gfx/leaders/UKR/Portrait_Zelensky.dds"
+		expire = "2024.3.31"
+		ideology = liberalism
+		traits = {	
+		}
+		}
+	}
+	
+	option = {
+	name = ukr_events.3.b
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+		
+			set_party_name = {
+		ideology = democratic
+		name = UKR_europe_party
+		long_name = UKR_europe_party_long
+		}
+		
+			hidden_effect = {
+			set_politics = {
+		ruling_party = democratic
+		last_election = "2019.5.20"
+		election_frequency = 60
+		elections_allowed = yes
+		}
+		add_stability = -0.1
+		}
+
+			create_country_leader = {
+		name = "Pyotr Poroshenko"
+		desc = ""
+		picture = "gfx/leaders/UKR/Portrait_Poroshenko2019.dds"
+		expire = "2024.3.31"
+		ideology = conservatism
+		traits = {
+		}
+		}
+	}
+	
+	option = {
+	name = ukr_events.3.c
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+		
+			set_party_name = {
+		ideology = democratic
+		name = UKR_fatherland_party
+		long_name = UKR_fatherland_party_long
+		}
+
+			hidden_effect = {
+			set_politics = {
+		ruling_party = democratic
+		last_election = "2019.5.20"
+		election_frequency = 60
+		elections_allowed = yes
+		}
+		}
+
+			create_country_leader = {
+		name = "Yulia Timoshenko"
+		desc = ""
+		picture = "gfx/leaders/UKR/Portrait_Timoshenko2019.dds"
+		expire = "2024.3.31"
+		ideology = progressivism
+		female = yes
+		traits = {
+		}
+		}
+	}
+}
+
+#Аннексия Крыма
+country_event = {
+	id = ukr_events.4
+	title = ukr_events.4.t
+	desc = ukr_events.4.d
+	picture = GFX_UKR_crimea
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = UKR
+		137 = { is_owned_and_controlled_by = SOV }
+		NOT = {
+		UKR = { has_war_with = SOV }
+		}
+	}
+
+	option = {
+	name = ukr_events.4.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 200 is_historical_focus_on = yes }
+	}
+		add_stability = -0.1
+	}
+	
+	option = {
+	name = ukr_events.4.b
+	ai_chance = { factor = 90 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+		declare_war_on = {
+                target = SOV 
+                type = annex_everything 
+    	}
+	}
+}
+
+#Поражение Л-ДНР
+country_event = {
+	id = ukr_events.5
+	title = ukr_events.5.t
+	desc = ukr_events.5.d
+	picture = GFX_UKR_donreturn
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = UKR
+		DNR = { is_puppet_of = UKR }
+		LNR = { is_puppet_of = UKR }
+	}
+
+	option = {
+	name = ukr_events.5.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 200 is_historical_focus_on = yes }
+	}
+		add_stability = 0.1
+		transfer_state = 227
+		transfer_state = 828
+		transfer_state = 228
+		transfer_state = 829
+		add_popularity = {
+				ideology = fascism
+				popularity = 0.2
+			}
+	}
+	
+	option = {
+	name = ukr_events.5.b
+	ai_chance = { factor = 100 
+	modifier = { factor = 150 is_historical_focus_on = yes }
+	}
+		add_stability = 0.20
+		add_political_power = 300
+		add_popularity = {
+				ideology = fascism
+				popularity = -0.1
+			}
+		random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+	}
+}
+
+#Выдача паспортов РФ
+country_event = {
+	id = ukr_events.6
+	title = ukr_events.6.t
+	desc = ukr_events.6.d
+	picture = GFX_DNR_PASPORTRUS
+	
+	is_triggered_only = yes
+
+	option = {
+	name = Ok
+		add_stability = -0.01
+		add_political_power = -150
+	}
+}
+
+#Иловайский котёл
+country_event = {
+	id = ukr_events.7
+	title = ukr_events.7.t
+	desc = ukr_events.7.d
+	picture = GFX_DNR_VSU1
+	
+	is_triggered_only = yes
+
+	option = {
+	name = Ok
+		add_stability = -0.1
+		add_political_power = -150
+		army_experience = 20
+	}
+}
+
+#Появление Опозиционного Блока
+country_event = {
+	id = ukr_events.9
+	title = ukr_events.9.t
+	desc = ukr_events.9.d
+	picture = GFX_UKR_OPOSSITION
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = UKR
+		NOT = {
+			has_government = neutrality
+		}
+		date > 2014.5.30
+	}
+
+	option = {
+	name = Ok
+		create_country_leader = {
+		name = "Vadim Rabinovich"
+		desc = ""
+		picture = "gfx/leaders/UKR/Portrait_Rabinovich.dds"
+		expire = "2030.1.1"
+		ideology = centrism
+		traits = {
+		}
+		}
+		set_party_name = {
+		ideology = neutrality
+		name = UKR_opposition_party
+		long_name = UKR_opposition_party_long
+		}
+	}
+}
+
+#Протесты на Донбассе
+country_event = {
+	id = ukr_events.10
+	title = ukr_events.10.t
+	desc = ukr_events.10.d
+	picture = GFX_UKR_DONPROTEST1
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = UKR
+		UKR = { has_idea = Russophobia }
+		date > 2014.3.1
+	}
+
+	option = {
+	name = Ok	
+	227 = { set_demilitarized_zone = yes }
+	228 = { set_demilitarized_zone = yes }
+	828 = { set_demilitarized_zone = yes }
+	829 = { set_demilitarized_zone = yes }
+	}
+}
+
+#Основание ДНР
+country_event = {
+	id = ukr_events.11
+	title = ukr_events.11.t
+	desc = ukr_events.11.d
+	picture = GFX_UKR_DNRFIRST
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = UKR
+		UKR = { has_idea = Russophobia }
+		date > 2014.4.7
+	}
+
+	option = {
+	name = ukr_events.11.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+	DNR = { change_tag_from = UKR }
+	DNR = { transfer_state = 227 }
+	227 = { add_core_of = DNR }
+	DNR = { transfer_state = 828 }
+	828 = { add_core_of = DNR }
+	hidden_effect = {
+	227 = { set_demilitarized_zone = no }
+	828 = { set_demilitarized_zone = no }
+	}
+	}
+	
+	option = {
+	name = ukr_events.11.b
+	ai_chance = { factor = 100 
+	modifier = { factor = 200 is_historical_focus_on = yes }
+	}
+	DNR = { transfer_state = 227 }
+	227 = { add_core_of = DNR }
+	DNR = { transfer_state = 828 }
+	828 = { add_core_of = DNR }
+	hidden_effect = {
+	227 = { set_demilitarized_zone = no }
+	828 = { set_demilitarized_zone = no }
+	}
+	}
+}
+
+#Движуха в ДНР
+country_event = {
+	id = ukr_events.12
+	title = ukr_events.12.t
+	desc = ukr_events.12.d
+	picture = GFX_UKR_DONPROTEST2
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = UKR
+		UKR = { has_idea = Russophobia }
+		date > 2014.4.11
+	}
+
+	option = {
+	name = Ok
+	add_stability = -0.15
+	add_political_power = -100
+	}
+}
+
+#Война с Л-ДНР 
+country_event = {
+	id = ukr_events.13
+	title = ukr_events.13.t
+	desc = ukr_events.13.d
+	picture = GFX_UKR_DNRWAR
+	
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = {
+	name = Ok
+	declare_war_on = {
+		target = DNR
+		type = annex_everything
+	}
+	declare_war_on = {
+		target = LNR
+		type = annex_everything
+	}
+		hidden_effect = {
+			declare_war_on = {
+				target = KNR
+				type = annex_everything
+			}
+		}
+	}
+}
+
+#Основание ЛНР
+country_event = {
+	id = ukr_events.14
+	title = ukr_events.14.t
+	desc = ukr_events.14.d
+	picture = GFX_UKR_LNRFIRST
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = UKR
+		UKR = { has_idea = Russophobia }
+		date > 2014.4.27
+	}
+
+	option = {
+	name = ukr_events.14.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+	LNR = { change_tag_from = UKR }
+	LNR = { transfer_state = 228 }
+	228 = { add_core_of = LNR }
+	LNR = { transfer_state = 829 }
+	829 = { add_core_of = LNR }
+	hidden_effect = {
+	228 = { set_demilitarized_zone = no }
+	829 = { set_demilitarized_zone = no }
+	}
+	}
+	
+	option = {
+	name = ukr_events.14.b
+	ai_chance = { factor = 100 
+	modifier = { factor = 200 is_historical_focus_on = yes }
+	}
+	LNR = { transfer_state = 228 }
+	228 = { add_core_of = LNR }
+	LNR = { transfer_state = 829 }
+	829 = { add_core_of = LNR }
+	hidden_effect = {
+	228 = { set_demilitarized_zone = no }
+	829 = { set_demilitarized_zone = no }
+	}
+	}
+}
+
+#Движуха в ЛНР (Апрель)
+country_event = {
+	id = ukr_events.15
+	title = ukr_events.15.t
+	desc = ukr_events.15.d
+	picture = GFX_UKR_LNRPROTESTS
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = UKR
+		UKR = { has_idea = Russophobia }
+		date > 2014.4.11
+	}
+
+	option = {
+	name = Ok
+	add_stability = -0.01
+	add_political_power = -10
+	}
+}
+
+#Движуха в ЛНР (МАРТ)
+country_event = {
+	id = ukr_events.16
+	title = ukr_events.16.t
+	desc = ukr_events.16.d
+	picture = GFX_UKR_LNRPROTESTS2
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = UKR
+		UKR = { has_idea = Russophobia }
+		date > 2014.3.30
+	}
+
+	option = {
+	name = Ok
+	add_stability = -0.01
+	add_political_power = -10
+	}
+}
+
+#Движуха в ДНР (МАРТ)
+country_event = {
+	id = ukr_events.17
+	title = ukr_events.17.t
+	desc = ukr_events.17.d
+	picture = GFX_UKR_DNRROTESTS
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = UKR
+		UKR = { has_idea = Russophobia }
+		date > 2014.3.15
+	}
+
+	option = {
+	name = Ok
+	add_stability = -0.01
+	add_political_power = -10
+	}
+}
+
+#Движуха в Харькове (МАРТ)
+country_event = {
+	id = ukr_events.18
+	title = ukr_events.18.t
+	desc = ukr_events.18.d
+	picture = GFX_UKR_KNRROTESTS1
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = UKR
+		UKR = { has_idea = Russophobia }
+		date > 2014.3.18
+	}
+
+	option = {
+	name = Ok
+	add_stability = -0.01
+	add_political_power = -10
+	}
+}
+
+#Движуха в Харькове (АПРЕЛЬ)
+country_event = {
+	id = ukr_events.19
+	title = ukr_events.19.t
+	desc = ukr_events.19.d
+	picture = GFX_UKR_KNRROTESTS2
+	
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = UKR
+		UKR = { has_idea = Russophobia }
+		date > 2014.4.7
+	}
+
+	option = {
+	name = ukr_events.19.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+	KNR = { change_tag_from = UKR }
+	KNR = { transfer_state = 221 }
+	221 = { add_core_of = KNR }
+	}
+	
+	option = {
+	name = ukr_events.19.b
+	ai_chance = { factor = 100 
+	modifier = { factor = 200 is_historical_focus_on = yes }
+	}
+	221 = { add_core_of = KNR }
+	add_stability = -0.05
+	add_war_support = 0.15
+	}
+
+}
+
+#Новороссия
+country_event = {
+	id = ukr_events.20
+	title = ukr_events.20.t
+	desc = ukr_events.20.d
+	picture = GFX_DNR_ConfedNovorussia
+	
+	is_triggered_only = yes
+
+	option = {
+	name = Ok
+		add_stability = -0.01
+		add_war_support = 0.25
+	}
+	
+}
+
+#Антифашизм и гражданская война
+country_event = {
+	id = ukr_events.24
+	title = ukr_events.24.t
+	desc = ukr_events.24.d
+	picture = GFX_UKR_stop_nazi
+	
+	is_triggered_only = yes
+	
+	option = {
+	name = Ok
+	set_capital = 221
+	set_party_name = {
+			ideology = neutrality
+			name = UKR_opposition_party
+			long_name = UKR_opposition_party_long
+		}
+		add_stability = -0.40
+		add_war_support = 0.20
+		add_ideas = A_divided_nation
+	hidden_effect = {
+		UKR = { country_event = { id = ukr_events.25 days = 1 } }
+		add_popularity = {
+				ideology = communism
+				popularity = 0.15
+			}
+		add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+		set_cosmetic_tag = UKR_ANTIFA
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.4
+		}
+		add_popularity = {
+			ideology = fascism
+			popularity = -0.4
+		}
+			set_politics = {
+		ruling_party = neutrality
+		}
+		create_country_leader = {
+		name = "Vadim Rabinovich"
+		desc = ""
+		picture = "gfx/leaders/UKR/Portrait_Rabinovich.dds"
+		expire = "2030.1.1"
+		ideology = centrism
+		traits = {
+		}
+		}
+	}
+	}
+}
+
+#Гражданская война
+country_event = {
+	id = ukr_events.25
+
+	is_triggered_only = yes
+	
+	trigger = {
+		original_tag = UKR
+		has_country_leader = {
+			name = "Vadim Rabinovich"
+			ruling_only = yes
+		}
+	}
+	
+	mean_time_to_happen = { days = 1 }
+
+	hidden = yes
+
+	immediate = {
+		start_civil_war = {
+		ruling_party = neutrality
+		ideology = fascism
+		size = 0.6
+		states = 73 80 89 91 93 193 198 199 201 202 203 225 259
+		}
+	}
+}

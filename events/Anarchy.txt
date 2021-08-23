@@ -1,0 +1,52 @@
+add_namespace = anarchism_events
+
+#Anarchy start
+country_event = {
+
+	id = anarchism_events.1
+	title = anarchism_events.1.t
+	desc = anarchism_events.1.d
+	picture = GFX_event_anarchism_speech
+
+	is_triggered_only = yes
+	
+	option = {
+		name = anarchism_events.1.a
+		swap_ruler_traits = { add = social_anarchists }
+		set_cosmetic_tag = generic_anarchism_soc_neutrality
+		set_country_flag = anarchy_country
+		hidden_effect = {
+		retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Collective"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "2030.1.1"
+				ideology = anarchist_communism
+				traits = {
+					social_anarchists
+				}
+			}
+		}
+	}
+	
+	option = {
+		name = anarchism_events.1.b
+		swap_ruler_traits = { add = lib_anarchists }
+		set_cosmetic_tag = generic_anarchism_lib_neutrality
+		set_country_flag = anarchy_country
+		hidden_effect = {
+		retire_country_leader = yes
+			create_country_leader = {
+				name = "Anarchist Collective"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "GFX_portrait_SPR_anarchist_commune"
+				expire = "2030.1.1"
+				ideology = anarchist_capitalist
+				traits = {
+					lib_anarchists
+				}
+			}
+		}
+	}
+}

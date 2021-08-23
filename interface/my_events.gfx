@@ -1,0 +1,403 @@
+spriteTypes = {	
+	
+	spriteType = {
+	name = "GFX_UKR_Civil_war"
+	texturefile = "gfx/event_pictures/GFX_UKR_Civil_war.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_event_king"
+	texturefile = "gfx/event_pictures/GFX_event_king.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_arab_civil_war"
+	texturefile = "gfx/event_pictures/GFX_arab_civil_war.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_CUB_resign"
+	texturefile = "gfx/event_pictures/GFX_CUB_resign.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_church"
+	texturefile = "gfx/event_pictures/GFX_UKR_church.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_event_impichment"
+	texturefile = "gfx/event_pictures/GFX_event_impichment.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_union"
+	texturefile = "gfx/event_pictures/GFX_DNR_union.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_Opolcheniye_evil"
+	texturefile = "gfx/event_pictures/GFX_DNR_Opolcheniye_evil.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_new_saud_king"
+	texturefile = "gfx/event_pictures/GFX_new_saud_king.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_event_ambazonia"
+	texturefile = "gfx/event_pictures/GFX_event_ambazonia.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_event_vietnam_president"
+	texturefile = "gfx/event_pictures/GFX_event_vietnam_president.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_MACEDONIA_REFERENDUM"
+	texturefile = "gfx/event_pictures/GFX_MACEDONIA_REFERENDUM.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_ProvGov"
+	texturefile = "gfx/event_pictures/GFX_DNR_ProvGov.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_Strelkov"
+	texturefile = "gfx/event_pictures/GFX_DNR_Strelkov.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_News"
+	texturefile = "gfx/event_pictures/GFX_DNR_News.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_Referendum"
+	texturefile = "gfx/event_pictures/GFX_DNR_Referendum.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_Airport"
+	texturefile = "gfx/event_pictures/GFX_DNR_Airport.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_ConfedNovorussia"
+	texturefile = "gfx/event_pictures/GFX_DNR_ConfedNovorussia.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_Boing777"
+	texturefile = "gfx/event_pictures/GFX_DNR_Boing777.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_VSU1"
+	texturefile = "gfx/event_pictures/GFX_DNR_VSU1.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_ELECTIONS1"
+	texturefile = "gfx/event_pictures/GFX_DNR_ELECTIONS1.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_ENDCONFED"
+	texturefile = "gfx/event_pictures/GFX_DNR_ENDCONFED.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_PASPORT"
+	texturefile = "gfx/event_pictures/GFX_DNR_PASPORT.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_DeadZacharchenko"
+	texturefile = "gfx/event_pictures/GFX_DNR_DeadZacharchenko.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_PASPORTRUS"
+	texturefile = "gfx/event_pictures/GFX_DNR_PASPORTRUS.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_OTHERHELP"
+	texturefile = "gfx/event_pictures/GFX_DNR_OTHERHELP.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_event_serbiamod1"
+	texturefile = "gfx/event_pictures/GFX_event_serbiamod1.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_event_serbiamod2"
+	texturefile = "gfx/event_pictures/GFX_event_serbiamod2.dds"		
+	}
+
+	spriteType = {
+	name = "GFX_event_braelect1"
+	texturefile = "gfx/event_pictures/GFX_event_braelect1.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_event_braelect2"
+	texturefile = "gfx/event_pictures/GFX_event_braelect2.dds"		
+	}
+
+	spriteType = {
+	name = "GFX_event_ministre"
+	texturefile = "gfx/event_pictures/GFX_event_ministre.dds"		
+	}
+
+	spriteType = {
+	name = "GFX_UKR_donreturn"
+	texturefile = "gfx/event_pictures/GFX_UKR_donreturn.dds"		
+	}
+
+	spriteType = {
+	name = "GFX_FRA_elections"
+	texturefile = "gfx/event_pictures/GFX_FRA_elections.dds"		
+	}
+
+	spriteType = {
+	name = "GFX_ITA_elections"
+	texturefile = "gfx/event_pictures/GFX_ITA_elections.dds"		
+	}
+
+	spriteType = {
+	name = "GFX_elections"
+	texturefile = "gfx/event_pictures/GFX_elections.dds"		
+	}
+
+	spriteType = {
+	name = "GFX_UKR_crimea"
+	texturefile = "gfx/event_pictures/GFX_UKR_crimea.dds"		
+	}
+
+	spriteType = {
+	name = "GFX_news_event_deportament"
+	texturefile = "gfx/event_pictures/GFX_news_event_deportament.dds"		
+	}
+
+	spriteType = {
+	name = "GFX_event_afg_election"
+	texturefile = "gfx/event_pictures/GFX_event_afg_election.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_event_geo_election"
+	texturefile = "gfx/event_pictures/GFX_event_geo_election.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_event_arm_election"
+	texturefile = "gfx/event_pictures/GFX_event_arm_election.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_event_talib"
+	texturefile = "gfx/event_pictures/GFX_news_event_talib.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_news_event_olympics_2016"
+	texturefile = "gfx/event_pictures/GFX_news_event_olympics_2016.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_event_anarchism_speech"
+	texturefile = "gfx/event_pictures/GFX_event_anarchism_speech.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_news_event_end_putinism"
+	texturefile = "gfx/event_pictures/GFX_news_event_end_putinism.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_news_event_soviet_new"
+	texturefile = "gfx/event_pictures/GFX_news_event_soviet_new.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_news_event_rus_empire_new"
+	texturefile = "gfx/event_pictures/GFX_news_event_rus_empire_new.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_event_army_1"
+	texturefile = "gfx/event_pictures/GFX_event_army_1.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_event_army_2"
+	texturefile = "gfx/event_pictures/GFX_event_army_2.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_event_elections_turkey"
+	texturefile = "gfx/event_pictures/GFX_event_elections_turkey.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_US_elections_2016"
+	texturefile = "gfx/event_pictures/GFX_US_elections_2016.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_US_elections_2020"
+	texturefile = "gfx/event_pictures/GFX_US_elections_2020.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_ENG_elections"
+	texturefile = "gfx/event_pictures/GFX_ENG_elections.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_elections_2014"
+	texturefile = "gfx/event_pictures/GFX_UKR_elections_2014.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_elections_2019"
+	texturefile = "gfx/event_pictures/GFX_UKR_elections_2019.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_MinskTreaty"
+	texturefile = "gfx/event_pictures/GFX_UKR_MinskTreaty.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_ENDMAIDAN"
+	texturefile = "gfx/event_pictures/GFX_UKR_ENDMAIDAN.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_OPOSSITION"
+	texturefile = "gfx/event_pictures/GFX_UKR_OPOSSITION.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_DNR_Opolcheniye"
+	texturefile = "gfx/event_pictures/GFX_DNR_Opolcheniye.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_DONPROTEST1"
+	texturefile = "gfx/event_pictures/GFX_UKR_DONPROTEST1.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_DNRFIRST"
+	texturefile = "gfx/event_pictures/GFX_UKR_DNRFIRST.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_DONPROTEST2"
+	texturefile = "gfx/event_pictures/GFX_UKR_DONPROTEST2.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_DNRWAR"
+	texturefile = "gfx/event_pictures/GFX_UKR_DNRWAR.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_LNRFIRST"
+	texturefile = "gfx/event_pictures/GFX_UKR_LNRFIRST.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_LNRPROTESTS"
+	texturefile = "gfx/event_pictures/GFX_UKR_LNRPROTESTS.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_LNRPROTESTS2"
+	texturefile = "gfx/event_pictures/GFX_UKR_LNRPROTESTS2.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_DNRROTESTS"
+	texturefile = "gfx/event_pictures/GFX_UKR_DNRROTESTS.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_KNRROTESTS1"
+	texturefile = "gfx/event_pictures/GFX_UKR_KNRROTESTS1.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_KNRROTESTS2"
+	texturefile = "gfx/event_pictures/GFX_UKR_KNRROTESTS2.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_LNR_REFERENDUM"
+	texturefile = "gfx/event_pictures/GFX_LNR_REFERENDUM.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_LNR_Opolcheniye"
+	texturefile = "gfx/event_pictures/GFX_LNR_Opolcheniye.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_LNR_Cossacks"
+	texturefile = "gfx/event_pictures/GFX_LNR_Cossacks.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_LNR_E2014"
+	texturefile = "gfx/event_pictures/GFX_LNR_E2014.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_LNR_PURGE"
+	texturefile = "gfx/event_pictures/GFX_LNR_PURGE.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_LNR_ASSASSINATION"
+	texturefile = "gfx/event_pictures/GFX_LNR_ASSASSINATION.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_LNR_PLOTLEAVE"
+	texturefile = "gfx/event_pictures/GFX_LNR_PLOTLEAVE.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_LNR_E2018"
+	texturefile = "gfx/event_pictures/GFX_LNR_E2018.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_maidan"
+	texturefile = "gfx/event_pictures/GFX_UKR_maidan.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_right_sector"
+	texturefile = "gfx/event_pictures/GFX_UKR_right_sector.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_right_sector_leader"
+	texturefile = "gfx/event_pictures/GFX_UKR_right_sector_leader.dds"		
+	}
+	
+	spriteType = {
+	name = "GFX_UKR_stop_nazi"
+	texturefile = "gfx/event_pictures/GFX_UKR_stop_nazi.dds"		
+	}
+
+}

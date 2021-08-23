@@ -1,0 +1,28 @@
+state={
+	id=814
+	name="STATE_814"
+
+	history={
+		owner = PAL
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			1065 = {
+				naval_base = 4
+			}
+			4088 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = PAL
+		add_core_of = ISR
+		victory_points = { 7107 10 }
+		victory_points = { 4088 5 }
+	}
+
+	provinces={
+		7107 4088 1065
+	}
+	manpower= 4550368
+	state_category = city
+}

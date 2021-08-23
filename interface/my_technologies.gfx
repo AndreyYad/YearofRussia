@@ -1,0 +1,64 @@
+spriteTypes = {
+
+	# Weapons
+
+	SpriteType = {
+		name = "GFX_altenativeinfantry_weapons_0_medium"
+		texturefile = "gfx/interface/technologies/infantry0_alt.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_altenativeinfantry_weapons1_medium"
+		texturefile = "gfx/interface/technologies/infantry1_alt.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_altenativeinfantry_weapons2_medium"
+		texturefile = "gfx/interface/technologies/infantry2_alt.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_altenativeinfantry_weapons3_medium"
+		texturefile = "gfx/interface/technologies/infantry3_alt.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_cevlar_armor_medium"
+		texturefile = "gfx/interface/technologies/cevlar_armor.dds"
+	}
+	
+	# Mech
+	
+	spriteType = {		
+		name = "GFX_archetype_mech_medium"		               
+		texturefile = "gfx/interface/technologies/MECH/protomech.dds"	
+	}	
+	spriteType = {		
+		name = "GFX_protomech_medium"		               
+		texturefile = "gfx/interface/technologies/MECH/protomech.dds"	
+	}
+	spriteType = {		
+		name = "GFX_basic_mech_medium"		                
+		texturefile = "gfx/interface/technologies/MECH/basic_mech.dds"	
+	}
+	spriteType = {		
+		name = "GFX_improved_mech_medium"		                
+		texturefile = "gfx/interface/technologies/MECH/improved_mech.dds"	
+	}
+	spriteType = {		
+		name = "GFX_advanced_mech_medium"		                
+		texturefile = "gfx/interface/technologies/MECH/advanced_mech.dds"	
+	}
+	
+	spriteType = {
+		name = "GFX_mech_techtree_bg"
+		textureFile = "gfx/interface/techtree/GFX_mech_techtree_bg.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_mech_folder_tab"
+		texturefile = "gfx/interface/techtree/techtree_mech.dds"
+		noOfFrames = 2		
+	}
+	
+}

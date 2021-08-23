@@ -1,0 +1,77 @@
+add_namespace = kaucas_events
+
+country_event = {
+	id = kaucas_events.1
+	title = kaucas_events.1.t
+	desc = kaucas_events.1.d
+	picture = GFX_event_geo_election
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = GEO
+		has_government = democratic
+		date > 2018.12.16
+	}
+	
+	option = {
+	name = kaucas_events.1.a
+	ai_chance = { factor = 200 }
+	retire_country_leader = yes
+	create_country_leader = {
+	name = "Salome Zurabishvili"
+	desc = ""
+	picture = "gfx/leaders/GEO/Portrait_Zurabishvili.dds"
+	expire = "2030.3.1"
+	ideology = liberalism
+	traits = {
+		
+	}
+	}
+	effect_tooltip = {
+		add_popularity = {
+			    ideology = democratic
+			    popularity = 0.05
+			}
+		add_stability = -0.010
+	}
+	}
+}
+
+country_event = {
+	id = kaucas_events.2
+	title = kaucas_events.2.t
+	desc = kaucas_events.2.d
+	picture = GFX_event_arm_election
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = ARM
+		has_government = neutrality
+		date > 2018.4.9
+	}
+	
+	option = {
+	name = kaucas_events.2.a
+	ai_chance = { factor = 200 }
+	retire_country_leader = yes
+	create_country_leader = {
+	name = "Armen Vardanovich"
+	desc = ""
+	picture = "gfx/leaders/ARM/Portrait_Vardanovich.dds"
+	expire = "2030.3.1"
+	ideology = oligarchism
+	traits = {
+		
+	}
+	}
+	effect_tooltip = {
+		add_popularity = {
+			    ideology = democratic
+			    popularity = 0.05
+			}
+		add_stability = -0.010
+	}
+	}
+}

@@ -1,0 +1,25 @@
+
+state={
+	id=782
+	name="STATE_782" # Tombouctou
+	manpower = 179243
+	
+	state_category = wasteland
+
+	history={
+		owner = AZV
+		add_core_of = MLI
+		add_core_of = AZV
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			10788 1 
+		}
+
+	}
+
+	provinces={
+		1115 2044 7930 10725 10788 10868
+	}
+}

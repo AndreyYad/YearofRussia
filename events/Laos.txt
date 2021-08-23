@@ -1,0 +1,76 @@
+﻿
+add_namespace = modlaos
+
+country_event = {
+	id = modlaos.1
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_event_vietnam_president
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = LAO
+		has_government = neutrality
+		date > 2016.4.20
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+			set_politics = {
+			ruling_party = neutrality
+			last_election = "2016.4.20"
+			election_frequency = 48
+			elections_allowed = yes
+			}
+		create_country_leader = {
+			name = "Bunnyang Howling"
+			desc = ""
+			picture = "gfx/leaders/LAO/Portrait_Howling.dds"
+			expire = "2021.5.22"
+			ideology = moderatism
+			traits = {
+				
+			}
+		}
+		}
+	}
+}
+
+country_event = {
+	id = modlaos.2
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_event_vietnam_president
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = LAO
+		has_government = neutrality
+		date > 2021.5.22
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+			set_politics = {
+			ruling_party = neutrality
+			last_election = "2021.5.22"
+			election_frequency = 48
+			elections_allowed = yes
+			}
+		create_country_leader = {
+			name = "Thonglun Sisulith"
+			desc = ""
+			picture = "gfx/leaders/LAO/Portrait_Sisulith.dds"
+			expire = "2030.1.1"
+			ideology = moderatism
+			traits = {
+				
+			}
+		}
+		}
+	}
+}

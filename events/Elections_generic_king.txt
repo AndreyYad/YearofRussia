@@ -1,0 +1,39 @@
+﻿add_namespace = modelectionking
+
+#OMAN - 2020
+country_event = {
+	id = modelectionking.1
+	title = modelectionking.1.t
+	desc = modelectionking.1.d
+	picture = GFX_event_ministre
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = OMA
+		has_government = fascism
+		date > 2020.1.10
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_politics = {
+			ruling_party = fascism
+			last_election = "2020.1.10"
+			election_frequency = 48
+			elections_allowed = no
+		}
+		create_country_leader = {
+			name = "Heissam bin Tariq"
+			desc = " "
+			picture = "gfx/leaders/OMA/Portrait_Tariq.dds"
+			expire = "2030.1.1"
+			ideology = rexism
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}

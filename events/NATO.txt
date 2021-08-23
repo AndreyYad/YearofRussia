@@ -1,0 +1,62 @@
+add_namespace = nato_events
+
+country_event = {
+	id = nato_events.1
+	title = nato_events.1.t
+	desc = nato_events.1.d
+	picture = GFX_event_army_1
+
+	is_triggered_only = yes
+
+	option = {
+	name = nato_events.1.a
+	ai_chance = { factor = 100 
+	modifier = { factor = 100 is_historical_focus_on = yes }
+	}
+	set_global_flag = call_NATO
+	create_faction = NATO
+	every_country = {
+	limit = {
+		has_idea = NATO_member
+		NOT = { tag = FROM }
+		}
+		country_event = { days = 1 id = nato_events.2 }
+		}
+	}
+	
+	option = {
+	name = nato_events.1.b
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+	add_war_support = 0.2
+	}
+}
+
+country_event = {
+	id = nato_events.2
+	title = nato_events.2.t
+	desc = nato_events.2.d
+	picture = GFX_event_army_1
+
+	is_triggered_only = yes
+
+	option = {
+	ai_chance = { factor = 100 
+	modifier = { factor = 100 is_historical_focus_on = yes }
+	}
+	name = nato_events.2.a
+	add_stability = -0.05
+	add_war_support = 0.2
+	FROM = { add_to_faction = ROOT }
+	}
+	
+	option = {
+	ai_chance = { factor = 100 
+	modifier = { factor = 0 is_historical_focus_on = yes }
+	}
+	name = nato_events.2.b
+	add_stability = 0.2
+	add_war_support = -0.2
+	}
+}

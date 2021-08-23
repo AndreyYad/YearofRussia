@@ -1,0 +1,116 @@
+novorossiya_war = {
+
+	play_dnr = {
+	
+	icon = generic_economy
+
+	available = {
+		NOT = {
+		UKR = { has_war_with = DNR } }
+		}
+
+	visible = {
+		is_ai = no
+		date > 2014.1.1
+		date < 2014.2.22
+		}
+		
+		fire_only_once = yes
+		
+	complete_effect = {
+		DNR = { change_tag_from = UKR }
+			hidden_effect = {
+			DNR = { transfer_state = 227 }
+			227 = { add_core_of = DNR }
+			DNR = { transfer_state = 828 }
+			828 = { add_core_of = DNR }
+			}
+		}
+	}
+	
+	play_lnr = {
+	
+	icon = generic_economy
+
+	available = {
+		NOT = {
+		UKR = { has_war_with = LNR } }
+		}
+
+	visible = {
+		is_ai = no
+		date > 2014.1.1
+		date < 2014.2.22
+		}
+		
+		fire_only_once = yes
+		
+	complete_effect = {
+		LNR = { change_tag_from = UKR }
+			hidden_effect = {
+			LNR = { transfer_state = 228 }
+			228 = { add_core_of = LNR }
+			LNR = { transfer_state = 829 }
+			829 = { add_core_of = LNR }
+			}
+		}
+	}
+	
+	play_hnr = {
+	
+	icon = generic_economy
+
+	available = {
+		NOT = {
+		UKR = { has_war_with = KNR } }
+		}
+
+	visible = {
+		is_ai = no
+		date > 2014.1.1
+		date < 2014.2.22
+		}
+		
+		fire_only_once = yes
+		
+	complete_effect = {
+		KNR = { change_tag_from = UKR }
+			hidden_effect = {
+			KNR = { transfer_state = 221 }
+			221 = { add_core_of = KNR }
+			}
+		}
+	}
+	
+	no_russians = {
+	
+	icon = generic_prepare_civil_war
+
+	allowed = {
+		}
+
+	visible = {
+		is_subject = no
+		NOT = {
+		has_country_leader = {
+				name = "Victor Yanukovich"
+				ruling_only = yes
+			}
+		}
+		or = {
+		has_government = fascism
+		has_government = democratic
+		has_government = neutrality
+		}
+		has_idea = Russophobia
+		}
+		
+		fire_only_once = yes
+		
+	complete_effect = {
+		add_manpower = -10000
+		add_stability = 0.25
+		}
+	}
+	
+}

@@ -1,0 +1,16 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_ideology_anarchism"
+		texturefile = "gfx/interface/ideologies/anarchism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_anarchist_capitalist"
+		texturefile = "gfx/interface/ideologies/anarchist_capitalist.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ideology_anarchist_communism"
+		texturefile = "gfx/interface/ideologies/anarchist_communism.dds"
+	}
+}

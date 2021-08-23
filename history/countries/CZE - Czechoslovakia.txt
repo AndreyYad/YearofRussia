@@ -1,0 +1,166 @@
+﻿capital = 9
+
+oob = "CZE_2014"
+
+add_ideas = {
+	NATO_member
+	supply_hospitals
+	build_school
+}
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	improved_light_tank = 1
+	interwar_antiair = 1
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+	fuel_silos = 1
+}
+
+set_cosmetic_tag = CZE_ONLY
+
+set_research_slots = 2
+
+2020.1.1 = {
+
+	add_ideas = {
+		NATO_member
+		supply_hospitals
+		build_school
+	}
+
+	add_political_power = 1197
+	
+	oob = "CZE_2014"
+
+	set_technology = {
+		improved_light_tank = 1 
+		basic_medium_tank = 1 
+		CAS2 = 1
+		heavy_fighter1 = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+	
+		improved_infantry_weapons = 1
+		support_weapons = 1
+		support_weapons2 = 1
+		paratroopers = 1
+		
+
+		#doctrines
+		delay = 1
+		elastic_defence = 1
+		armored_spearhead = 1
+		schwerpunk = 1
+		blitzkrieg = 1
+		convoy_interdiction_ti = 1
+		unrestricted_submarine_warfare = 1
+		raider_patrols = 1
+		#air
+		formation_flying = 1		
+		dive_bombing = 1
+		direct_ground_support = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		decimetric_radar = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		oil_processing = 1
+		fuel_refining2 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		construction4 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+		dispersed_industry4 = 1
+
+	}
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2013.3.8"
+	election_frequency = 60
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 65
+	neutrality = 20
+	fascism = 5
+	communism = 10
+}
+
+create_country_leader = {
+	name = "Milos Zeman"
+	desc = " "
+	picture = "gfx/leaders/CZE/Portrait_Zeman.dds"
+	expire = "2030.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+create_field_marshal = {
+	name = "Vojtěch Luža"
+	gfx = "GFX_Portrait_czechoslovakia_vojtech_luza"
+	traits = { fast_planner offensive_doctrine }
+	skill = 3
+    attack_skill = 4
+    defense_skill = 2
+    planning_skill = 3
+    logistics_skill = 1
+}
+
+create_field_marshal = {
+	name = "Josef Šnejdárek"
+	gfx = "GFX_Portrait_czechoslovakia_josef_snejdarek"
+	traits = { thorough_planner defensive_doctrine }
+	skill = 3
+    attack_skill = 3
+    defense_skill = 4
+    planning_skill = 2
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Richard Tesařík"
+	gfx = "GFX_Portrait_czechoslovakia_richard_tesarik"
+	traits = { armor_officer }
+	skill = 2
+    attack_skill = 4
+    defense_skill = 1
+    planning_skill = 1
+    logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Sergej Vojcechovský"
+	gfx = "GFX_Portrait_czechoslovakia_sergej_vojcechovsky"
+	traits = { winter_specialist }
+	skill = 3
+    attack_skill = 4
+    defense_skill = 3
+    planning_skill = 2
+    logistics_skill = 1
+}

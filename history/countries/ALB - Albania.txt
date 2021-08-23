@@ -1,0 +1,172 @@
+﻿capital = 44
+
+OOB = "ALB_2014"
+
+add_ideas = {
+	NATO_member
+}
+
+set_technology = {
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	basic_heavy_tank = 1 
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_submarine = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		coastal_defense_ships = 1
+	}
+}
+
+set_convoys = 40
+
+2020.1.1 = {
+
+	add_ideas = {
+	}
+
+	add_political_power = 1198
+	
+	oob = "ALB_2014"
+	
+	set_technology = {
+		tech_recon = 1
+		tech_support = 1		
+		tech_engineers = 1
+		tech_military_police = 1
+		tech_mountaineers = 1
+	
+		fighter1 = 1
+		early_bomber = 1
+		tactical_bomber1 = 1
+		strategic_bomber1 = 1
+		CAS1 = 1
+		naval_bomber1 = 1
+		gw_artillery = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+		interwar_antiair = 1
+		motorised_infantry = 1
+		paratroopers = 1
+		gw_artillery = 1
+		gwtank = 1
+		basic_light_tank = 1
+		basic_heavy_tank = 1 
+	
+		support_weapons = 1
+		basic_destroyer = 1
+
+		#doctrines
+		air_superiority = 1
+		grand_battle_plan = 1
+		trench_warfare = 1
+		battlefleet_concentration = 1
+		convoy_sailing = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		construction1 = 1
+		concentrated_industry = 1
+	}
+	if = {
+		limit = { not = { has_dlc = "Man the Guns" } }
+		set_technology = {
+			basic_destroyer = 1
+		}
+	}
+	if = {
+		limit = { has_dlc = "Man the Guns" }
+		set_technology = {
+			basic_light_battery = 1
+		}
+	}
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2012.7.24"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	neutrality = 34
+	democratic = 66
+}
+
+create_country_leader = {
+	name = "Buyar Nishani"
+	desc = " "
+	picture = "gfx/leaders/ALB/Portrait_Nishani.dds"
+	expire = "2017.7.24"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+2017.7.24 = {
+
+set_party_name = {
+	ideology = democratic
+	name = ALB_socialism_party
+	long_name = ALB_socialism_party_long
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2017.7.24"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+create_country_leader = {
+	name = "Ilir Meta"
+	desc = " "
+	picture = "gfx/leaders/ALB/Portrait_Meta.dds"
+	expire = "2030.1.1"
+	ideology = socialism
+	traits = {
+		#
+	}
+}
+
+}

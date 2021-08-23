@@ -1,0 +1,54 @@
+Russiphiboa_1 = {
+	enable = {
+	or = {
+	original_tag = EST
+	original_tag = LAT
+	original_tag = LIT
+	original_tag = POL
+	original_tag = UKR
+	original_tag = GEO
+	}
+	}
+	
+	abort = {
+		NOT = {
+			has_government = democratic
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "SOV"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "DNR"
+		value = 200
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "BLR"
+		value = 200
+	}
+	ai_strategy = {
+		type = befriend
+		id = "UKR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = support
+		id = "UKR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "UKR"			
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = "SOV"
+		value = 5
+	}
+}

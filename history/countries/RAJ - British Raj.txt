@@ -1,0 +1,121 @@
+﻿capital = 439
+
+OOB = "RAJ_2014"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	transport = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	CAS1 = 1
+	early_fighter = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	atomic_research = 1
+	nuclear_reactor = 1
+	nukes = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "Battle for the Bosporus"
+	}
+	set_technology = { camelry = 1 }
+}
+
+set_research_slots = 3
+set_convoys = 200
+
+2020.1.1 = {
+
+	add_ideas = {
+		complete_devastation
+	}
+
+	add_political_power = 1198
+	oob = "RAJ_2020"
+
+	set_technology = {
+		
+		early_fighter = 1
+		fighter1 = 1
+		force_rotation = 1
+		fighter_baiting = 1
+		grand_battle_plan = 1
+
+		trench_warfare = 1
+		prepared_defense = 1
+		battlefleet_concentration = 1
+		subsidiary_carrier_role = 1
+		convoy_sailing = 1
+		convoy_escorts = 1
+		submarine_operations = 1
+
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		decimetric_radar = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		fuel_refining2 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+		atomic_research = 1
+		nuclear_reactor = 1
+		nukes = 1
+	}
+	
+	set_politics = {
+	ruling_party = democratic
+	last_election = "2017.7.25"
+	election_frequency = 48
+	elections_allowed = yes
+	}
+	create_country_leader = {
+	name = "Ram Nath Kovind"
+	desc = " "
+	picture = "gfx/leaders/RAJ/Portrait_Kovind.dds"
+	expire = "2030.1.1"
+	ideology = conservatism
+	traits = {	
+	}
+	}
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2012.7.25"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 60
+	fascism = 5
+	neutrality = 20
+	communism = 15
+}
+
+create_country_leader = {
+	name = "Pranab Mukherjee"
+	desc = " "
+	picture = "gfx/leaders/RAJ/Portrait_Mukherjee.dds"
+	expire = "2017.7.25"
+	ideology = conservatism
+	traits = {
+	}
+}

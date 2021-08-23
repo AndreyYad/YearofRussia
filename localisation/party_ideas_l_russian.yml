@@ -1,0 +1,36 @@
+﻿l_russian:
+
+ party_issues:0 "Партийные вопросы"
+
+ party_trade_policy:0 "Торговая политика"
+ party_economy_policy:0 "Экономическая политика"
+ party_religious_policy:0 "Религиозная политика"
+ party_citizenship_policy:0 "Политика гражданства"
+ party_war_policy:0 "Военная политика"
+ party_welfare_policy:0 "Господдержка граждан"
+ 
+ party_trade_policy_free_trade:0 "Свободная торговля"
+ party_trade_policy_protectionism:0 "Протекционизм"
+ 
+ party_economy_policy_laissez_faire:0 "Laissez-faire"
+ party_economy_policy_interventionism:0 "Государственный контроль"
+ party_economy_policy_state_capitalism:0 "Государственный капитализм"
+ party_economy_policy_planned_economy:0 "Плановая экономика"
+ 
+ party_religious_policy_moralism:0 "Морализм"
+ party_religious_policy_pluralism:0 "Плюрализм"
+ party_religious_policy_secularized:0 "Секуляризм"
+ party_religious_policy_atheism:0 "Атеизм"
+ 
+ party_citizenship_policy_residency:0 "Вид на жительство"
+ party_citizenship_policy_limited_citizenship:0 "Ограниченное гражданство"
+ party_citizenship_policy_full_citizenship:0 "Полное гражданство"
+ 
+ party_war_policy_jingoism:0 "Шовинизм"
+ party_war_policy_pro_military:0 "Милитаризм"
+ party_war_policy_anti_military:0 "Антимилитаризм"
+ party_war_policy_pacifism:0 "Пацифизм"
+ 
+ party_welfare_policy_full_welfare:0 "Высокий уровень"
+ party_welfare_policy_paternalistic_welfare:0 "Приемлемый уровень"
+ party_welfare_policy_opposed_to_welfare:0 "Низкий уровень"

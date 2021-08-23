@@ -1,0 +1,68 @@
+sub_units = {
+
+	mech = {
+		sprite = light_armor
+		map_icon_category = armored
+		priority = 2501
+		ai_priority = 3000
+		active = yes
+		
+		type = {
+			armor    ##unsure
+		}
+		
+		group = infantry    ##unsure
+		
+		categories = {
+			category_front_line
+			category_all_armor
+			category_army
+		}
+
+		combat_width = 4
+
+		need = {
+			mech_equipment = 60
+		}
+		
+		transport = mech_equipment
+		
+		manpower = 120
+		max_organisation = 60
+		default_morale = 0.3
+		training_time = 200
+		max_strength = 2
+		weight = 1
+		supply_consumption = 0.22
+
+		#Tanks are awesome
+		soft_attack = 0.60
+
+		forest = {
+		    attack = -0.1
+			movement = -0.25
+		}
+		mountain = 	{
+		    attack = -0.05
+		}
+		jungle = {
+		    attack = -0.25
+			movement = -0.33
+		}
+		marsh = {
+		    attack = -0.1 
+			movement = -0.1
+		}
+		urban = {
+			attack = 0.6
+			defence = 0.4
+		}
+		river = { 
+			attack = -0.1 
+			movement = -0.1
+		}
+		amphibious = { 
+			attack = -0.4
+		}	
+	}
+}

@@ -1,0 +1,64 @@
+add_namespace = mynews
+
+# Олимпийские игры 2016
+news_event = {
+	id = mynews.1
+	title = mynews.1.t
+	desc = mynews.1.d
+	picture = GFX_news_event_olympics_2016
+	
+	fire_only_once = yes
+	
+	trigger = {
+		date > 2016.8.15
+		country_exists = BRA
+		country_exists = USA
+		BRA = { has_war = no }
+		BRA = { has_civil_war = no }
+		PRC = { has_war = no }
+		ENG = { has_war = no }
+		USA = { has_war = no }
+	}
+	
+	option = {
+		name = mynews.1.a
+		trigger = { 
+			NOT = { TAG = BRA }
+		}
+	}
+	option = {
+		name = mynews.1.a
+		trigger = { TAG = BRA }
+	}
+}
+
+# Талибан
+news_event = {
+	id = mynews.2
+	title = mynews.2.t
+	desc = mynews.2.d
+	picture = GFX_event_talib
+
+	fire_only_once = yes
+	
+	trigger = {
+		date > 2015.1.1
+		AFG = { NOT = { has_government = fascism } }
+	}
+	
+	option = {
+		name = mynews.2.a
+		trigger = { 
+			NOT = { original_tag = AFG }
+		}
+	}
+	option = {
+		name = mynews.2.b
+		trigger = { original_tag = AFG }
+		start_civil_war = {
+		ideology = fascism
+		size = 0.4
+		states = 415
+		}
+	}
+}

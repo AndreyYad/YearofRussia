@@ -1,0 +1,205 @@
+technologies = {
+
+	#mech techs
+
+	protomech = { #walker
+
+		enable_equipments = {
+			protomech_equipment
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = mech }
+			NOT = { has_template_containing_unit = motorised_infantry }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_mechs_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_mechs"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+	
+		path = {
+			leads_to_tech = basic_mech
+			research_cost_coeff = 1
+		}
+	
+		
+		research_cost = 2.7
+		start_year = 2010
+		folder = {
+			name = mechs_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 3
+				original_tag = jap
+			}
+			
+			modifier = {
+				factor = 0
+				is_major = no
+			}
+			
+		}
+		
+		categories = {
+			armor
+			mech
+		}
+	}
+
+	basic_mech = { #Loki
+
+		enable_equipments = {
+			mech_equipment_1 
+		}
+		
+		on_research_complete_limit = {
+			NOT = {	has_template_containing_unit = mech }
+			NOT = { has_template_containing_unit = motorised_infantry }
+		}
+		on_research_complete = {
+			hidden_effect = {
+				if = {
+					limit = {
+						has_tech = motorised_infantry
+					}
+
+					load_oob = "unlock_mechs_mot"
+				}
+				if = {
+					limit = {
+						NOT = { has_tech = motorised_infantry }
+					}
+
+					load_oob = "unlock_mechs"
+				}
+			}
+
+			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
+		}
+		
+		path = {
+			leads_to_tech = improved_mech
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.9
+		start_year = 2015
+		folder = {
+			name = mechs_folder
+			position = { x = 0 y = 4 }
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 3
+				original_tag = jap
+			}
+		}
+		
+		categories = {
+			armor
+			mech
+		}
+	}	
+	improved_mech = { #Valkurie
+
+		enable_equipments = {
+			mech_equipment_2 
+		}
+		
+		path = {
+			leads_to_tech = advanced_mech
+			research_cost_coeff = 1
+		}
+		
+		
+		research_cost = 3.0
+		start_year = 2020
+		
+		folder = {
+			name = mechs_folder
+			position = { x = 0 y = 8 }
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				date > 2022.1.1
+			}
+			modifier = {
+				factor = 3
+				original_tag = jap
+			}
+		}
+		
+		categories = {
+			armor
+			mech
+		}
+	}
+	advanced_mech = { #Late-War
+
+		enable_equipments = {
+			mech_equipment_3 
+		}	
+		
+		research_cost = 3.0
+		start_year = 2025
+		
+		folder = {
+			name = mechs_folder
+			position = { x = 0 y = 12 }
+		}
+		
+		
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 3
+				original_tag = jap
+			}
+		
+		}
+		
+		categories = {
+			armor
+			mech
+		}
+	}
+}

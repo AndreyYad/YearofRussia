@@ -1,0 +1,26 @@
+
+state={
+	id=832
+	name="STATE_832"
+
+	history={
+		owner = AZV
+		buildings = {
+			infrastructure = 3
+			industrial_complex =1
+			arms_factory = 1
+		}
+		add_core_of = AZV
+		add_core_of = MLI
+		victory_points = {
+			5101 5 
+		}
+	}
+	
+	provinces={
+		2068 5101 7954
+	}
+	manpower=1295000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

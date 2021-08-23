@@ -1,0 +1,25 @@
+state={
+	id=826
+	name="STATE_826"
+	
+	history={
+		owner = OSE
+		victory_points = { #Цхинвал
+			1530 5 
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		add_core_of = OSE
+		add_core_of = GEO
+
+	}
+	
+	provinces={
+		1530 
+	}
+	manpower=53532
+	buildings_max_level_factor=1.000
+	state_category=town
+}

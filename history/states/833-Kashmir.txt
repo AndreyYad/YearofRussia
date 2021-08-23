@@ -1,0 +1,26 @@
+
+state={
+	id=833
+	name="STATE_833"
+	manpower = 4045366
+	
+	state_category = rural
+
+	history={
+		owner = KAS
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			10905 1
+		}
+		add_core_of = RAJ
+		add_core_of = PAK
+		add_core_of = KAS
+		add_claim_by = PRC
+	}
+
+	provinces={
+		10905
+	}
+}

@@ -1,0 +1,104 @@
+﻿add_namespace = modbrazil
+
+#2016
+country_event = {
+	id = modbrazil.1
+	title = modbrazil.1.t
+	desc = modbrazil.1.d
+	picture = GFX_event_braelect1
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = BRA
+		has_government = democratic
+		date > 2016.8.31
+	}
+
+	option = {
+	name = OK
+		hidden_effect = {
+			set_party_name = {
+				ideology = democratic
+				name = BRA_liberalism_party
+				long_name = BRA_liberalism_party_long
+			}
+
+			set_politics = {
+				ruling_party = democratic
+				last_election = "2016.8.31"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+				
+			set_popularities = {
+				neutrality = 15
+				democratic = 50
+				fascism = 25
+				communism = 10
+			}
+
+			create_country_leader = {
+				name = "Michel Temer"
+				desc = " "
+				picture = "gfx/leaders/BRA/Portrait_Temer.dds"
+				expire = "2019.1.1"
+				ideology = liberalism
+				traits = {
+					#
+				}
+			}
+		}
+	}
+}
+
+#2019
+country_event = {
+	id = modbrazil.2
+	title = modbrazil.2.t
+	desc = modbrazil.2.d
+	picture = GFX_event_braelect2
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = BRA
+		has_government = democratic
+		date > 2019.1.1
+	}
+
+	option = {
+	name = OK
+		hidden_effect = {
+			set_party_name = {
+				ideology = democratic
+				name = BRA_conservatism_party
+				long_name = BRA_conservatism_party_long
+			}
+
+			set_politics = {
+				ruling_party = democratic
+				last_election = "2019.1.1"
+				election_frequency = 48
+				elections_allowed = yes
+			}
+				
+			set_popularities = {
+				neutrality = 50
+				democratic = 10
+				fascism = 40
+			}
+
+			create_country_leader = {
+				name = "Jair Bolsonaro"
+				desc = " "
+				picture = "gfx/leaders/BRA/Portrait_Bolsonaro.dds"
+				expire = "2030.1.1"
+				ideology = conservatism
+				traits = {
+					#
+				}
+			}
+		}
+	}
+}

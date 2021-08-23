@@ -1,0 +1,219 @@
+ideas = {
+
+	education_laws = {
+		law = yes
+		use_list_view = yes
+
+		ruined_education = {
+						
+			cost = 100
+			removal_cost = -1
+			level = 9
+			
+			available = {
+				#has_research_speed_factor_change_to = { value = -0.5 group = education_laws }
+			}
+
+			ai_will_do = {
+   				factor = 0
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.01
+				research_speed_factor = -0.025
+			}
+			
+			default = no
+			
+			cancel_if_invalid = yes
+		}
+
+		common_superstitions = {
+						
+			cost = 100
+			removal_cost = -1
+			level = 8
+			
+			available = {
+				always = yes
+			}
+
+			ai_will_do = {
+   				factor = 2
+			}
+
+			modifier = {
+				research_speed_factor = -0.01
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = yes
+		}
+		
+		education_promotion = {
+						
+			cost = 100
+			removal_cost = -1
+			level = 7
+			
+			available = {
+				#has_research_speed_factor_change_to =  { value = 0 group = education_laws }
+				has_stability > 0.1
+			}
+
+			ai_will_do = {
+   				factor = 4
+			}
+
+			modifier = {
+				research_speed_factor = 0.01
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		research_grants = {
+					
+			cost = 100
+			removal_cost = -1
+			level = 5
+
+			available = {
+				#has_research_speed_factor_change_to =  { value = 0.05 group = education_laws }
+				has_stability > 0.2
+			}
+
+			modifier = {
+				research_speed_factor = 0.02
+			}
+
+			ai_will_do = {
+   				factor = 5
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		supply_schools = {
+			
+			available = {
+				#has_research_speed_factor_change_to = { value = 0.15 group = education_laws }
+				has_stability > 0.3
+			}
+			ai_will_do = {
+   				factor = 6
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 5
+			
+			modifier = {
+				research_speed_factor = 0.04
+				consumer_goods_factor = 0.01
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		build_school = {
+			
+			
+			available = {
+				#has_research_speed_factor_change_to =  { value = 0.25 group = education_laws }
+				has_stability > 0.4
+			}
+
+			ai_will_do = {
+   				factor = 7
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 4
+
+			modifier = {
+				research_speed_factor = 0.08
+				consumer_goods_factor = 0.02
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		education_reform = {
+			
+			
+			available = {
+				#has_research_speed_factor_change_to =  { value = 0.50 group = education_laws }
+				has_stability > 0.5
+			}
+			ai_will_do = {
+   				factor = 8
+			}
+		
+			cost = 350
+			removal_cost = -1
+			level = 3
+			
+			modifier = {
+				research_speed_factor = 0.16
+				consumer_goods_factor = 0.04
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		invite_scientists = {
+			
+			
+			available = {
+				#has_research_speed_factor_change_to =  { value = 1 group = education_laws }
+				has_stability > 0.6
+				}
+
+			ai_will_do = {
+   				factor = 9
+			}
+
+			cost = 100
+			removal_cost = -1
+			level = 2
+
+			modifier = {
+				research_speed_factor = 0.32
+				consumer_goods_factor = 0.08
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		attractive_conditions_for_scientists = {
+			
+			
+			available = {
+				#has_research_speed_factor_change_to =  { value = 3 group = education_laws }
+				has_stability > 0.6
+				is_major = no
+				}
+			visible = {
+				is_major = no
+				}
+
+			ai_will_do = {
+   				factor = 10
+			}
+
+			cost = 100
+			removal_cost = -1
+			level = 1
+
+			modifier = {
+				research_speed_factor = 0.4
+				consumer_goods_factor = 0.04
+			}
+			
+			cancel_if_invalid = yes
+		}
+	}
+}

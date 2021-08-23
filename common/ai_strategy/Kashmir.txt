@@ -1,0 +1,70 @@
+China = {
+	enable = {
+	original_tag = CHI
+	}
+	
+	abort = {
+		owns_state = 833
+		owns_state = 787
+		owns_state = 441
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "RAJ"
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = "PAK"			
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "PAK"			
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "PAK"			
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = "RAJ"
+		value = 25
+	}
+}
+
+India = {
+	enable = {
+	original_tag = RAJ
+	}
+	
+	abort = {
+		owns_state = 833
+		owns_state = 787
+		owns_state = 441
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "PRC"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "PAK"
+		value = 100
+	}
+	ai_strategy = {
+		type = conquer
+		id = "PAK"
+		value = 40
+	}
+	ai_strategy = {
+		type = conquer
+		id = "PRC"
+		value = 25
+	}
+}

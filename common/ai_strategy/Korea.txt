@@ -1,0 +1,95 @@
+Korea_1 = {
+	enable = {
+	original_tag = KPR
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = KOR
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "KOR"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "JAP"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "USA"
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = "PRC"			
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "PRC"			
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "PRC"			
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = "KOR"
+		value = 5
+	}
+}
+
+Korea_2 = {
+	enable = {
+	original_tag = KOR
+	}
+	
+	abort = {
+		NOT = {
+			country_exists = KPR
+		}
+	}
+	
+	ai_strategy = {
+		type = antagonize
+		id = "KPR"
+		value = 100
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "PRC"
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = "JAP"			
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = "USA"
+		value = 100
+	}
+	ai_strategy = {
+		type = support
+		id = "RAJ"			
+		value = 100
+	}
+	ai_strategy = {
+		type = send_volunteers_desire
+		id = "RAJ"			
+		value = 200
+	}
+	ai_strategy = {
+		type = conquer
+		id = "KPR"
+		value = 5
+	}
+}

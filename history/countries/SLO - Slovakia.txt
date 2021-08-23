@@ -1,0 +1,167 @@
+﻿capital = 70
+
+oob = "SLO_2014"
+
+add_ideas = {
+	NATO_member
+	build_school
+}
+
+set_technology = {
+	gw_artillery = 1
+	interwar_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1
+	infantry_weapons = 1
+	support_weapons = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	tech_engineers = 1
+	early_fighter = 1
+	early_bomber = 1
+	CAS1 = 1
+}
+
+2020.1.1 = {
+	
+	add_ideas = {
+		NATO_member
+		build_school
+	}
+	
+	oob = "SLO_2014"
+	
+	add_political_power = 1198
+	
+	set_technology = {
+		improved_light_tank = 1 
+		basic_medium_tank = 1 
+		CAS2 = 1
+		heavy_fighter1 = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+	
+		improved_infantry_weapons = 1
+		support_weapons = 1
+		support_weapons2 = 1
+		paratroopers = 1
+		
+
+		#doctrines
+		delay = 1
+		elastic_defence = 1
+		armored_spearhead = 1
+		schwerpunk = 1
+		blitzkrieg = 1
+		convoy_interdiction_ti = 1
+		unrestricted_submarine_warfare = 1
+		raider_patrols = 1
+		#air
+		formation_flying = 1		
+		dive_bombing = 1
+		direct_ground_support = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		decimetric_radar = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		oil_processing = 1
+		fuel_refining2 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		construction4 = 1
+		dispersed_industry = 1
+		dispersed_industry2 = 1
+		dispersed_industry3 = 1
+		dispersed_industry4 = 1
+
+	}
+}
+
+create_country_leader = {
+	name = "Ivan Gasparovich"
+	desc = " "
+	picture = "gfx/leaders/SLO/Portrait_Gasparovich.dds"
+	expire = "2014.4.15"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2004.4.15"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 90
+	fascism = 5
+	communism = 5
+}
+
+2014.4.15 = {
+
+	create_country_leader = {
+		name = "Andrej Kiska"
+		desc = " "
+		picture = "gfx/leaders/SLO/Portrait_Kiska.dds"
+		expire = "2019.4.15"
+		ideology = conservatism
+		traits = {
+			#
+		}
+	}
+
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2014.4.15"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+
+}
+
+2019.4.15 = {
+
+		set_party_name = {
+			ideology = democratic
+			name = SLO_progressivism_party
+			long_name = SLO_progressivism_party_long
+		}
+
+		create_country_leader = {
+			name = "Zuzana Chaputova"
+			desc = " "
+			picture = "gfx/leaders/SLO/Portrait_Chaputova.dds"
+			expire = "2030.1.1"
+			ideology = progressivism
+			female = yes
+			traits = {
+				#
+			}
+		}
+
+		set_politics = {
+			ruling_party = democratic
+			last_election = "2019.4.15"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+
+}

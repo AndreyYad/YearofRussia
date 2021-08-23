@@ -1,0 +1,26 @@
+state={
+	id=816
+	name="STATE_816"
+	
+	state_category = town
+
+	history={
+		owner = DSY
+		victory_points = { #Идлиб
+			7140 5 
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		add_core_of = SYR
+		add_core_of = DSY
+
+	}
+	
+	provinces={
+		7140 
+	}
+	manpower=365500
+	buildings_max_level_factor=1.000
+}

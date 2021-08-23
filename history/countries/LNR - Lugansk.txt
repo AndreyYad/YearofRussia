@@ -1,0 +1,215 @@
+capital = 228 #Stalino
+
+oob = "LNR_2014"
+
+set_research_slots = 2
+
+add_ideas = {
+	limited_conscription
+	unrecognized_state
+}
+
+add_ideas = {
+	party_trade_policy_protectionism
+	party_economy_policy_interventionism
+	party_religious_policy_pluralism
+	party_citizenship_policy_full_citizenship
+	party_war_policy_jingoism
+	party_welfare_policy_opposed_to_welfare
+}
+
+set_technology = {
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_military_police = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	paratroopers = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+	gwtank = 1
+	basic_light_tank = 1
+	basic_heavy_tank = 1
+	early_fighter = 1
+	fighter1 = 1
+	early_bomber = 1
+	strategic_bomber1 = 1
+	naval_bomber1 = 1
+	mass_assault = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+	fuel_refining = 1
+}
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+2020.1.1 = {
+	add_political_power = 1198
+
+	oob = "LNR_2020"
+	
+	set_technology = {
+		CAS1 = 1
+		improved_light_tank = 1 
+		basic_heavy_tank = 1
+		basic_medium_tank = 1
+		tactical_bomber1 = 1
+		interwar_artillery = 1
+		interwar_antitank = 1
+	
+		support_weapons = 1
+		support_weapons2 = 1
+		paratroopers = 1
+
+		#doctrines
+		pocket_defence = 1
+		defence_in_depth = 1
+		battlefleet_concentration = 1
+		submarine_operations = 1
+
+		#Air
+		formation_flying = 1		
+		dive_bombing = 1
+		direct_ground_support = 1
+
+		#electronics
+		electronic_mechanical_engineering = 1
+		radio = 1
+		radio_detection = 1
+		mechanical_computing = 1
+		computing_machine = 1
+		basic_encryption = 1
+		basic_decryption = 1
+
+		#industry
+		basic_machine_tools = 1
+		improved_machine_tools = 1
+		advanced_machine_tools = 1
+		synth_oil_experiments = 1
+		oil_processing = 1
+		fuel_refining2 = 1
+		construction1 = 1
+		construction2 = 1
+		construction3 = 1
+		concentrated_industry = 1
+		concentrated_industry2 = 1
+		concentrated_industry3 = 1
+	}
+}
+
+set_convoys = 30
+
+set_cosmetic_tag = LNR_FF
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "2014.4.27"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 15
+	fascism = 10
+	communism = 25
+	neutrality = 50
+}
+
+#Казаки
+#create_country_leader = {
+#    name = "Nikolay Kozitsyn"
+#    desc = ""
+#    picture = "gfx/leaders/NOVORUSSIA/Portrait_Kozitsyn.dds"
+#    expire = "2030.1.1"
+#    ideology = rexism 
+#    traits = {
+#        #
+#    }
+#}
+
+#Экономический союз
+#create_country_leader = {
+#    name = "Oleg Akimov"
+#    desc = ""
+#    picture = "gfx/leaders/NOVORUSSIA/Portrait_Akimov.dds"
+#    expire = "2030.1.1"
+#    ideology = fascism_ideology 
+#    traits = {
+#        #
+#   }
+#}
+
+create_country_leader = {
+    name = "Zinaida Nadeon"
+    desc = ""
+    picture = "gfx/leaders/NOVORUSSIA/Portrait_Nadeon.dds"
+    expire = "2030.1.1"
+    ideology = fascism_ideology 
+	female = yes
+    traits = {
+        #
+    }
+}
+
+#Народное собрание
+create_country_leader = {
+    name = "People's Assembly"
+    desc = ""
+    picture = "gfx/leaders/NOVORUSSIA/Portrait_LNR.dds"
+    expire = "2030.1.1"
+    ideology = conservatism 
+    traits = {
+        #
+    }
+}
+
+create_country_leader = {
+    name = "Igor Gumenyuk"
+    desc = ""
+    picture = "gfx/leaders/NOVORUSSIA/Portrait_Gumenyuk.dds"
+    expire = "2030.1.1"
+    ideology = stalinism 
+    traits = {
+        #
+    }
+}
+
+#Первый глава
+create_country_leader = {
+    name = "Igor Plotnitsky"
+    desc = ""
+    picture = "gfx/leaders/NOVORUSSIA/Portrait_Plotnitsky.dds"
+    expire = "2017.11.24"
+    ideology = oligarchism 
+    traits = {
+        #
+    }
+}
+
+#Второй глава
+2017.11.24 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "2014.4.27"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	create_country_leader = {
+		name = "Leonid Pasechnik"
+		desc = ""
+		picture = "gfx/leaders/NOVORUSSIA/Portrait_Pasechnik.dds"
+		expire = "2030.1.1"
+		ideology = oligarchism 
+		traits = {
+			#
+		}
+	}
+}

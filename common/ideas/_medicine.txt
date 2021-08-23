@@ -1,0 +1,214 @@
+ideas = {
+
+	medicine_laws = {
+		law = yes
+		use_list_view = yes
+
+		complete_devastation = {
+						
+			cost = 100
+			removal_cost = -1
+			level = 9
+			
+			available = {
+				always = yes
+			}
+
+			ai_will_do = {
+   				factor = 0
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.01
+				monthly_population = -0.25
+			}
+			
+			default = no
+			
+			cancel_if_invalid = yes
+		}
+
+		sick_nation = {
+						
+			cost = 100
+			removal_cost = -1
+			level = 8
+			
+			available = {
+				always = yes
+			}
+
+			ai_will_do = {
+   				factor = 2
+			}
+
+			modifier = {
+				monthly_population = -0.1
+			}
+			
+			default = yes
+			
+			cancel_if_invalid = yes
+		}
+		
+		health_promotion = {
+						
+			cost = 100
+			removal_cost = -1
+			level = 7
+			
+			available = {
+				has_stability > 0.1
+			}
+
+			ai_will_do = {
+   				factor = 4
+			}
+
+			modifier = {
+				monthly_population = 0.01
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		hand_out_antibiotics = {
+					
+			cost = 100
+			removal_cost = -1
+			level = 5
+
+			available = {
+				has_stability > 0.2
+			}
+
+			modifier = {
+				monthly_population = 0.05
+			}
+
+			ai_will_do = {
+   				factor = 5
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		supply_hospitals = {
+			
+			available = {
+				has_stability > 0.3
+			}
+			ai_will_do = {
+   				factor = 6
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 5
+			
+			modifier = {
+				monthly_population = 0.10
+				consumer_goods_factor = 0.01
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		vaccination = {
+			
+			
+			available = {
+				has_stability > 0.4
+			}
+
+			ai_will_do = {
+   				factor = 7
+			}
+			
+			cost = 100
+			removal_cost = -1
+			level = 4
+
+			modifier = {
+				monthly_population = 0.20
+				consumer_goods_factor = 0.02
+				stability_factor = -0.0001
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		build_hospitals = {
+			
+			
+			available = {
+				has_stability > 0.5
+			}
+			ai_will_do = {
+   				factor = 8
+			}
+		
+			cost = 100
+			removal_cost = -1
+			level = 3
+			
+			modifier = {
+				monthly_population = 0.40
+				consumer_goods_factor = 0.04
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		vouchers_to_the_sanatorium = {
+			
+			available = {
+				has_stability > 0.6
+				}
+
+			ai_will_do = {
+   				factor = 9
+			}
+
+			cost = 100
+			removal_cost = -1
+			level = 2
+
+			modifier = {
+				monthly_population = 0.80
+				consumer_goods_factor = 0.08
+			}
+			
+			cancel_if_invalid = yes
+		}
+		
+		attractive_conditions_for_migrants = {
+			
+			
+			available = {
+				#has_monthly_population_change_to =  { value = 3 group = medicine_laws }
+				has_stability > 0.6
+				is_major = no
+				}
+			visible = {
+				is_major = no
+				}
+
+			ai_will_do = {
+   				factor = 10
+			}
+
+			cost = 100
+			removal_cost = -1
+			level = 1
+
+			modifier = {
+				monthly_population = 1.00
+				consumer_goods_factor = 0.04
+				stability_factor = -0.001
+			}
+			
+			cancel_if_invalid = yes
+		}
+	}
+}

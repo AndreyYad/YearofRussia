@@ -1,0 +1,17 @@
+state={
+	id=811
+	name="STATE_811"
+	manpower = 8248828
+	
+	state_category = town
+	history = {
+		owner = SUD
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SUD
+	}
+	provinces={
+		1914 5060 1960 10739 8084 2016 4918 8052 10827 10795 10851
+	}
+}

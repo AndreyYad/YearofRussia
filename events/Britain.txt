@@ -1,0 +1,74 @@
+﻿add_namespace = modbritain
+
+country_event = {
+	id = modbritain.1
+	title = modbritain.1.t
+	desc = modbritain.1.d
+	picture = GFX_ENG_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = ENG
+		has_government = democratic
+		date > 2016.7.13
+	}
+
+	option = {
+	name = OK
+		hidden_effect = {
+			set_politics = {
+			ruling_party = democratic
+			last_election = "2016.7.13"
+			election_frequency = 48
+			elections_allowed = yes
+			}
+			create_country_leader = {
+			name = "Theresa May"
+			desc = " "
+			picture = "gfx/leaders/ENG/Portrait_May.dds"
+			expire = "2019.7.24"
+			ideology = conservatism
+			female = yes
+			traits = {
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = modbritain.2
+	title = modbritain.2.t
+	desc = modbritain.2.d
+	picture = GFX_ENG_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = ENG
+		has_government = democratic
+		date > 2019.7.24
+	}
+
+	option = {
+	name = OK
+		hidden_effect = {
+			set_politics = {
+			ruling_party = democratic
+			last_election = "2019.7.24"
+			election_frequency = 48
+			elections_allowed = yes
+			}
+			create_country_leader = {
+			name = "Boris Johnson"
+			desc = " "
+			picture = "gfx/leaders/ENG/Portrait_Johnson.dds"
+			expire = "2030.3.1"
+			ideology = conservatism
+			traits = {
+			}
+			}
+		}
+	}
+}

@@ -1,0 +1,300 @@
+ideas = {
+
+	country = {
+		generic_fascist_emperor = {
+			available = {
+				NOT = {
+					has_government = communism
+					has_government = anarchy
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+
+			picture = generic_fascist_emperor
+			
+			modifier = {
+				political_power_factor = 0.05
+				mobilization_speed = 0.3
+				consumer_goods_factor = 0.04
+			}
+		}
+	}
+
+	country = {
+		generic_emperor = {
+			available = {
+				NOT = {
+					has_government = communism
+					has_government = anarchy
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			
+			removal_cost = -1
+
+			picture = generic_emperor
+			
+			modifier = {
+				political_power_factor = 0.1
+				consumer_goods_factor = 0.02
+			}
+		}
+	}
+
+	country = {
+		OMA_Monarchy = {
+			available = {
+				NOT = {
+					has_government = communism
+					has_government = anarchy
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+
+			picture = Monarchy
+			
+			modifier = {
+				stability_factor = -0.01
+				political_power_factor = 0.10
+				consumer_goods_factor = 0.01
+			}
+		}
+	}
+
+	country = {
+		SAU_Monarchy = {
+			available = {
+				NOT = {
+					has_government = communism
+					has_government = anarchy
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			
+			removal_cost = -1
+
+			picture = Monarchy
+			
+			modifier = {
+				stability_factor = -0.01
+				political_power_factor = 0.15
+				consumer_goods_factor = 0.03
+			}
+		}
+	}
+
+	country = {
+		CAM_Norodom = {
+			available = {
+				NOT = {
+					has_government = communism
+					has_government = anarchy
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			
+			removal_cost = -1
+
+			picture = Norodom
+			
+			modifier = {
+				mobilization_speed = 0.1
+				political_power_factor = 0.1
+				consumer_goods_factor = 0.01
+			}
+		}
+	}
+
+	country = {
+		BEL_Leopold = {
+			available = {
+				NOT = {
+					has_government = communism
+					has_government = anarchy
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			
+			removal_cost = -1
+
+			picture = Leopold
+			
+			modifier = {
+				stability_factor = 0.01
+				research_speed_factor = 0.1
+				consumer_goods_factor = 0.01
+			}
+		}
+	}
+	
+	country = {
+		ENG_Elizabeth = {
+			available = {
+				NOT = {
+					has_government = communism
+					has_government = anarchy
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			
+			removal_cost = -1
+
+			picture = Elizabeth
+			
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.01
+			}
+		}
+	}
+	
+	country = {
+		DEN_Margrethe = {
+			available = {
+				NOT = {
+					has_government = communism
+					has_government = anarchy
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			removal_cost = -1
+
+			picture = Margrethe
+			
+			modifier = {
+				stability_factor = 0.03
+				political_power_factor = 0.10
+				consumer_goods_factor = 0.01
+			}
+		}
+	}
+	
+	country = {
+		HOL_Willem-Alexander = {
+			available = {
+				NOT = {
+					has_government = communism
+					has_government = anarchy
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			removal_cost = -1
+
+			picture = Willem-Alexander
+			
+			modifier = {
+				stability_factor = 0.04
+				political_power_factor = 0.05
+				consumer_goods_factor = 0.01
+			}
+		}
+	}
+	
+	country = {
+		SWE_Gustav = {
+			available = {
+				NOT = {
+					has_government = communism
+					has_government = anarchy
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+			
+			removal_cost = -1
+
+			picture = Gustav
+			
+			modifier = {
+				stability_factor = 0.05
+				research_speed_factor = 0.05
+				consumer_goods_factor = 0.01
+			}
+		}
+	}
+	
+	country = {
+		NOR_Harald = {
+			available = {
+				NOT = {
+					has_government = communism
+					has_government = anarchy
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			
+			removal_cost = -1
+
+			picture = Harald
+			
+			modifier = {
+				stability_factor = 0.05
+				political_power_factor = 0.04
+				consumer_goods_factor = 0.01
+			}
+		}
+	}
+	
+	country = {
+		JOR_Abdullah = {
+			available = {
+				NOT = {
+					has_government = communism
+					has_government = anarchy
+				}
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			
+			removal_cost = -1
+
+			picture = Abdullah
+			
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.02
+				consumer_goods_factor = 0.005
+			}
+		}
+	}
+}
