@@ -1,6 +1,11 @@
 spriteTypes = {
 
 	spriteType = {
+		name = "GFX_ideology_PNS_centrism"
+		texturefile = "gfx/interface/ideologies/MOL/centrism.dds"
+	}
+
+	spriteType = {
 		name = "GFX_ideology_TUA_nationalism_ideology"
 		texturefile = "gfx/interface/ideologies/TUA/nationalism.dds"
 	}

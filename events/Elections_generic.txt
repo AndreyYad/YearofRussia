@@ -1148,3 +1148,41 @@ country_event = {
 		}
 	}
 }
+
+#Transnistria - 2016
+country_event = {
+	id = modelection.28
+	title = modelection.2.t
+	desc = modelection.2.d
+	picture = GFX_elections
+
+	fire_only_once = yes
+	
+	trigger = {
+		original_tag = PNS
+		has_government = neutrality
+		date > 2016.12.16
+	}
+
+	option = {
+	name = Ok
+		hidden_effect = {
+		set_politics = {
+			ruling_party = neutrality
+			last_election = "2016.12.16"
+			election_frequency = 48
+			elections_allowed = yes
+		}
+		create_country_leader = {
+			name = "Vadim Krasnoselsky"
+			desc = ""
+			picture = "gfx/leaders/PNS/Portrait_Krasnoselsky.dds"
+			expire = "2030.1.1"
+			ideology = centrism
+			traits = {
+				#
+			}
+		}
+		}
+	}
+}

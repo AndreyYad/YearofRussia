@@ -74,7 +74,7 @@ set_convoys = 5
 
 set_politics = {
 	ruling_party = democratic
-	last_election = "2014.1.1"
+	last_election = "2012.3.23"
 	election_frequency = 48
 	elections_allowed = yes
 }
@@ -90,7 +90,7 @@ create_country_leader = {
     name = "Nikolay Timofti"
     desc = ""
     picture = "gfx/leaders/MOL/Portrait_Timofti.dds"
-    expire = "2030.1.1"
+    expire = "2016.12.23"
     ideology = socialism
     traits = {
         #
