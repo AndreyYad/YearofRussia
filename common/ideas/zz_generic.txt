@@ -7,6 +7,7 @@ ideas = {
 		
 			allowed = {
 				has_war = no
+				threat < 0.10
 			}
 			
 			allowed_civil_war = {
@@ -2006,7 +2007,7 @@ generic_stay_the_course = {
 
 	removal_cost = -1
 
-	picture = generic_sea_focused_navy
+	picture = idea_eng_steady_as_she_goes
 			
 	modifier = {
 	stability_factor = -0.10

@@ -1702,6 +1702,36 @@ communism_on_the_rise = {
 
 political_actions = {
 
+	stop_ai_spam = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 1
+		fire_only_once = yes
+
+		allowed = {
+		threat < 0.10
+		}
+
+		visible = {
+		is_ai = yes
+		}
+
+		complete_effect = {
+			add_ideas = stop_spam_idea
+		}
+		
+		ai_will_do = {
+			factor = 0
+			modifier = {
+			factor = 100
+			or = {
+			num_of_military_factories < 6
+			num_of_factories < 6 }
+			}
+		}
+	}
+
 	UKR_decommunization = {
 
 		icon = generic_prepare_civil_war
