@@ -1140,15 +1140,14 @@ ideas = {
 	
 	#Технологии
 
-	#ТАНКИ
-	
+	#Танки
 	tank_manufacturer = {
 	
 		designer = yes
 		
 		generic_tank_manufacturer = {
 
-			picture = generic_tank_manufacturer_1
+			picture = generic_tank_manufacturer_2
 			
 			allowed = {
 			}
@@ -1166,7 +1165,7 @@ ideas = {
 		
 		fast_tank_manufacturer = {
 
-			picture = generic_tank_manufacturer_1
+			picture = generic_motorized_equipment_manufacturer_1
 			
 			allowed = {
 			}
@@ -1183,7 +1182,7 @@ ideas = {
 		
 		armored_car_manufacturer = {
 
-			picture = generic_tank_manufacturer_1
+			picture = generic_motorized_equipment_manufacturer_3
 			
 			allowed = {
 			}
@@ -1200,7 +1199,7 @@ ideas = {
 		
 		infantry_tank_manufacturer = {
 
-			picture = generic_tank_manufacturer_1
+			picture = generic_infantry_equipment_manufacturer_1
 			
 			allowed = {
 			}
@@ -1234,7 +1233,7 @@ ideas = {
 		
 		heavy_tank_manufacturer = {
 
-			picture = generic_tank_manufacturer_1
+			picture = generic_tank_manufacturer_3
 			
 			allowed = {
 			}
@@ -1276,7 +1275,7 @@ ideas = {
 	
 		pacific_fleet_naval_manufacturer = {
 			
-			picture = generic_naval_manufacturer_1
+			picture = kure_naval_arsenal
 
 			allowed = {
 			}
@@ -1293,7 +1292,7 @@ ideas = {
 	
 		atlantic_fleet_naval_manufacturer = {
 			
-			picture = generic_naval_manufacturer_1
+			picture = maizuru_naval_arsenal
 
 			allowed = {
 			}
@@ -1310,7 +1309,7 @@ ideas = {
 	
 		battlefleet_designer = {
 			
-			picture = generic_naval_manufacturer_1
+			picture = schneider
 
 			allowed = {
 			}
@@ -1327,7 +1326,7 @@ ideas = {
 	
 		raiding_fleet_naval_manufacturer = {
 			
-			picture = generic_naval_manufacturer_1
+			picture = brooklyn_naval_yard
 
 			allowed = {
 			}
@@ -1344,7 +1343,7 @@ ideas = {
 
 		convoy_escort_naval_manufacturer = {
 			
-			picture = generic_naval_manufacturer_1
+			picture = newport_news_shipbuilding
 
 			allowed = {
 			}
@@ -1361,7 +1360,7 @@ ideas = {
 	
 		mediterranean_naval_manufacturer = {
 			
-			picture = generic_naval_manufacturer_1
+			picture = generic_naval_manufacturer_2
 
 			allowed = {
 			}
@@ -1378,7 +1377,7 @@ ideas = {
 	
 		coastal_defence_naval_manufacturer = {
 			
-			picture = generic_naval_manufacturer_1
+			picture = generic_naval_manufacturer_3
 
 			allowed = {
 			}
@@ -1437,7 +1436,7 @@ ideas = {
 		
 		generic_light_aircraft_manufacturer2 = {
 			
-			picture = generic_air_manufacturer_1
+			picture = amiot
 
 			allowed = {
 			is_major = no
@@ -1455,7 +1454,7 @@ ideas = {
 	
 		CAS_manufacturer = {
 			
-			picture = generic_air_manufacturer_1
+			picture = generic_industrial_concern_2
 
 			allowed = {
 			}
@@ -1472,7 +1471,7 @@ ideas = {
 		
 		fuel_efficient_aircraft_manufacturer = {
 			
-			picture = generic_air_manufacturer_1
+			picture = generic_artillery_manufacturer_3
 
 			allowed = {
 			}
@@ -1538,7 +1537,8 @@ ideas = {
 			traits = { naval_aircraft_manufacturer }
 		}
 	}
-
+	
+	#Индустрия 
 	industrial_concern = {
 	
 		generic_industrial_concern = {
@@ -1560,7 +1560,7 @@ ideas = {
 
 		generic_electronics_concern = {
 			
-			picture = generic_electronics_concern_1
+			picture = generic_industrial_concern_3
 
 			allowed = {
 			}
@@ -1577,7 +1577,7 @@ ideas = {
 		
 		construction_company = {
 			
-			picture = generic_industrial_concern_1
+			picture = generic_electronics_concern_2
 
 			allowed = {
 			}
@@ -1594,7 +1594,7 @@ ideas = {
 		
 		refinery_concern = {
 			
-			picture = generic_industrial_concern_1
+			picture = generic_refining_concern_1
 
 			allowed = {
 			}
@@ -1629,6 +1629,7 @@ ideas = {
 		
 	}
 	
+	#Снаряжение
 	materiel_manufacturer = {
 	
 		designer = yes
@@ -1669,7 +1670,7 @@ ideas = {
 		
 		support_equipment_manufacturer = {
 			
-			picture = generic_infantry_equipment_manufacturer_2
+			picture = generic_infantry_equipment_manufacturer_3
 
 			allowed = {
 			}
@@ -1686,7 +1687,7 @@ ideas = {
 		
 		generic_artillery_manufacturer = {
 			
-			picture = generic_artillery_manufacturer_2
+			picture = generic_artillery_manufacturer_1
 
 			allowed = {
 			}

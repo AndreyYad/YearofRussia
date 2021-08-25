@@ -1,7 +1,7 @@
 state=
 {
 	id=835
-	name="STATE_78" #Приднестровье
+	name="STATE_835" #Приднестровье
 	manpower = 469000
 	
 	state_category = town

@@ -18,6 +18,15 @@ ideas = {
 				NOT = { has_government = anarchy }
 				#has_manpower_for_recruit_change_to = { value = 0.005 group = mobilization_laws }
 			}
+			
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 160 # being disarmed is bad in a wargame yo
+					num_of_military_factories < 1
+				}
+			}
 
 			modifier = {
 				conscription = 0.01
@@ -51,6 +60,10 @@ ideas = {
    				modifier = {
 					factor = 60 # being disarmed is bad in a wargame yo
 					has_idea = disarmed_nation 
+				}
+				modifier = {
+					factor = 60
+					has_idea = stop_spam_idea
 				}
 			}
 

@@ -78,6 +78,16 @@ ideas = {
 				fuel_gain_factor = -0.4
 			}
 			
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 60
+					has_idea = stop_spam_idea
+				}
+
+   			}
+			
 			default = yes
 			
 		}

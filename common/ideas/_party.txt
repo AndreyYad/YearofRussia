@@ -733,7 +733,7 @@ ideas = {
 
 			cancel_if_invalid = yes
 			
-			picture = generic_production_bonus
+			picture = raj_risk_of_famine
 
 			ai_will_do = {
 				factor = 4
