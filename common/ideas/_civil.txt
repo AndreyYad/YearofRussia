@@ -57,6 +57,7 @@ ideas = {
 			
 			available = {
 				has_stability > 0.3
+				num_of_factories > 2
 			}
 			
 			visible = {
@@ -85,6 +86,7 @@ ideas = {
 			
 			available = {
 				has_stability > 0.5
+				num_of_factories > 4
 			}
 			
 			visible = {

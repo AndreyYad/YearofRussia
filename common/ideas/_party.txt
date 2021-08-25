@@ -27,6 +27,10 @@ ideas = {
 
 			ai_will_do = {
 				factor = 8
+				modifier = {
+				factor = 16
+				has_government = democratic
+				}
 			}
 		}
 		
@@ -52,6 +56,14 @@ ideas = {
 
 			ai_will_do = {
 				factor = 8
+				modifier = {
+				factor = 16
+				has_government = neutrality
+				}
+				modifier = {
+				factor = 16
+				has_government = fascism
+				}
 			}
 		}
 	}
@@ -88,9 +100,10 @@ ideas = {
 			
 			ai_will_do = {
 				factor = 8
-					modifier = {
-					factor = 16 
-					has_government = democratic }
+				modifier = {
+				factor = 16
+				has_government = democratic
+				}
 			}
 		}
 		
@@ -123,6 +136,10 @@ ideas = {
 					modifier = {
 					factor = 16 
 					has_government = democratic }
+					modifier = {
+					factor = 16
+					has_government = neutrality
+					}
 			}
 		}
 		
@@ -151,8 +168,12 @@ ideas = {
 			ai_will_do = {
 				factor = 8
 					modifier = {
-					factor = 4 
-					has_government = democratic }
+					factor = 16 
+					has_government = neutrality }
+					modifier = {
+					factor = 16
+					has_government = fascism
+					}
 			}
 		}
 		
@@ -182,6 +203,13 @@ ideas = {
 
 			ai_will_do = {
 				factor = 8
+				modifier = {
+				factor = 16
+				or = {
+				has_government = communism
+				has_government = anarchy
+				}
+				}
 			}
 		}
 	}
@@ -216,6 +244,13 @@ ideas = {
 
 			ai_will_do = {
 				factor = 8
+				modifier = {
+				factor = 16
+				or = {
+				has_government = neutrality
+				has_government = fascism
+				}
+				}
 			}
 		}
 	
@@ -242,6 +277,13 @@ ideas = {
 
 			ai_will_do = {
 				factor = 8
+				modifier = {
+				factor = 16
+				or = {
+				has_government = democratic
+				has_government = neutrality
+				}
+				}
 			}
 		}
 		
@@ -270,6 +312,10 @@ ideas = {
 
 			ai_will_do = {
 				factor = 8
+				modifier = {
+				factor = 16
+				has_government = democratic
+				}
 			}
 		}
 		
@@ -299,6 +345,14 @@ ideas = {
 
 			ai_will_do = {
 				factor = 8
+				modifier = {
+				factor = 16
+				has_government = communism
+				}
+				modifier = {
+				factor = 16
+				has_government = anarchy
+				}
 			}
 		}
 	}
@@ -506,6 +560,10 @@ ideas = {
 				factor = 8
 					modifier = {
 					 factor = 16
+					 num_of_military_factories < 12
+					}
+					modifier = {
+					 factor = 16
 					 has_war = no
 					 has_government = democratic
 					}
@@ -548,6 +606,10 @@ ideas = {
 					modifier = {
 					 factor = 0
 					 has_war = yes
+					}
+					modifier = {
+					 factor = 32
+					 num_of_military_factories < 1
 					}
 					modifier = {
 					 factor = 16

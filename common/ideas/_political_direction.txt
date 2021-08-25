@@ -149,6 +149,7 @@ ideas = {
 			
 			allowed = {
 				original_tag = ROOT
+				num_of_military_factories > 8
 			}
 			
 			traits = { syncretic_revanchist }		
@@ -336,6 +337,7 @@ ideas = {
 			
 			allowed = {
 				original_tag = ROOT
+				num_of_military_factories > 16
 			}
 			
 			traits = { reluctant_interventionist }
@@ -358,6 +360,7 @@ ideas = {
 			
 			allowed = {
 				original_tag = ROOT
+				num_of_factories > 16
 			}
 			
 			traits = { rocket_scientist }
@@ -369,6 +372,7 @@ ideas = {
 			
 			allowed = {
 				original_tag = ROOT
+				num_of_factories > 32
 			}
 			
 			traits = { nuclear_scientist }
