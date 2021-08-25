@@ -29,6 +29,7 @@ play_hnr: "Поддержать ХНР"
 no_russians: ""Решать" русский вопрос"
 
 form_greatukraine_category: "Украинские амбиции"
+form_greatukraine_category_desc: "Украинские амбиции"
 form_great_ukraine: "Великая Украина"
 form_great_ukraine_rus: "Защитить Украинцев из России"
 form_great_ukraine_blr: "Защитить Украинцев из Беларуси"
@@ -36,6 +37,7 @@ form_great_ukraine_mol: "Защитить Украинцев из Молдовы
 form_great_ukraine_pol: "Защитить Украинцев из Польши"
 form_great_ukraine_slo: "Защитить Украинцев из Словакии"
 form_great_ukraine_rom: "Защитить Украинцев из Румынии"
+form_great_ukraine_pns: "Защитить Украинцев из Преднестровья"
 form_country_ukraine_required_states_tt: "Мы защитили наш народ во всех регионах"
 form_country_ukraine_rostov_required_states_tt: "Россия удерживает Кубань"
 

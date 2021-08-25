@@ -458,3 +458,66 @@ country_event = {
 		}
 	}
 }
+
+
+#Украина требует хз какие там регионы, но все Преднестровье кароч
+country_event = {
+	id = grukr_event.8
+	title = grukr_event.8.t
+	desc = grukr_event.8.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = grukr_event.1.a
+		ai_chance = {
+			factor = 61
+			modifier = {
+				factor = 0
+				OR = {
+					any_other_country = {
+						is_major = yes
+						NOT = { tag = UKR }
+						OR = {
+							is_in_faction_with = PNS
+							has_guaranteed = PNS
+						}
+					}
+				}
+			}
+		}
+		UKR = {
+			country_event = { days = 1 id = grukr_event.0 }
+			transfer_state = 835
+		}
+	}
+	option = {
+		name = grukr_event.1.b
+		ai_chance = {
+			base = 41
+			modifier = {
+				add = 10
+				is_in_faction = yes
+				NOT = { is_in_faction_with = PNS }
+			}
+			modifier = {
+				has_idea = NATO_member
+				factor = 51
+			}
+			modifier = {
+				is_major = yes
+				factor = 51
+			}
+		}
+		UKR = {
+			country_event = { days = 1 id = grukr_event.7 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = PNS
+				}
+			}
+		}
+	}
+}
