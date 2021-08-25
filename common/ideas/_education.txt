@@ -81,6 +81,7 @@ ideas = {
 
 			available = {
 				#has_research_speed_factor_change_to =  { value = 0.05 group = education_laws }
+				num_of_factories > 2
 				has_stability > 0.2
 			}
 
@@ -99,6 +100,7 @@ ideas = {
 			
 			available = {
 				#has_research_speed_factor_change_to = { value = 0.15 group = education_laws }
+				num_of_factories > 4
 				has_stability > 0.3
 			}
 			ai_will_do = {
@@ -122,6 +124,7 @@ ideas = {
 			
 			available = {
 				#has_research_speed_factor_change_to =  { value = 0.25 group = education_laws }
+				num_of_factories > 8
 				has_stability > 0.4
 			}
 
@@ -146,6 +149,7 @@ ideas = {
 			
 			available = {
 				#has_research_speed_factor_change_to =  { value = 0.50 group = education_laws }
+				num_of_factories > 16
 				has_stability > 0.5
 			}
 			ai_will_do = {
@@ -169,6 +173,7 @@ ideas = {
 			
 			available = {
 				#has_research_speed_factor_change_to =  { value = 1 group = education_laws }
+				num_of_factories > 32
 				has_stability > 0.6
 				}
 
@@ -193,6 +198,7 @@ ideas = {
 			
 			available = {
 				#has_research_speed_factor_change_to =  { value = 3 group = education_laws }
+				num_of_factories > 32
 				has_stability > 0.6
 				is_major = no
 				}

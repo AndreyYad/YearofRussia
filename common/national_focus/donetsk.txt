@@ -772,7 +772,7 @@
 		}
 		available = {
 			has_country_leader = {
-				name = "Vladimir Medvedev"
+				name = "Boris Litvinov"
 				ruling_only = yes
 			}
 		}
