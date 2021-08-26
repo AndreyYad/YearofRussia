@@ -60,4 +60,9 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/GFX_anarchy.dds"
 	}
 
+	SpriteType = {
+		name = "GFX_decision_cat_generic_great_ukraine"
+		texturefile = "gfx/interface/decisions/decision_cat_generic_great_ukraine.dds"
+	}
+
 }
