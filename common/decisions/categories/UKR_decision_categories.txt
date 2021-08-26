@@ -1,0 +1,10 @@
+form_great_ukraine = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_great_ukraine
+
+	allowed = {
+		has_completed_focus = UKR_great_ukraine
+	}
+}

@@ -138,7 +138,7 @@ form_greatukraine_category = {
 	}
 	form_great_ukraine_rus = {
 
-		icon = generic_form_nation
+		icon = infiltrate_state
 
 		allowed = {
 			has_dlc = "Waking the Tiger"
@@ -190,7 +190,7 @@ form_greatukraine_category = {
 	
 	form_great_ukraine_blr = {
 
-		icon = generic_form_nation
+		icon = infiltrate_state
 
 		allowed = {
 			has_dlc = "Waking the Tiger"
@@ -228,7 +228,7 @@ form_greatukraine_category = {
 	
 	form_great_ukraine_mol = {
 
-		icon = generic_form_nation
+		icon = infiltrate_state
 
 		allowed = {
 			has_dlc = "Waking the Tiger"
@@ -264,7 +264,7 @@ form_greatukraine_category = {
 	
 	form_great_ukraine_pol = {
 
-		icon = generic_form_nation
+		icon = infiltrate_state
 
 		allowed = {
 			has_dlc = "Waking the Tiger"
@@ -304,7 +304,7 @@ form_greatukraine_category = {
 	
 	form_great_ukraine_slo = {
 
-		icon = generic_form_nation
+		icon = infiltrate_state
 
 		allowed = {
 			has_dlc = "Waking the Tiger"
@@ -340,7 +340,7 @@ form_greatukraine_category = {
 	
 	form_great_ukraine_rom = {
 
-		icon = generic_form_nation
+		icon = infiltrate_state
 
 		allowed = {
 			has_dlc = "Waking the Tiger"
@@ -359,6 +359,42 @@ form_greatukraine_category = {
 		complete_effect = {
 			ROM = {
 				country_event = { days = 1 id = grukr_event.6 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 170
+			modifier = {
+				factor = 0
+				or = {
+				has_war = yes
+				is_historical_focus_on = yes
+				}
+			}
+		}
+	}
+
+	form_great_ukraine_pns = {
+
+		icon = infiltrate_state
+
+		allowed = {
+			has_dlc = "Waking the Tiger"
+		}
+
+		available = {
+			is_subject = no
+			PNS = { controls_state = 835 }
+		}
+
+		visible = {
+			NOT = { has_global_flag = UKR_great_ukraine_form }
+			has_completed_focus = UKR_great_ukraine
+		}
+
+		complete_effect = {
+			PNS = {
+				country_event = { days = 1 id = grukr_event.8 }
 			}
 		}
 
