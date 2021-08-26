@@ -22,6 +22,16 @@ set_technology = {
 	early_bomber = 1
 }
 
+create_country_leader = {
+	name = "Atifete Yahyaga"
+	desc = " "
+	picture = "gfx/leaders/KOS/Portrait_Yahyaga.dds"
+	expire = "2016.4.7"
+	ideology = liberalism
+	traits = {
+	}
+}
+
 2020.1.1 = {
 
 	add_political_power = 1198
@@ -88,4 +98,31 @@ set_popularities = {
 	democratic = 50
 	neutrality = 30
 	communism = 20
+}
+
+2016.4.7 = {
+
+	set_party_name = {
+		ideology = democratic
+		name = KOS_democratic_party_2
+		long_name = KOS_democratic_party_2_long
+	}
+
+	set_politics = {
+		ruling_party = democratic
+		last_election = "2016.4.7"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	
+	create_country_leader = {
+	name = "Hashim Thaci"
+	desc = " "
+	picture = "gfx/leaders/USA/Portrait_Thaci.dds"
+	expire = "2030.3.1"
+	ideology = socialism
+	traits = {
+	}
+	}
+	
 }
